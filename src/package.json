@@ -1,0 +1,12 @@
+{
+  "name": "pdf-kobo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PDF_KOBO build dependencies (bundled into the single HTML file)",
+  "license": "MIT",
+  "dependencies": {
+    "pdf-lib": "1.17.1",
+    "pdfjs-dist": "6.5.438",
+    "qrcode-generator": "1.4.4"
+  }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja" data-l="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>PDF_KOBO — インストール不要・完全オフラインの PDF 編集ツール | Front Softworks</title>
+<meta name="description" content="PDF_KOBO は HTML ファイル1つで動く、無料・オフラインの PDF 編集ツールです。結合・分割・注釈・付箋・ハンコ・黒塗り。ファイルは外部に送信されません。">
+<meta property="og:title" content="PDF_KOBO — free offline PDF editor in one HTML file">
+<meta property="og:description" content="No install. Nothing leaves your PC. Merge, split, annotate, sticky notes, stamps, black-out.">
+<meta property="og:image" content="screenshot_ja.png">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--fg:#1d2433;--mut:#5b6476;--line:#e2e6ee;--acc:#2563eb;--acc2:#1d4ed8;--soft:#eef3ff;--ok:#16a34a;--ng:#dc2626;--warn:#b45309}
+@media (prefers-color-scheme:dark){:root{--bg:#0f131b;--card:#171c26;--fg:#e7ebf3;--mut:#9aa4b6;--line:#283043;--acc:#4f8cff;--acc2:#3b7bff;--soft:#1a2440;--ok:#22c55e;--ng:#f87171;--warn:#f59e0b}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 system-ui,-apple-system,"Segoe UI","Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif}
+html[data-l=ja] [lang=en],html[data-l=en] [lang=ja]{display:none!important}
+a{color:var(--acc)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:18px;height:58px}
+.logo{font-weight:800;letter-spacing:2px;font-size:19px;color:var(--fg);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{width:22px;height:26px;border-radius:3px;background:linear-gradient(160deg,#fff 0 62%,#e5484d 62%);border:2px solid currentColor;display:inline-block}
+nav{display:flex;gap:16px;margin-left:auto;font-size:14px}
+nav a{color:var(--mut);text-decoration:none}nav a:hover{color:var(--fg)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:12px}
+.lang button{border:0;background:none;color:var(--mut);padding:4px 10px;cursor:pointer}
+.lang button.on{background:var(--acc);color:#fff}
+@media (max-width:760px){nav{display:none}.lang{margin-left:auto}}
+.hero{padding:64px 0 32px;text-align:center}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.25;margin:0 0 14px;letter-spacing:.5px}
+.hero h1 b{color:var(--acc)}
+.hero p.lead{color:var(--mut);font-size:clamp(15px,2vw,18px);margin:0 auto 26px;max-width:720px}
+.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.pill{font-size:13px;padding:4px 12px;border-radius:999px;background:var(--soft);color:var(--acc2);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;background:var(--acc);color:#fff;text-decoration:none;font-weight:700;border:0;cursor:pointer;font-size:16px}
+.btn:hover{background:var(--acc2)}
+.btn.sub{background:var(--card);color:var(--fg);border:1px solid var(--line);font-weight:600}
+.btn.sm{padding:7px 14px;font-size:14px;border-radius:8px}
+.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.note{font-size:13px;color:var(--mut);margin-top:10px}
+.shot{margin:40px auto 0;max-width:1000px;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px rgba(20,30,60,.15)}
+.shot img{display:block;width:100%;height:auto}
+section{padding:56px 0;border-top:1px solid var(--line);scroll-margin-top:58px}
+section h2{font-size:clamp(22px,3vw,30px);margin:0 0 8px}
+section .sub{color:var(--mut);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card h3{margin:0 0 6px;font-size:16px;display:flex;gap:8px;align-items:center}
+.card p{margin:0;color:var(--mut);font-size:14px;line-height:1.65}
+.ico{font-size:20px}
+.promise{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.promise .card{border-top:4px solid var(--acc)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0 0 18px}
+.steps li{counter-increment:s;position:relative;padding-left:40px;margin:10px 0}
+.steps li:before{content:counter(s);position:absolute;left:0;top:2px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+code,.mono{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
+.hash{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;word-break:break-all;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;display:block}
+.warnbox{border-left:4px solid var(--warn);background:color-mix(in srgb,var(--warn) 9%,var(--card));padding:12px 16px;border-radius:8px;font-size:14.5px;margin-top:16px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+input.idin{font:700 24px/1 ui-monospace,Consolas,monospace;letter-spacing:3px;text-transform:uppercase;padding:10px 14px;border-radius:10px;border:2px solid var(--line);background:var(--bg);color:var(--fg);width:min(260px,100%)}
+input.idin:focus{outline:0;border-color:var(--acc)}
+textarea.out{width:100%;min-height:190px;font:13px/1.55 ui-monospace,Consolas,monospace;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--fg);resize:vertical}
+.code{font:800 26px/1 ui-monospace,Consolas,monospace;letter-spacing:3px;padding:8px 14px;border-radius:10px;background:var(--soft);color:var(--acc2)}
+.err{color:var(--ng);font-weight:600;min-height:1.6em}
+.drop{border:2px dashed var(--line);border-radius:14px;padding:34px 16px;text-align:center;color:var(--mut);cursor:pointer;transition:.15s}
+.drop.on,.drop:hover{border-color:var(--acc);background:var(--soft)}
+.res{margin-top:14px;padding:14px 16px;border-radius:10px;font-weight:600;display:none}
+.res.ok{display:block;background:color-mix(in srgb,var(--ok) 12%,var(--card));color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent)}
+.res.ng{display:block;background:color-mix(in srgb,var(--ng) 10%,var(--card));color:var(--ng);border:1px solid color-mix(in srgb,var(--ng) 40%,transparent)}
+.res small{display:block;font-weight:400;color:var(--mut);margin-top:4px;word-break:break-all}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:8px 0}
+details summary{cursor:pointer;font-weight:600}
+details p{margin:8px 0 0;color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media (max-width:760px){.two{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--mut);font-size:13px}
+footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:8px 16px;border-radius:999px;font-size:14px;opacity:0;transition:.2s;pointer-events:none}
+.toast.on{opacity:1}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="logo" href="#top"><i></i>PDF_KOBO</a>
+ <nav>
+  <a href="#features"><span lang="ja">特長</span><span lang="en">Features</span></a>
+  <a href="#download"><span lang="ja">ダウンロード</span><span lang="en">Download</span></a>
+  <a href="#register"><span lang="ja">利用登録</span><span lang="en">Registration</span></a>
+  <a href="#verify"><span lang="ja">本物チェック</span><span lang="en">Verify</span></a>
+  <a href="#faq">FAQ</a>
+ </nav>
+ <div class="lang"><button data-set="ja">日本語</button><button data-set="en">English</button></div>
+</div></header>
+
+<main id="top">
+<div class="hero wrap">
+ <h1><span lang="ja">HTML ファイル1つで動く<br><b>オフライン</b>の PDF 編集ツール</span><span lang="en">An <b>offline</b> PDF editor<br>in a single HTML file</span></h1>
+ <p class="lead"><span lang="ja">インストール不要。ダブルクリックするだけで、結合・分割・注釈・付箋・ハンコ・黒塗りまで。ファイルは一切外部に送信されません。</span><span lang="en">No installation. Just double-click to merge, split, annotate, add sticky notes, stamps and black-outs. Your files never leave your PC.</span></p>
+ <div class="pills">
+  <span class="pill"><span lang="ja">無料</span><span lang="en">Free</span></span>
+  <span class="pill"><span lang="ja">インストール不要</span><span lang="en">No install</span></span>
+  <span class="pill"><span lang="ja">外部と通信しない</span><span lang="en">No network access</span></span>
+  <span class="pill"><span lang="ja">オープンソース（MIT）</span><span lang="en">Open source (MIT)</span></span>
+  <span class="pill"><span lang="ja">7言語対応</span><span lang="en">7 languages</span></span>
+ </div>
+ <div class="cta">
+  <a class="btn dl" href="#download">⬇ <span lang="ja">無料ダウンロード</span><span lang="en">Free download</span> <span class="ver mono" style="opacity:.8;font-weight:500"></span></a>
+  <a class="btn sub" href="#register"><span lang="ja">利用登録はこちら</span><span lang="en">Register</span></a>
+ </div>
+ <div class="note"><span lang="ja">Windows / Mac / Chromebook の Edge・Chrome で動作</span><span lang="en">Works in Edge / Chrome on Windows, Mac and Chromebook</span></div>
+ <div class="shot"><img lang="ja" src="screenshot_ja.png" alt="PDF_KOBO の画面" width="2100" height="1290"><img lang="en" src="screenshot_en.png" alt="PDF_KOBO screenshot" width="2100" height="1290"></div>
+</div>
+
+<section id="features"><div class="wrap">
+ <h2><span lang="ja">できること</span><span lang="en">What it does</span></h2>
+ <p class="sub"><span lang="ja">「ちょっと PDF をいじりたい」をこれ1つで。</span><span lang="en">Everything for "I just need to tweak this PDF".</span></p>
+ <div class="grid">
+  <div class="card"><h3><span class="ico">📑</span><span lang="ja">結合・分割・並べ替え</span><span lang="en">Merge, split, reorder</span></h3><p lang="ja">PDF と画像をまとめて読み込み、ドラッグで並べ替え。回転・削除・白紙追加、範囲や N ページごとの分割書き出し。</p><p lang="en">Load PDFs and images, drag to reorder, rotate, delete, add blank pages, and export by ranges or every N pages.</p></div>
+  <div class="card"><h3><span class="ico">✏️</span><span lang="ja">書き込み</span><span lang="en">Annotate</span></h3><p lang="ja">ペン・ブラシ・蛍光ペン・図形・表・矢印・文字・絵文字・画像。Snipping Tool の画像も Ctrl+V で貼れます。</p><p lang="en">Pen, brush, highlighter, shapes, tables, arrows, text, emoji and images. Paste screenshots with Ctrl+V.</p></div>
+  <div class="card"><h3><span class="ico">🗒️</span><span lang="ja">付箋</span><span lang="en">Sticky notes</span></h3><p lang="ja">DocuWorks のような貼り紙の付箋。PDF の注釈として書き出すので、相手の Acrobat や Edge でもそのまま読めます。</p><p lang="en">Paper-style notes, exported as PDF annotations that show up in Acrobat or Edge.</p></div>
+  <div class="card"><h3><span class="ico">💮</span><span lang="ja">ハンコ帳</span><span lang="en">Stamp book</span></h3><p lang="ja">日付印・丸印・角印・チェック・花まる・スキャンした印影。よく使うハンコはブラウザに記憶されます。</p><p lang="en">Date stamps, seals, check marks, "hanamaru" and scanned seals, remembered in your browser.</p></div>
+  <div class="card"><h3><span class="ico">⬛</span><span lang="ja">黒塗り・白塗り</span><span lang="en">Black-out / white-out</span></h3><p lang="ja">塗ったページだけ画像化して書き出す「安全な書き出し」で、下の文字データを残しません。</p><p lang="en">"Safe export" rasterizes only the masked pages, so no text remains underneath.</p></div>
+  <div class="card"><h3><span class="ico">🔍</span><span lang="ja">検索・表コピー</span><span lang="en">Search & table copy</span></h3><p lang="ja">文字検索と一括マーカー・一括黒塗り。範囲を囲んでコピーすると、表は Excel にそのまま貼れます。</p><p lang="en">Search with bulk highlight or black-out. Box-select text and tables paste straight into Excel.</p></div>
+  <div class="card"><h3><span class="ico">💾</span><span lang="ja">作業ファイル</span><span lang="en">Work files</span></h3><p lang="ja">書き込みを編集できる状態のまま保存（.pdfkobo）。付箋で指示して同僚に渡す使い方も。</p><p lang="en">Save your work with markups still editable (.pdfkobo) and hand it to a colleague.</p></div>
+  <div class="card"><h3><span class="ico">🎨</span><span lang="ja">スキン・多言語</span><span lang="en">Skins & languages</span></h3><p lang="ja">モダン・ダーク・レトロPC・アクア・ゲーム機の5スキン。日英中（簡・繁）葡仏韓の7言語。</p><p lang="en">Five skins and seven languages: Japanese, English, Chinese (Simplified/Traditional), Portuguese, French, Korean.</p></div>
+ </div>
+</div></section>
+
+<section id="safety"><div class="wrap">
+ <h2><span lang="ja">安心して使える3つの約束</span><span lang="en">Three promises</span></h2>
+ <p class="sub"><span lang="ja">会社や学校の PC でも使えるように作りました。</span><span lang="en">Built to be usable on company and school PCs.</span></p>
+ <div class="promise">
+  <div class="card"><h3>🔒 <span lang="ja">外部と通信しない</span><span lang="en">No network access</span></h3><p lang="ja">PDF はブラウザの中だけで処理します。アップロードもアクセス解析もありません。</p><p lang="en">PDFs are processed only inside your browser. No uploads, no analytics.</p></div>
+  <div class="card"><h3>📄 <span lang="ja">インストール不要</span><span lang="en">No installation</span></h3><p lang="ja">exe ではなく HTML ファイル1つ。管理者権限も不要で、PC の設定を変えません。</p><p lang="en">Not an exe — one HTML file. No admin rights, no changes to your PC.</p></div>
+  <div class="card"><h3>🔎 <span lang="ja">中身を確認できる</span><span lang="en">Open and verifiable</span></h3><p lang="ja">MIT ライセンスのオープンソース。公式版かどうかは SHA-256 で誰でも確認できます。</p><p lang="en">Open source under MIT. Anyone can verify the official build with SHA-256.</p></div>
+ </div>
+</div></section>
+
+<section id="download"><div class="wrap">
+ <h2><span lang="ja">ダウンロード</span><span lang="en">Download</span></h2>
+ <p class="sub"><span lang="ja">最新版</span><span lang="en">Latest version</span> <b class="ver mono"></b> ・ <span class="size"></span></p>
+ <div class="two">
+  <div class="box">
+   <ol class="steps">
+    <li><span lang="ja">下のボタンから <code>PDF_KOBO.html</code> をダウンロード</span><span lang="en">Download <code>PDF_KOBO.html</code> with the button below</span></li>
+    <li><span lang="ja">ダブルクリックで開く（Edge / Chrome）</span><span lang="en">Double-click to open it (Edge / Chrome)</span></li>
+    <li><span lang="ja">初回だけ、画面の ID でこのページの<a href="#register">利用登録</a>をする</span><span lang="en">First time only: do the <a href="#register">registration</a> on this page with the ID shown</span></li>
+   </ol>
+   <div class="row">
+    <a class="btn" id="dlHtml" href="#">⬇ PDF_KOBO.html</a>
+    <a class="btn sub sm" id="dlZip" href="#"><span lang="ja">説明書・ライセンス付き ZIP</span><span lang="en">ZIP with manuals & licenses</span></a>
+   </div>
+   <p class="note"><a id="allRel" href="#"><span lang="ja">すべてのリリース・変更履歴</span><span lang="en">All releases & changelog</span></a></p>
+  </div>
+  <div class="box">
+   <b><span lang="ja">公式版の SHA-256</span><span lang="en">SHA-256 of the official build</span></b>
+   <span class="hash" id="curHash"></span>
+   <p class="note" style="margin-top:8px"><span lang="ja">Windows のコマンドプロンプトで確認：</span><span lang="en">Check in Windows Command Prompt:</span><br><code>certutil -hashfile PDF_KOBO.html SHA256</code><br><span lang="ja">または下の<a href="#verify">本物チェック</a>にファイルをドロップ。</span><span lang="en">Or drop the file on <a href="#verify">Verify</a> below.</span></p>
+  </div>
+ </div>
+ <div class="warnbox"><b><span lang="ja">作者はメールでは配布しません。</span><span lang="en">The author never distributes PDF_KOBO by email.</span></b>
+  <span lang="ja">メールなどで回ってきたファイルは改ざんされている可能性があります。必ずこのページから入手し、人に勧めるときはファイルではなくこのページの URL を教えてください。</span><span lang="en">Files passed around by email may have been modified. Always download from this page, and share this page's URL rather than the file.</span>
+  <div class="row" style="margin-top:8px"><button class="btn sub sm" id="shareBtn"><span lang="ja">紹介文と URL をコピー</span><span lang="en">Copy intro text and URL</span></button></div>
+ </div>
+</div></section>
+
+<section id="register"><div class="wrap">
+ <h2><span lang="ja">利用登録（無料）</span><span lang="en">Registration (free)</span></h2>
+ <p class="sub"><span lang="ja">アプリの初回起動時に表示される「この PC の ID」を入力すると、その PC 専用の登録テキストを発行します。</span><span lang="en">Enter "This PC's ID" shown when the app starts for the first time to get a registration text for that PC.</span></p>
+ <div class="box">
+  <div class="row">
+   <input class="idin" id="idIn" maxlength="9" placeholder="XXXX-XXXX" autocomplete="off" spellcheck="false" aria-label="ID">
+   <button class="btn" id="issueBtn"><span lang="ja">発行する</span><span lang="en">Issue</span></button>
+  </div>
+  <div class="err" id="idErr"></div>
+  <div id="outWrap" style="display:none">
+   <p style="margin:6px 0"><b><span lang="ja">① 登録テキストをコピーして、アプリに貼り付けてください</span><span lang="en">1. Copy the registration text and paste it into the app</span></b></p>
+   <textarea class="out" id="outText" readonly></textarea>
+   <div class="row" style="margin-top:8px"><button class="btn sm" id="copyText"><span lang="ja">登録テキストをコピー</span><span lang="en">Copy registration text</span></button></div>
+   <p style="margin:18px 0 6px"><b><span lang="ja">② スマホで見ている場合は、こちらの 10 文字を手で入力しても登録できます</span><span lang="en">2. On a phone? You can also type this 10-character code instead</span></b></p>
+   <div class="row"><span class="code" id="outCode"></span><button class="btn sub sm" id="copyCode"><span lang="ja">コードをコピー</span><span lang="en">Copy code</span></button></div>
+  </div>
+  <p class="note" style="margin-top:16px">🔒 <span lang="ja">ID はアプリが作ったランダムな番号で、PC や個人の情報は含みません。このページは ID をどこにも送信せず、ブラウザの中だけで計算します（このページは外部と通信できない設定になっています）。</span><span lang="en">The ID is a random number made by the app and contains no PC or personal information. This page never sends it anywhere; everything is calculated in your browser (the page is configured so it cannot make network requests).</span></p>
+ </div>
+</div></section>
+
+<section id="verify"><div class="wrap">
+ <h2><span lang="ja">本物チェック</span><span lang="en">Verify your file</span></h2>
+ <p class="sub"><span lang="ja">手元の PDF_KOBO.html が公式版かどうかを確認できます。ファイルはアップロードされません。</span><span lang="en">Check whether your PDF_KOBO.html is an official build. The file is not uploaded.</span></p>
+ <div class="drop" id="drop" tabindex="0"><div style="font-size:30px">🛡️</div><span lang="ja">ここに PDF_KOBO.html をドロップ（またはクリックして選択）</span><span lang="en">Drop PDF_KOBO.html here (or click to choose)</span><input type="file" id="vfile" accept=".html,.htm" hidden></div>
+ <div class="res" id="vres"></div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+ <h2><span lang="ja">よくある質問</span><span lang="en">FAQ</span></h2>
+ <details><summary><span lang="ja">本当に無料ですか？会社で使ってもいいですか？</span><span lang="en">Is it really free? Can I use it at work?</span></summary><p lang="ja">はい。MIT ライセンスなので、個人・会社・学校を問わず無料で使えます。商用利用も可能です。</p><p lang="en">Yes. Under the MIT License it is free for individuals, companies and schools, including commercial use.</p></details>
+ <details><summary><span lang="ja">開いた PDF が外部に送られることはありますか？</span><span lang="en">Are my PDFs sent anywhere?</span></summary><p lang="ja">ありません。アプリは自分から通信しない作りで、PDF はブラウザの中だけで処理します。ブラウザの開発者ツール（F12）のネットワーク欄でも確認できます。</p><p lang="en">No. The app makes no network requests by itself; PDFs are processed only in your browser. You can confirm this in the browser's developer tools (F12) Network tab.</p></details>
+ <details><summary><span lang="ja">なぜ利用登録が必要なのですか？</span><span lang="en">Why is registration needed?</span></summary><p lang="ja">メールなどで出どころのわからないファイルが出回るのを防ぎ、必ず公式の最新版を使ってもらうためです。料金や個人情報の入力はありません。</p><p lang="en">To keep files of unknown origin from circulating by email and make sure everyone uses the latest official version. No payment and no personal information.</p></details>
+ <details><summary><span lang="ja">ID が変わった／もう一度登録画面が出た</span><span lang="en">My ID changed / the registration screen came back</span></summary><p lang="ja">ブラウザのデータ（サイトデータ）を消すと ID が新しくなります。お手数ですが、新しい ID でもう一度発行してください。何度でも無料です。</p><p lang="en">Clearing browser (site) data creates a new ID. Please issue a new registration text for it — it is free, any number of times.</p></details>
+ <details><summary><span lang="ja">人に勧めたいときは？</span><span lang="en">How do I recommend it to others?</span></summary><p lang="ja">ファイルを送らずに、このページの URL を教えてください。いつでも改ざんされていない最新版を入手できます。</p><p lang="en">Please share this page's URL instead of the file, so they always get the latest unmodified version.</p></details>
+ <details><summary><span lang="ja">改変して配布してもいいですか？</span><span lang="en">May I modify and redistribute it?</span></summary><p lang="ja">MIT ライセンスの範囲で自由です。ただし、利用者が混乱しないよう、改変版は「PDF_KOBO」以外の名前で配布してください。改変版によって生じた問題について作者は責任を負いません。</p><p lang="en">Yes, under the MIT License. To avoid confusion, please distribute modified versions under a name other than "PDF_KOBO". The author is not responsible for problems caused by modified versions.</p></details>
+ <details><summary><span lang="ja">できないことは？</span><span lang="en">What can't it do?</span></summary><p lang="ja">既存の文字の直接書き換え、OCR、電子署名、フォーム作成、パスワード付き PDF の読み込みには対応していません。</p><p lang="en">Editing existing text in place, OCR, digital signatures, creating forms and opening password-protected PDFs are not supported.</p></details>
+</div></section>
+
+<section id="about"><div class="wrap two">
+ <div class="box"><b><span lang="ja">ライセンス</span><span lang="en">License</span></b>
+  <p style="margin:6px 0;font-size:14.5px;color:var(--mut)"><span lang="ja">© 2026 Front Softworks ・ MIT License。PDF.js（Apache-2.0）、pdf-lib・pako・qrcode-generator（MIT）などのオープンソースを同梱しています。本ソフトは無保証です。</span><span lang="en">© 2026 Front Softworks · MIT License. Bundles open-source software such as PDF.js (Apache-2.0), pdf-lib, pako and qrcode-generator (MIT). Provided without warranty.</span></p>
+  <p class="note" style="margin:0"><a class="repo" href="#"><span lang="ja">ソースコード（GitHub）</span><span lang="en">Source code (GitHub)</span></a> ・ <a class="issues" href="#"><span lang="ja">不具合の報告・要望</span><span lang="en">Report a bug / request</span></a></p>
+  <div id="donate" style="display:none;margin-top:12px"><a class="btn sub sm" id="donateA" href="#">☕ <span lang="ja">開発を応援する</span><span lang="en">Support development</span></a></div>
+ </div>
+ <div class="box"><b><span lang="ja">Front Softworks のほかのソフト</span><span lang="en">Other software by Front Softworks</span></b><div id="works" style="margin-top:6px"></div></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div>© 2026 Front Softworks — PDF_KOBO</div>
+ <div><span lang="ja">このページはアクセス解析・外部の読み込みを一切使っていません。</span><span lang="en">This page uses no analytics and loads nothing from other sites.</span></div>
+</div></footer>
+<div class="toast" id="toast"></div>
+
+<script>/*__LIC__*/</script>
+<script>
+const CFG=/*__CFG__*/{};
+const $=s=>document.querySelector(s);
+let L='ja';
+function setL(l){L=l;document.documentElement.dataset.l=l;document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.set===l));try{localStorage.setItem('kobo.site.lang',l);}catch(e){}}
+setL((()=>{try{const v=localStorage.getItem('kobo.site.lang');if(v)return v;}catch(e){}return /^ja/i.test(navigator.language||'ja')?'ja':'en';})());
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setL(b.dataset.set));
+const T=(ja,en)=>L==='ja'?ja:en;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),1800);}
+async function copy(t){try{await navigator.clipboard.writeText(t);}catch(e){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();}toast(T('コピーしました','Copied'));}
+/* 設定の反映 */
+document.querySelectorAll('.ver').forEach(e=>e.textContent='v'+CFG.version);
+document.querySelectorAll('.size').forEach(e=>e.textContent=(CFG.size/1048576).toFixed(1)+' MB');
+$('#curHash').textContent=CFG.sha256||'—';
+const rel=CFG.repo?CFG.repo+'/releases':'#';
+$('#dlHtml').href=CFG.repo?rel+'/latest/download/PDF_KOBO.html':'#';$('#dlZip').href=CFG.repo?rel+'/latest/download/PDF_KOBO.zip':'#';$('#allRel').href=rel;
+document.querySelectorAll('a.repo').forEach(a=>a.href=CFG.repo||'#');document.querySelectorAll('a.issues').forEach(a=>a.href=CFG.repo?CFG.repo+'/issues':'#');
+if(CFG.donate){$('#donate').style.display='';$('#donateA').href=CFG.donate;}
+$('#works').innerHTML=(CFG.works||[]).map(w=>'<div style="margin:6px 0"><b>'+w.name+'</b> — <span lang="ja">'+w.ja+'</span><span lang="en">'+w.en+'</span><br><a href="'+w.url+'" target="_blank" rel="noopener noreferrer">'+w.url+'</a></div>').join('');
+const SITE=CFG.site||location.href.replace(/#.*$/,'');
+$('#shareBtn').onclick=()=>copy(T('無料・オフラインの PDF 編集ツール「PDF_KOBO」（インストール不要・ファイルは外部に送信されません）\n公式配布元: ','PDF_KOBO — a free, offline PDF editor (no installation; files never leave your PC)\nOfficial source: ')+SITE);
+/* 利用登録 */
+const idIn=$('#idIn');
+idIn.addEventListener('input',()=>{let v=idIn.value.normalize('NFKC').toUpperCase().replace(/[^0-9A-Z]/g,'').slice(0,8);idIn.value=v.length>4?v.slice(0,4)+'-'+v.slice(4):v;$('#idErr').textContent='';});
+function issue(){
+  const id=KoboLic.normId(idIn.value);
+  if(!id){$('#idErr').textContent=T('ID は 8 文字です（例：4K7Q-9M2X）。アプリの画面に表示されている ID を入力してください。','The ID has 8 characters (e.g. 4K7Q-9M2X). Enter the ID shown in the app.');$('#outWrap').style.display='none';return;}
+  const d=new Date(),day=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  const w=(CFG.works||[]).map(x=>x.name+' '+x.url).join(' / ');
+  const txt=['━━━━ PDF_KOBO 利用登録テキスト / Registration ━━━━',
+   'この PC 専用です（ほかの PC では使えません） / For this PC only',
+   'ID : '+KoboLic.fmtId(id),
+   'KEY: '+KoboLic.key48(id),
+   '発行日 / Issued: '+day,
+   '公式配布元 / Official: '+SITE,
+   '※作者はメールでは配布しません / The author never distributes by email',
+   w?'Front Softworks: '+w:'',
+   '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'].filter(Boolean).join('\n');
+  $('#outText').value=txt;$('#outCode').textContent=KoboLic.fmtCode(KoboLic.code(id));$('#outWrap').style.display='';$('#idErr').textContent='';
+}
+$('#issueBtn').onclick=issue;idIn.addEventListener('keydown',e=>{if(e.key==='Enter')issue();});
+$('#copyText').onclick=()=>copy($('#outText').value);$('#copyCode').onclick=()=>copy($('#outCode').textContent);
+function fromHash(){const m=location.hash.match(/^#id=([0-9A-Za-z\-]{8,9})/);if(m){idIn.value=m[1];idIn.dispatchEvent(new Event('input'));issue();setTimeout(()=>$('#register').scrollIntoView(),50);history.replaceState(null,'',location.pathname+'#register');}}
+fromHash();window.addEventListener('hashchange',fromHash);
+/* 本物チェック */
+const drop=$('#drop'),vf=$('#vfile');
+drop.onclick=()=>vf.click();drop.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')vf.click();};
+['dragenter','dragover'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.add('on');}));
+['dragleave','drop'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.remove('on');}));
+drop.addEventListener('drop',e=>{const f=e.dataTransfer.files[0];if(f)verify(f);});vf.onchange=()=>{if(vf.files[0])verify(vf.files[0]);vf.value='';};
+async function verify(f){
+  const r=$('#vres');r.className='res';
+  try{const buf=await f.arrayBuffer();const h=[...new Uint8Array(await crypto.subtle.digest('SHA-256',buf))].map(b=>b.toString(16).padStart(2,'0')).join('');
+    const v=(CFG.hashes||{})[h];
+    if(v){r.className='res ok';r.innerHTML='✅ '+T('公式版です：PDF_KOBO '+v,'Official build: PDF_KOBO '+v)+(v!=='v'+CFG.version?'<small>'+T('最新版は v'+CFG.version+' です。上のボタンから更新できます。','The latest version is v'+CFG.version+'. You can update with the button above.')+'</small>':'')+'<small>SHA-256: '+h+'</small>';}
+    else{r.className='res ng';r.innerHTML='⚠ '+T('公式版ではありません。改ざんされているか、別のファイルです。使わずに、このページからダウンロードし直してください。','This is not an official build. It may have been modified or is a different file. Do not use it; download again from this page.')+'<small>'+f.name+' — SHA-256: '+h+'</small>';}
+  }catch(e){r.className='res ng';r.textContent=T('確認できませんでした：','Could not check: ')+e.message;}
+}
+</script>
+</body>
+</html>
