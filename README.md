@@ -9,7 +9,7 @@
 > ⚠ **作者はメールでは配布しません。** 必ず公式ページまたは GitHub Releases から入手してください。人に勧めるときは、ファイルではなく公式ページの URL を教えてください。
 > ⚠ **The author never distributes PDF_KOBO by email.** Always download from the official page or GitHub Releases, and share the page URL rather than the file.
 
-![PDF_KOBO](docs/screenshot_ja.png)
+![PDF_KOBO](docs/screenshot_ja.jpg)
 
 ---
 
