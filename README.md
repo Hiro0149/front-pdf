@@ -1,7 +1,5 @@
 # Front PDF
 
-> 旧名 PDF_KOBO（v1.0.1 で改名） / Formerly PDF_KOBO (renamed in v1.0.1)
-
 **インストール不要・完全オフラインの PDF 編集ツール（HTML ファイル1つ）**
 **A free, offline PDF editor in a single HTML file — no installation, nothing leaves your PC.**
 
@@ -43,7 +41,7 @@ certutil -hashfile Front_PDF.html SHA256
 
 ### ライセンス
 - © 2026 Front Softworks — [MIT License](LICENSE)。無料で使用・改変・再配布・商用利用できます。条件は著作権表示とライセンス文を残すことだけです。
-- **改変版は「Front PDF」「PDF_KOBO」以外の名前で配布してください**（利用者の混乱を防ぐため。MIT ライセンスは名前やロゴの使用を許諾していません）。改変版によって生じた問題について作者は責任を負いません。
+- **改変版は「Front PDF」以外の名前で配布してください**（利用者の混乱を防ぐため。MIT ライセンスは名前やロゴの使用を許諾していません）。改変版によって生じた問題について作者は責任を負いません。
 - 同梱ソフトのライセンス：[THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt)（PDF.js / pdf-lib / pako / qrcode-generator ほか）
 - 本ソフトは無保証です。大切な書類は書き出した結果を必ず確認してください。
 
@@ -75,7 +73,7 @@ Drop the file on "Verify" on the official page, or run `certutil -hashfile Front
 
 ### License
 - © 2026 Front Softworks — [MIT License](LICENSE).
-- **Please distribute modified versions under a name other than "Front PDF" or "PDF_KOBO".** The MIT License does not grant rights to the name or logo. The author is not responsible for problems caused by modified versions.
+- **Please distribute modified versions under a name other than "Front PDF".** The MIT License does not grant rights to the name or logo. The author is not responsible for problems caused by modified versions.
 - Third-party licenses: [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt)
 - Provided "as is", without warranty.
 
