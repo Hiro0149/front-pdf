@@ -158,6 +158,10 @@ section:nth-of-type(even){background:var(--paper2)}
 /* 共通ボックス */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}@media (max-width:860px){.two{grid-template-columns:1fr}}
 .box{padding:30px}
+.regcard{background:var(--leaf);border:2px solid rgba(47,107,79,.45);box-shadow:0 10px 28px rgba(47,107,79,.14)}
+.regcard .idin{background:#fff}
+.reghint{margin:10px 0 4px;font-size:14.5px;color:var(--green2);font-weight:600}
+.regcard .out{background:#fff}
 .actsteps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:0 0 28px}@media (max-width:900px){.actsteps{grid-template-columns:1fr}}
 .actsteps figure{margin:0;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(0,0,0,.05)}
 .actsteps img{width:100%;height:auto;border-radius:6px;border:1px solid rgba(0,0,0,.06)}
@@ -405,8 +409,9 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
   <figure><a href="act_2.jpg" target="_blank" rel="noopener"><img src="act_2.jpg" alt="" loading="lazy" width="900" height="457"></a><figcaption><b>2</b><span lang="ja">下の欄にコードを貼り付けて「発行する」を押し、表示されたパスワード（登録テキスト）をコピーします。スマホの場合は、10 文字の短いパスワードでも大丈夫です。</span><span lang="en">Paste the code below, press "Issue", and copy the password (registration text). On a phone, the 10-character short password also works.</span></figcaption></figure>
   <figure><a href="act_3.jpg" target="_blank" rel="noopener"><img src="act_3.jpg" alt="" loading="lazy" width="900" height="677"></a><figcaption><b>3</b><span lang="ja">アプリの入力欄にパスワードを貼り付けて「はじめる」を押すと、利用できるようになります。</span><span lang="en">Paste the password into the app's box and press "Start". You're ready to go.</span></figcaption></figure>
  </div>
- <div class="panel box fade">
+ <div class="panel box fade regcard">
   <div class="row"><input class="idin" id="idIn" maxlength="9" placeholder="XXXX-XXXX" autocomplete="off" spellcheck="false" aria-label="ID"><button class="btn" id="issueBtn"><span lang="ja">発行する</span><span lang="en">Issue</span></button></div>
+  <p class="reghint"><span lang="ja">ここにアプリ側の ID を貼り付けて、「発行する」ボタンを押してください</span><span lang="en">Paste the ID shown in the app here and press "Issue"</span></p>
   <div class="err" id="idErr"></div>
   <div id="outWrap" style="display:none">
    <p style="margin:6px 0 8px;color:var(--mist2)"><b><span lang="ja">① パスワード（登録テキスト）をコピーして、アプリに貼り付けてください</span><span lang="en">1. Copy the password (registration text) and paste it into the app</span></b></p>
