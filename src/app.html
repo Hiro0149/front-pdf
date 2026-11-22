@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- PDF_KOBO v1.0.0 | Copyright (c) 2026 Front Softworks | MIT License (see script#lic-mit) | Official source: GitHub Releases | Third-party licenses: script#lic-3rd -->
+<!-- Front PDF v1.0.1 | Copyright (c) 2026 Front Softworks | MIT License (see script#lic-mit) | Official source: GitHub Releases | Third-party licenses: script#lic-3rd -->
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="PDF_KOBO v1.0.0 (c) 2026 Front Softworks, MIT License. Offline single-file PDF editor. Full user/AI manual is embedded in the script#ai-manual block below.">
+<meta name="description" content="Front PDF v1.0.1 (c) 2026 Front Softworks, MIT License. Offline single-file PDF editor. Full user/AI manual is embedded in the script#ai-manual block below.">
 <script type="text/markdown" id="ai-manual">
 /*__MANUAL__*/
 </script>
@@ -14,7 +14,7 @@
 <script type="text/plain" id="lic-3rd">
 /*__NOTICES__*/
 </script>
-<title>PDF_KOBO</title>
+<title>Front PDF</title>
 <style>
 :root{--side:230px}
 /* ===== skin: modern (default) ===== */
@@ -261,7 +261,7 @@ legend{padding:0 4px}
 <body class="skin-modern">
 
 <div class="win" id="main">
-  <div class="title"><div class="ico"></div><span class="t" id="winTitle">PDF_KOBO ― PDF加工ツール</span><div class="hdr"><span class="gl">画像取込</span><select id="imgMode" title="PNG/JPEGを開いたときの配置"><option value="a4">A4に配置</option><option value="raw">画像サイズのまま</option></select><span class="gl">スキン</span><select id="skinSel" title="見た目を切り替え"><option value="modern">モダン</option><option value="dark">ダーク</option><option value="98">レトロPC</option><option value="aqua">アクア</option><option value="gba">ゲーム機</option></select><span class="gl" title="言語 / Language" style="margin-left:6px"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" style="display:block"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg></span><select id="langSel" data-noi18n title="言語 / Language"></select><button id="bHelp" title="使い方">？</button><button id="bAbout" title="バージョン・ライセンス">ⓘ</button></div><button tabindex="-1" class="wb wb-min">_</button><button tabindex="-1" class="wb wb-max">□</button><button tabindex="-1" class="wb wb-close" id="aboutX">×</button></div>
+  <div class="title"><div class="ico"></div><span class="t" id="winTitle">Front PDF ― PDF加工ツール</span><div class="hdr"><span class="gl">画像取込</span><select id="imgMode" title="PNG/JPEGを開いたときの配置"><option value="a4">A4に配置</option><option value="raw">画像サイズのまま</option></select><span class="gl">スキン</span><select id="skinSel" title="見た目を切り替え"><option value="modern">モダン</option><option value="dark">ダーク</option><option value="98">レトロPC</option><option value="aqua">アクア</option><option value="gba">ゲーム機</option></select><span class="gl" title="言語 / Language" style="margin-left:6px"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" style="display:block"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg></span><select id="langSel" data-noi18n title="言語 / Language"></select><button id="bHelp" title="使い方">？</button><button id="bAbout" title="バージョン・ライセンス">ⓘ</button></div><button tabindex="-1" class="wb wb-min">_</button><button tabindex="-1" class="wb wb-max">□</button><button tabindex="-1" class="wb wb-close" id="aboutX">×</button></div>
   <div class="toolbar tbar">
    <div class="trow">
     <div class="grp"><span class="gl">ファイル</span><button id="bOpen" title="PDF / PNG / JPEG / 作業ファイル(.pdfkobo) を開く (Ctrl+O)">開く</button><button id="bSave" title="作業ファイル(.pdfkobo)に保存して、あとで続きから編集 (Ctrl+S)">作業を保存</button></div>
@@ -291,7 +291,7 @@ legend{padding:0 4px}
     <div id="split" title="ドラッグで幅を調整"></div>
     <div class="toolbox" id="toolbox"></div>
     <div class="edarea" id="edArea">
-      <div id="viewEmpty"><div class="big">PDF_KOBO</div><div data-ih>PDF・PNG・JPEG を<b>ドラッグ＆ドロップ</b><br>または［開く］ボタン ／ 画像は Ctrl+V でも追加できます</div><div class="vcredit"><div class="pw" data-noi18n>Powered by <b>Front Softworks</b></div><div class="vw" id="vWorks"></div></div></div>
+      <div id="viewEmpty"><div class="big">Front PDF</div><div data-ih>PDF・PNG・JPEG を<b>ドラッグ＆ドロップ</b><br>または［開く］ボタン ／ 画像は Ctrl+V でも追加できます</div><div class="vcredit"><div class="pw" data-noi18n>Powered by <b>Front Softworks</b></div><div class="vw" id="vWorks"></div></div></div>
       <div id="stages"><div class="stage" id="stage" style="display:none"><canvas id="edBase"></canvas><canvas id="edOv"></canvas></div><div class="stage" id="stage2" style="display:none"><canvas id="edBase2"></canvas><canvas id="edOv2"></canvas></div></div>
     </div>
     <div class="props"><div class="ptitle" id="pTitle">プロパティ</div><div id="props" class="sunken"></div></div>
@@ -390,29 +390,29 @@ legend{padding:0 4px}
 </div></div>
 
 <div class="modal" id="dlgUnlock"><div class="win" style="width:620px">
-  <div class="title"><span class="t">ようこそ PDF_KOBO へ</span></div>
+  <div class="title"><span class="t">ようこそ Front PDF へ</span></div>
   <div class="dbody" style="line-height:1.6;padding:12px 14px;max-height:84vh;overflow:auto">
-   <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><b style="font-size:20px" data-noi18n>PDF_KOBO</b><span data-noi18n class="wVer"></span><span data-noi18n style="opacity:.8">by Front Softworks</span><span style="flex:1"></span><select id="ulLang" data-noi18n title="Language"></select></div>
-   <p data-ih style="margin:8px 0">はじめて使うときは、公式ページで<b>無料の利用登録</b>をしてください（この PC・ブラウザで1回だけです）。</p>
+   <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><b style="font-size:20px" data-noi18n>Front PDF</b><span data-noi18n class="wVer"></span><span data-noi18n style="opacity:.8">by Front Softworks</span><span style="flex:1"></span><select id="ulLang" data-noi18n title="Language"></select></div>
+   <p data-ih style="margin:8px 0">はじめて使うときは、公式ページで<b>無料のアクティベーション（利用有効化）</b>をしてください（このブラウザで1回だけです）。</p>
    <div class="absec ulgrid">
     <div class="ulsteps">
-     <div class="ulst"><span class="uln">1</span><div><b>この PC の ID</b><div style="display:flex;gap:6px;align-items:center;margin-top:2px"><code id="ulId" data-noi18n></code><button id="bUlId">ID をコピー</button></div></div></div>
-     <div class="ulst"><span class="uln">2</span><div><b>公式ページの「利用登録」に ID を入力</b><div style="display:flex;gap:6px;align-items:center;margin-top:2px"><div class="wUrl" style="flex:1;user-select:all;word-break:break-all;font-family:monospace;font-size:12px"></div><button id="bUlCopy">URL をコピー</button></div></div></div>
-     <div class="ulst"><span class="uln">3</span><div><b>発行された登録テキストを下に貼り付け</b></div></div>
+     <div class="ulst"><span class="uln">1</span><div><b>このブラウザの ID</b><div style="display:flex;gap:6px;align-items:center;margin-top:2px"><code id="ulId" data-noi18n></code><button id="bUlId">ID をコピー</button></div></div></div>
+     <div class="ulst"><span class="uln">2</span><div><b>公式ページの「アクティベーション」に ID を貼り付けて「発行する」</b><div style="display:flex;gap:6px;align-items:center;margin-top:2px"><div class="wUrl" style="flex:1;user-select:all;word-break:break-all;font-family:monospace;font-size:12px"></div><button id="bUlCopy">URL をコピー</button></div></div></div>
+     <div class="ulst"><span class="uln">3</span><div><b>表示されたパスワードを下に貼り付け</b></div></div>
     </div>
     <div class="ulqr"><div id="ulQr" data-noi18n></div><div class="ulqrc">スマホで読み取ると、ID 入力済みの公式ページが開きます</div></div>
    </div>
-   <textarea id="ulCode" rows="4" autocomplete="off" spellcheck="false" placeholder="登録テキスト（または 10 文字のコード）をここに貼り付け" style="width:100%;box-sizing:border-box;font-family:monospace;font-size:12px;padding:6px"></textarea>
+   <textarea id="ulCode" rows="4" autocomplete="off" spellcheck="false" placeholder="パスワード（または 10 文字の短いパスワード）をここに貼り付け" style="width:100%;box-sizing:border-box;font-family:monospace;font-size:12px;padding:6px"></textarea>
    <div style="display:flex;gap:8px;align-items:center;margin-top:6px"><div id="ulErr" style="flex:1;color:#d33;min-height:1.4em"></div><button id="bUlGo" class="primary">はじめる</button></div>
    <p data-ih class="ulnote">ID はアプリが作ったランダムな番号で、PC や個人の情報は含みません。公式ページでも ID は送信されず、ブラウザの中だけで計算します。</p>
-   <p data-ih class="ulnote">PDF_KOBO は公式配布元から無料でダウンロードできます。メールなどでファイルだけを受け取った方は、公式配布元から改ざんされていない最新版を入手してください。</p>
+   <p data-ih class="ulnote">Front PDF は公式配布元から無料でダウンロードできます。メールなどでファイルだけを受け取った方は、公式配布元から改ざんされていない最新版を入手してください。</p>
    <div class="absec"><b>Front Softworks のほかのソフト</b><div class="wWorks"></div></div>
   </div>
 </div></div>
 <div class="modal" id="dlgWelcome"><div class="win" style="width:520px">
-  <div class="title"><span class="t">ようこそ PDF_KOBO へ</span><button data-close>×</button></div>
+  <div class="title"><span class="t">ようこそ Front PDF へ</span><button data-close>×</button></div>
   <div class="dbody" style="line-height:1.65;padding:12px 14px">
-   <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><b style="font-size:20px" data-noi18n>PDF_KOBO</b><span data-noi18n class="wVer"></span><span data-noi18n style="opacity:.8">by Front Softworks</span></div>
+   <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><b style="font-size:20px" data-noi18n>Front PDF</b><span data-noi18n class="wVer"></span><span data-noi18n style="opacity:.8">by Front Softworks</span></div>
    <p data-ih style="margin:8px 0">ブラウザだけで動く、無料・オフラインの PDF 編集ツールです。ファイルは外部に送信されません。</p>
    <div class="absec"><b>公式配布元</b><div class="wUrl" style="user-select:all;word-break:break-all;font-family:monospace;margin:2px 0 4px"></div>
     <p data-ih style="margin:0">このファイルをメールなどで受け取った方は、改ざんされていない最新版を<b>公式配布元</b>から入手してください。人に勧めるときも、ファイルではなく URL を教えてください。</p></div>
@@ -421,9 +421,9 @@ legend{padding:0 4px}
   <div class="btns"><button id="bWShare">紹介文と URL をコピー</button><button data-close>はじめる</button></div>
 </div></div>
 <div class="modal" id="dlgAbout"><div class="win" style="width:580px">
-  <div class="title"><span class="t">PDF_KOBO について</span><button data-close>×</button></div>
+  <div class="title"><span class="t">Front PDF について</span><button data-close>×</button></div>
   <div class="dbody" style="max-height:74vh;overflow:auto;line-height:1.65;padding:12px 14px">
-   <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><b style="font-size:20px" data-noi18n>PDF_KOBO</b><span data-noi18n id="abVer"></span><span data-noi18n style="opacity:.8">© 2026 Front Softworks ・ MIT License</span></div>
+   <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><b style="font-size:20px" data-noi18n>Front PDF</b><span data-noi18n id="abVer"></span><span data-noi18n style="opacity:.8">© 2026 Front Softworks ・ MIT License</span></div>
    <p data-ih style="margin:8px 0">このソフトは <b>MIT ライセンス</b>のオープンソースです。個人・会社を問わず、無料で使用・コピー・改変・再配布・商用利用ができます。条件は、著作権表示とライセンス文を残すことだけです。</p>
    <p data-ih style="margin:8px 0"><b>無保証：</b>本ソフトは「現状のまま」提供され、作者はいかなる保証も責任も負いません。大切な書類は、書き出した結果を必ず確認してください。</p>
    <div class="absec"><b>公式配布元</b>
@@ -431,7 +431,7 @@ legend{padding:0 4px}
     <p data-ih style="margin:0">公式配布元以外から入手したファイルは、改変されている可能性があります。改変版によって生じた問題について、作者は責任を負いません。</p></div>
    <div class="absec"><b>改変されていないかの確認（SHA-256）</b>
     <p data-ih style="margin:0 0 4px">Windows のコマンドプロンプトで次のコマンドを実行し、表示された値が公式配布元に掲載されている SHA-256 と一致するか確認してください（インストール不要）。</p>
-    <div style="display:flex;gap:6px;align-items:center"><code data-noi18n id="abCmd" style="flex:1;user-select:all;padding:4px 6px;border:1px solid var(--line,#8888);border-radius:4px;font-size:12px">certutil -hashfile PDF_KOBO.html SHA256</code><button id="bAbCmd">コピー</button></div></div>
+    <div style="display:flex;gap:6px;align-items:center"><code data-noi18n id="abCmd" style="flex:1;user-select:all;padding:4px 6px;border:1px solid var(--line,#8888);border-radius:4px;font-size:12px">certutil -hashfile Front_PDF.html SHA256</code><button id="bAbCmd">コピー</button></div></div>
    <div class="absec"><b>人に勧めるときは</b>
     <p data-ih style="margin:0 0 6px">作者はこのソフトをメールでは配布しません。人に勧めるときは、ファイルを送らずに<b>公式配布元の URL</b> を教えてください。いつでも改ざんされていない最新版を入手できます。</p>
     <button id="bShare">紹介文と URL をコピー</button></div>
@@ -443,7 +443,7 @@ legend{padding:0 4px}
   <div class="btns"><button data-close>閉じる</button></div>
 </div></div>
 <div class="modal" id="dlgHelp"><div class="win" style="width:580px">
-  <div class="title"><span class="t">PDF_KOBO の使い方</span><button data-close>×</button></div>
+  <div class="title"><span class="t">Front PDF の使い方</span><button data-close>×</button></div>
   <div class="dbody" style="max-height:72vh;overflow:auto">
   <table class="help">
    <tr><td>開く・結合</td><td>PDF・PNG・JPEGを何個でも追加できます（ドラッグ＆ドロップ可）。左のサムネイル順にそのまま結合されます。</td></tr>
@@ -505,9 +505,9 @@ function canvasBlob(c){return new Promise(r=>c.toBlob(r,'image/png'));}
 function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},5000);}
 const isTyping=t=>t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT');
 /* ===== 公式情報（公開時に OFFICIAL_URL を GitHub Releases の URL にする） ===== */
-const APP_VER='1.0.0',OFFICIAL_URL='/*__SITEURL__*/',AUTHOR='Front Softworks';
+const APP_VER='1.0.1',OFFICIAL_URL='/*__SITEURL__*/',AUTHOR='Front Softworks';
 const OFFICIAL_SHOW=()=>OFFICIAL_URL||'GitHub Releases（公開準備中）';
-/* 利用登録（PC ごとの ID 方式）。ACT は build.py で SITE_URL を設定し ACTIVATION=True のときだけ true になる */
+/* アクティベーション（ブラウザごとの ID 方式）。ACT は build.py で SITE_URL を設定し ACTIVATION=True のときだけ true になる */
 const ACT=/*__ACT__*/false;
 let LOCKED=false;
 const FS_WORKS=[{name:'ExVAN Planner',desc:'コンテナ積み付け最適化ソフト（業務用）',url:'https://exvan-planner.github.io/'}];
@@ -548,7 +548,7 @@ const i18nObs=new MutationObserver(ms=>{for(const m of ms){
   if(m.type==='attributes'){if(m.target.closest&&!skipNode(m.target))trAttr(m.target,m.attributeName);continue;}
   const t=m.target.nodeType===3?m.target.parentElement:m.target;const r=t&&t.closest?t.closest(RICH):null;if(r){trRich(r);continue;}
   if(m.type==='characterData'){trText(m.target);continue;}m.addedNodes.forEach(n=>trTree(n));}});
-function setLang(l){LANG=l;try{localStorage.setItem('pdfkobo98.lang',JSON.stringify(l));}catch(e){}document.documentElement.lang=HTMLLANG[l]||l;document.title=tr('PDF_KOBO');
+function setLang(l){LANG=l;try{localStorage.setItem('pdfkobo98.lang',JSON.stringify(l));}catch(e){}document.documentElement.lang=HTMLLANG[l]||l;document.title=tr('Front PDF');
   const ls=document.getElementById('langSel');if(ls)ls.value=l;const ul=document.getElementById('ulLang');if(ul)ul.value=l;trTree(document.body,true);}
 
 // ================= state
@@ -685,7 +685,7 @@ function updateDirty(){updatePgNo();}
 async function buildWorkFile(){
   const used=new Set(state.pages.map(p=>p.srcId)),imgs={};
   for(const p of state.pages)for(const o of p.objects)if(o.imgId&&state.images[o.imgId])imgs[o.imgId]=state.images[o.imgId].url;
-  const data={app:'PDF_KOBO',ver:1,saved:new Date().toISOString(),cur:state.cur,wm:state.wm,
+  const data={app:'Front PDF',ver:1,saved:new Date().toISOString(),cur:state.cur,wm:state.wm,
     sources:[...used].map(id=>({id,name:state.sources[id].name,b64:u8b64(state.sources[id].bytes)})),
     pages:JSON.parse(serialize()).pages,images:imgs};
   let body=new TextEncoder().encode(JSON.stringify(data)),flag='J';
@@ -698,14 +698,14 @@ async function doSave(base){base=(base||'作業ファイル').replace(/[\\/:*?"<
   try{busy('作業ファイルを保存中...',0.3);const bytes=await buildWorkFile();busy(false);
     let saved=false;
     if(window.showSaveFilePicker){try{
-        if(!work.handle||work.name!==fname)work.handle=await window.showSaveFilePicker({suggestedName:fname,types:[{description:'PDF_KOBO 作業ファイル',accept:{'application/octet-stream':['.pdfkobo']}}]});
+        if(!work.handle||work.name!==fname)work.handle=await window.showSaveFilePicker({suggestedName:fname,types:[{description:'Front PDF 作業ファイル',accept:{'application/octet-stream':['.pdfkobo']}}]});
         const w=await work.handle.createWritable();await w.write(bytes);await w.close();saved=true;work.name=work.handle.name||fname;}
       catch(e){if(e&&e.name==='AbortError'){status('保存をキャンセルしました');return;}work.handle=null;}}
     if(!saved){download(new Blob([bytes],{type:'application/octet-stream'}),fname);work.name=fname;}
     work.saved=serialize();updateDirty();status('作業ファイル「'+work.name+'」を保存しました（人に渡すときは［PDF書き出し］を使ってください）');
   }catch(e){busy(false);console.error(e);msg('保存エラー',e.message||String(e));}}
 async function loadWorkFile(f){
-  const raw=new Uint8Array(await f.arrayBuffer());const magic=new TextDecoder().decode(raw.subarray(0,8));if(magic!==KOBO_MAGIC)throw new Error('PDF_KOBOの作業ファイルではありません');
+  const raw=new Uint8Array(await f.arrayBuffer());const magic=new TextDecoder().decode(raw.subarray(0,8));if(magic!==KOBO_MAGIC)throw new Error('Front PDFの作業ファイルではありません');
   const flag=String.fromCharCode(raw[8]);let body=raw.subarray(9);if(flag==='Z')body=await streamConv(body,new DecompressionStream('gzip'));
   const data=JSON.parse(new TextDecoder().decode(body));
   if(state.pages.length&&!confirm(tr('いま開いている作業を閉じて、作業ファイル「'+f.name+'」を開きます。よろしいですか？\n（保存していない変更は失われます）')))return false;
@@ -861,7 +861,7 @@ async function buildPdf(list,o,prog){
     for(const a of stick)await addStickyAnnot(out,cp,a.r,a.q,a.png);
   }
   let doc=out;if(o.nup>1)doc=await nUp(await PDFDocument.load(await out.save()),o.nup);
-  if(o.title)doc.setTitle(o.title);doc.setProducer('PDF_KOBO v'+APP_VER+' ('+AUTHOR+')'+(OFFICIAL_URL?' '+OFFICIAL_URL:''));doc.setCreator('PDF_KOBO v'+APP_VER+(OFFICIAL_URL?' - '+OFFICIAL_URL:''));
+  if(o.title)doc.setTitle(o.title);doc.setProducer('Front PDF v'+APP_VER+' ('+AUTHOR+')'+(OFFICIAL_URL?' '+OFFICIAL_URL:''));doc.setCreator('Front PDF v'+APP_VER+(OFFICIAL_URL?' - '+OFFICIAL_URL:''));
   return await doc.save();
 }
 function z2h(s){return s.replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xFEE0)).replace(/[－ー〜～~―‐]/g,'-').replace(/[，、]/g,',');}
@@ -900,7 +900,7 @@ function hex01(h){const v=parseInt((h||'#fff38a').slice(1),16);return[(v>>16&255
 async function addStickyAnnot(doc,page,rect,o,png){const{PDFHexString,PDFString}=PDFLib;const ctx=doc.context;const img=await doc.embedPng(png);
   const[x1,y1,x2,y2]=rect,w=x2-x1,h=y2-y1;
   const ap=ctx.register(ctx.stream('q '+w.toFixed(3)+' 0 0 '+h.toFixed(3)+' 0 0 cm /Im0 Do Q',{Type:'XObject',Subtype:'Form',BBox:[0,0,w,h],Resources:{XObject:{Im0:img.ref}}}));
-  const d=ctx.obj({Type:'Annot',Subtype:'Stamp',Rect:[x1,y1,x2,y2],Contents:PDFHexString.fromText(o.text||''),T:PDFHexString.fromText(o.author||'PDF_KOBO'),
+  const d=ctx.obj({Type:'Annot',Subtype:'Stamp',Rect:[x1,y1,x2,y2],Contents:PDFHexString.fromText(o.text||''),T:PDFHexString.fromText(o.author||'Front PDF'),
     Subj:PDFHexString.fromText('付箋'),C:hex01(o.color),F:4,M:PDFString.fromDate(new Date()),AP:{N:ap}});page.node.addAnnot(ctx.register(d));}
 function isMask(o){return(o.type==='shape'&&o.fillOn&&(o.alpha??100)>=80)||(o.type==='text'&&o.bg&&o.bg!=='none');}
 $('#secGo').onclick=()=>{closeDlg($('#secGo'));const p=pendingExport;pendingExport=null;if(p)runExport(p.groups,p.o);};
@@ -949,7 +949,7 @@ async function stampFromImage(file){
   const d=x.getImageData(0,0,c.width,c.height),a=d.data;for(let i=0;i<a.length;i+=4){const mn=Math.min(a[i],a[i+1],a[i+2]);if(mn>225)a[i+3]=0;else if(mn>180)a[i+3]=Math.round(a[i+3]*(225-mn)/45);}x.putImageData(d,0,0);
   const s={...normStamp({style:'image',d:20*MM}),id:uid(),img:c.toDataURL('image/png'),ar:c.height/c.width};libImgPrep(s);LIB.push(s);libCur=LIB.length-1;libSave();renderPanel();status('印影を登録しました');
 }
-function exportLib(){download(new Blob([JSON.stringify(LIB.map(s=>{const c={...s};delete c.imgId;return c;}),null,1)],{type:'application/json'}),'StampBook_PDF_KOBO.json');}
+function exportLib(){download(new Blob([JSON.stringify(LIB.map(s=>{const c={...s};delete c.imgId;return c;}),null,1)],{type:'application/json'}),'StampBook_Front_PDF.json');}
 async function importLib(file){try{const arr=JSON.parse(await file.text());if(!Array.isArray(arr))throw new Error('形式が違います');for(const s of arr){const n={...normStamp(s),id:uid()};libImgPrep(n);LIB.push(n);}libSave();renderPanel();status(arr.length+' 個のハンコを読み込みました');}catch(e){msg('ハンコ帳の読み込み',e.message);}}
 
 // ================= editor (right view)
@@ -1075,7 +1075,7 @@ function showPage(u,keepSel){endInline();
   updatePgNo();refreshSel();renderPanel();if(p&&VS.mode!=='grid'){edRenderBase();const c=cards.get(p.uid);if(c){const r=c.getBoundingClientRect(),sr=$('#side').getBoundingClientRect();if(r.top<sr.top||r.bottom>sr.bottom)c.scrollIntoView({block:'nearest'});}}
 }
 function updatePgNo(){const i=ed.p?state.pages.indexOf(ed.p):-1;$('#pgNo').textContent=(i+1)+' / '+state.pages.length;$('#bPrev').disabled=i<=0;$('#bNext').disabled=i<0||i>=state.pages.length-1;
-  $('#winTitle').textContent='PDF_KOBO'+(work.name?' ― '+work.name+(isDirty()?' *':''):(ed.p?' ― '+state.sources[ed.p.srcId].name:''));}
+  $('#winTitle').textContent='Front PDF'+(work.name?' ― '+work.name+(isDirty()?' *':''):(ed.p?' ― '+state.sources[ed.p.srcId].name:''));}
 function goPage(delta){if(!ed.p)return;const i=state.pages.indexOf(ed.p)+delta;if(i<0||i>=state.pages.length)return;const u=state.pages[i].uid;state.sel.clear();state.sel.add(u);state.anchor=u;showPage(u);}
 const ZL=[0.25,0.33,0.5,0.67,0.75,1,1.25,1.5,2,3,4,5];
 function setZoom(z){const sel=$('#edZoom'),a=$('#edArea');const rx=(a.scrollLeft+a.clientWidth/2)/Math.max(1,a.scrollWidth),ry=(a.scrollTop+a.clientHeight/2)/Math.max(1,a.scrollHeight);
@@ -1472,15 +1472,15 @@ $('#bExport').onclick=openExport;$('#xGo').onclick=doExport;
 $('#bPng').onclick=()=>{if(!state.pages.length){msg('ページがありません','先にファイルを開いてください。');return;}$('#pName').value=defaultBase();openDlg('#dlgPng');};$('#pGo').onclick=doPng;
 function manualText(){try{const m=JSON.parse($('#manuals').textContent);if(m[LANG])return m[LANG];}catch(e){}return $('#ai-manual').textContent.trim();}
 $('#bManCopy').onclick=()=>{copyText(manualText()).then(ok=>status(ok?'説明書をコピーしました。AIのチャットに貼り付けて質問できます':'コピーできませんでした'));};
-$('#bManDl').onclick=()=>download(new Blob([manualText()],{type:'text/markdown'}),'PDF_KOBO_manual_'+LANG+'.md');
+$('#bManDl').onclick=()=>download(new Blob([manualText()],{type:'text/markdown'}),'Front_PDF_manual_'+LANG+'.md');
 $('#bHelp').onclick=()=>openDlg('#dlgHelp');$('#abVer').textContent='v'+APP_VER;$('#abUrl').textContent=OFFICIAL_SHOW();
 function worksHtml(){return FS_WORKS.map(w=>'<div style="margin:2px 0"><b data-noi18n>'+w.name+'</b> — <span>'+w.desc+'</span><br><a data-noi18n href="'+w.url+'" target="_blank" rel="noopener noreferrer" style="font-family:monospace;word-break:break-all">'+w.url+'</a></div>').join('');}
-function shareText(){return tr('無料・オフラインの PDF 編集ツール「PDF_KOBO」（インストール不要・ファイルは外部に送信されません）')+'\n'+tr('公式配布元')+': '+OFFICIAL_SHOW();}
+function shareText(){return tr('無料・オフラインの PDF 編集ツール「Front PDF」（インストール不要・ファイルは外部に送信されません）')+'\n'+tr('公式配布元')+': '+OFFICIAL_SHOW();}
 function doShare(){copyText(shareText()).then(ok=>status(ok?'紹介文と URL をコピーしました。メールやチャットに貼り付けてください':'コピーできませんでした'));}
 $('#abWorks').innerHTML=worksHtml();
 $('#vWorks').innerHTML=FS_WORKS.map(w=>'<a data-noi18n href="'+w.url+'" target="_blank" rel="noopener noreferrer">'+w.name+'</a> — <span>'+w.desc+'</span>').join(' ／ ');$('#bShare').onclick=doShare;$('#bWShare').onclick=doShare;
 $('#dlgWelcome .wVer').textContent='v'+APP_VER;$('#dlgWelcome .wUrl').textContent=OFFICIAL_SHOW();$('#dlgWelcome .wWorks').innerHTML=worksHtml();
-$('#stCredit').textContent='PDF_KOBO v'+APP_VER+' © '+AUTHOR;$('#stCredit').onclick=()=>$('#bAbout').click();
+$('#stCredit').textContent='Front PDF v'+APP_VER+' © '+AUTHOR;$('#stCredit').onclick=()=>$('#bAbout').click();
 $('#dlgUnlock .wVer').textContent='v'+APP_VER;$('#dlgUnlock .wUrl').textContent=OFFICIAL_SHOW();$('#dlgUnlock .wWorks').innerHTML=worksHtml();
 let IID=KoboLic.normId(LS.get('iid',''));if(!IID){IID=KoboLic.newId();LS.set('iid',IID);}
 const REG_URL=()=>OFFICIAL_URL?OFFICIAL_URL.replace(/#.*$/,'')+'#id='+IID:'';
@@ -1488,8 +1488,8 @@ $('#ulId').textContent=KoboLic.fmtId(IID);$('#dlgUnlock .wUrl').textContent=OFFI
 $('#bUlId').onclick=()=>copyText(KoboLic.fmtId(IID)).then(ok=>status(ok?'コピーしました':'コピーできませんでした'));
 $('#bUlCopy').onclick=()=>copyText(REG_URL()||OFFICIAL_SHOW()).then(ok=>status(ok?'コピーしました':'コピーできませんでした'));
 try{if(REG_URL()&&typeof qrcode==='function'){const q=qrcode(0,'M');q.addData(REG_URL());q.make();$('#ulQr').innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true});}else $('#dlgUnlock .ulqr').style.display='none';}catch(e){$('#dlgUnlock .ulqr').style.display='none';}
-function tryUnlock(){const v=$('#ulCode').value;if(KoboLic.check(v,IID)){LOCKED=false;LS.set('lic1',IID);$('#dlgUnlock').classList.remove('show');status('ありがとうございます。PDF_KOBO をお使いいただけます');}
-  else{$('#ulErr').textContent=tr(!v.trim()?'登録テキストを貼り付けてください':'この PC の ID 用の登録テキストではありません。公式ページで発行し直してください');}}
+function tryUnlock(){const v=$('#ulCode').value;if(KoboLic.check(v,IID)){LOCKED=false;LS.set('lic1',IID);$('#dlgUnlock').classList.remove('show');status('ありがとうございます。Front PDF をお使いいただけます');}
+  else{$('#ulErr').textContent=tr(!v.trim()?'パスワードを貼り付けてください':'このブラウザの ID 用のパスワードではありません。公式ページで発行し直してください');}}
 $('#bUlGo').onclick=tryUnlock;$('#ulCode').addEventListener('keydown',e=>{e.stopPropagation();if(e.key==='Enter'&&(e.ctrlKey||!e.shiftKey)&&KoboLic.check($('#ulCode').value,IID)){e.preventDefault();tryUnlock();}});
 $('#ulCode').addEventListener('paste',()=>setTimeout(()=>{if(KoboLic.check($('#ulCode').value,IID))tryUnlock();},30));
 if(ACT&&location.hash!=='#nowelcome'&&LS.get('lic1','')!==IID){LOCKED=true;openDlg('#dlgUnlock');setTimeout(()=>$('#ulCode').focus(),50);}

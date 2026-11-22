@@ -3,7 +3,7 @@
 import json
 L=['en','zhCN','zhTW','pt','fr','ko']
 EX=r"""
-PDF_KOBO の使い方¦PDF_KOBO Help¦PDF_KOBO 使用说明¦PDF_KOBO 使用說明¦Ajuda do PDF_KOBO¦Aide de PDF_KOBO¦PDF_KOBO 사용법
+Front PDF の使い方¦Front PDF Help¦Front PDF 使用说明¦Front PDF 使用說明¦Ajuda do Front PDF¦Aide de Front PDF¦Front PDF 사용법
 スキン¦Skin¦皮肤¦外觀¦Tema¦Thème¦스킨
 ダーク¦Dark¦深色¦深色¦Escuro¦Sombre¦다크
 レトロPC¦Retro PC¦复古PC¦復古PC¦PC retrô¦PC rétro¦레트로 PC
@@ -35,7 +35,7 @@ AI（Copilot・Claude など）に貼り付けて質問できる詳しい説明�
 コピーできませんでした¦Couldn't copy¦无法复制¦無法複製¦Não foi possível copiar¦Copie impossible¦복사하지 못했습니다
 コピー¦Copy¦复制¦複製¦Copiar¦Copier¦복사
 コピーしました¦Copied¦已复制¦已複製¦Copiado¦Copié¦복사했습니다
-PDF_KOBO について¦About PDF_KOBO¦关于 PDF_KOBO¦關於 PDF_KOBO¦Sobre o PDF_KOBO¦À propos de PDF_KOBO¦PDF_KOBO 정보
+Front PDF について¦About Front PDF¦关于 Front PDF¦關於 Front PDF¦Sobre o Front PDF¦À propos de Front PDF¦Front PDF 정보
 バージョン・ライセンス¦Version & license¦版本与许可¦版本與授權¦Versão e licença¦Version et licence¦버전·라이선스
 公式配布元¦Official source¦官方发布处¦官方發布處¦Fonte oficial¦Source officielle¦공식 배포처
 改変されていないかの確認（SHA-256）¦Check that the file is unmodified (SHA-256)¦确认文件未被修改（SHA-256）¦確認檔案未被修改（SHA-256）¦Verificar se o arquivo não foi alterado (SHA-256)¦Vérifier que le fichier n'a pas été modifié (SHA-256)¦수정 여부 확인 (SHA-256)
@@ -47,23 +47,23 @@ GitHub Releases（公開準備中）¦GitHub Releases (coming soon)¦GitHub Rele
 人に勧めるときは¦Recommending it to others¦推荐给他人时¦推薦給他人時¦Para recomendar a outras pessoas¦Pour le recommander¦다른 사람에게 추천할 때
 紹介文と URL をコピー¦Copy intro text and URL¦复制介绍文字和 URL¦複製介紹文字與 URL¦Copiar texto e URL¦Copier le texte et l'URL¦소개 문구와 URL 복사
 Front Softworks のほかのソフト¦Other software by Front Softworks¦Front Softworks 的其他软件¦Front Softworks 的其他軟體¦Outros softwares da Front Softworks¦Autres logiciels de Front Softworks¦Front Softworks의 다른 소프트웨어
-ようこそ PDF_KOBO へ¦Welcome to PDF_KOBO¦欢迎使用 PDF_KOBO¦歡迎使用 PDF_KOBO¦Bem-vindo ao PDF_KOBO¦Bienvenue dans PDF_KOBO¦PDF_KOBO에 오신 것을 환영합니다
+ようこそ Front PDF へ¦Welcome to Front PDF¦欢迎使用 Front PDF¦歡迎使用 Front PDF¦Bem-vindo ao Front PDF¦Bienvenue dans Front PDF¦Front PDF에 오신 것을 환영합니다
 はじめる¦Get started¦开始使用¦開始使用¦Começar¦Commencer¦시작하기
-無料・オフラインの PDF 編集ツール「PDF_KOBO」（インストール不要・ファイルは外部に送信されません）¦PDF_KOBO — a free, offline PDF editor (no installation; files never leave your PC)¦免费离线 PDF 编辑工具「PDF_KOBO」（无需安装，文件不会发送到外部）¦免費離線 PDF 編輯工具「PDF_KOBO」（無需安裝，檔案不會傳送到外部）¦PDF_KOBO — editor de PDF gratuito e offline (sem instalação; os arquivos não saem do seu PC)¦PDF_KOBO — éditeur PDF gratuit et hors ligne (sans installation ; vos fichiers ne quittent pas votre PC)¦무료 오프라인 PDF 편집 도구 「PDF_KOBO」(설치 불필요, 파일은 외부로 전송되지 않음)
+無料・オフラインの PDF 編集ツール「Front PDF」（インストール不要・ファイルは外部に送信されません）¦Front PDF — a free, offline PDF editor (no installation; files never leave your PC)¦免费离线 PDF 编辑工具「Front PDF」（无需安装，文件不会发送到外部）¦免費離線 PDF 編輯工具「Front PDF」（無需安裝，檔案不會傳送到外部）¦Front PDF — editor de PDF gratuito e offline (sem instalação; os arquivos não saem do seu PC)¦Front PDF — éditeur PDF gratuit et hors ligne (sans installation ; vos fichiers ne quittent pas votre PC)¦무료 오프라인 PDF 편집 도구 「Front PDF」(설치 불필요, 파일은 외부로 전송되지 않음)
 紹介文と URL をコピーしました。メールやチャットに貼り付けてください¦Intro text and URL copied. Paste them into an email or chat¦已复制介绍文字和 URL，请粘贴到邮件或聊天中¦已複製介紹文字與 URL，請貼到郵件或聊天中¦Texto e URL copiados. Cole-os num e-mail ou chat¦Texte et URL copiés. Collez-les dans un e-mail ou une discussion¦소개 문구와 URL을 복사했습니다. 메일이나 채팅에 붙여넣으세요
 URL をコピー¦Copy URL¦复制 URL¦複製 URL¦Copiar URL¦Copier l'URL¦URL 복사
 合言葉¦Passphrase¦口令¦通關密語¦Senha¦Mot de passe¦암호
 合言葉が違います。公式配布元のページで確認してください¦Wrong passphrase. Please check it on the official source page¦口令不正确，请在官方发布处的页面上确认¦通關密語不正確，請在官方發布處的頁面上確認¦Senha incorreta. Confira na página da fonte oficial¦Mot de passe incorrect. Vérifiez-le sur la page de la source officielle¦암호가 틀렸습니다. 공식 배포처 페이지에서 확인하세요
 合言葉を入力してください¦Please enter the passphrase¦请输入口令¦請輸入通關密語¦Digite a senha¦Saisissez le mot de passe¦암호를 입력하세요
-ありがとうございます。PDF_KOBO をお使いいただけます¦Thank you! PDF_KOBO is ready to use¦谢谢！现在可以使用 PDF_KOBO 了¦謝謝！現在可以使用 PDF_KOBO 了¦Obrigado! O PDF_KOBO está pronto para usar¦Merci ! PDF_KOBO est prêt¦감사합니다! 이제 PDF_KOBO를 사용할 수 있습니다
-この PC の ID¦This PC's ID¦本机 ID¦本機 ID¦ID deste PC¦ID de ce PC¦이 PC의 ID
+ありがとうございます。Front PDF をお使いいただけます¦Thank you! Front PDF is ready to use¦谢谢！现在可以使用 Front PDF 了¦謝謝！現在可以使用 Front PDF 了¦Obrigado! O Front PDF está pronto para usar¦Merci ! Front PDF est prêt¦감사합니다! 이제 Front PDF를 사용할 수 있습니다
+このブラウザの ID¦This browser's ID¦本浏览器的 ID¦本瀏覽器的 ID¦ID deste navegador¦ID de ce navigateur¦이 브라우저의 ID
 ID をコピー¦Copy ID¦复制 ID¦複製 ID¦Copiar ID¦Copier l'ID¦ID 복사
-公式ページの「利用登録」に ID を入力¦Enter the ID in "Registration" on the official page¦在官方页面的"使用登记"中输入 ID¦在官方頁面的「使用登記」中輸入 ID¦Digite o ID em "Registro" na página oficial¦Saisissez l'ID dans « Enregistrement » sur la page officielle¦공식 페이지의 "이용 등록"에 ID 입력
-発行された登録テキストを下に貼り付け¦Paste the issued registration text below¦将发放的登记文本粘贴到下方¦將發放的登記文字貼到下方¦Cole abaixo o texto de registro emitido¦Collez ci-dessous le texte d'enregistrement obtenu¦발급된 등록 텍스트를 아래에 붙여넣기
+公式ページの「アクティベーション」に ID を貼り付けて「発行する」¦Paste the ID into "Activation" on the official page and press "Issue"¦将 ID 粘贴到官方页面的"激活"中并点击"发放"¦將 ID 貼到官方頁面的「啟用」中並點選「發放」¦Cole o ID em "Ativação" na página oficial e clique em "Emitir"¦Collez l'ID dans « Activation » sur la page officielle et cliquez sur « Émettre »¦공식 페이지의 "활성화"에 ID를 붙여넣고 "발급" 클릭
+表示されたパスワードを下に貼り付け¦Paste the password shown there below¦将显示的密码粘贴到下方¦將顯示的密碼貼到下方¦Cole abaixo a senha exibida¦Collez ci-dessous le mot de passe affiché¦표시된 비밀번호를 아래에 붙여넣기
 スマホで読み取ると、ID 入力済みの公式ページが開きます¦Scan with a phone to open the official page with the ID filled in¦用手机扫描即可打开已填好 ID 的官方页面¦用手機掃描即可開啟已填好 ID 的官方頁面¦Leia com o celular para abrir a página oficial com o ID preenchido¦Scannez avec un téléphone pour ouvrir la page officielle avec l'ID déjà rempli¦스마트폰으로 읽으면 ID가 입력된 공식 페이지가 열립니다
-登録テキスト（または 10 文字のコード）をここに貼り付け¦Paste the registration text (or the 10-character code) here¦在此粘贴登记文本（或 10 位代码）¦在此貼上登記文字（或 10 位代碼）¦Cole aqui o texto de registro (ou o código de 10 caracteres)¦Collez ici le texte d'enregistrement (ou le code à 10 caractères)¦등록 텍스트(또는 10자 코드)를 여기에 붙여넣기
-登録テキストを貼り付けてください¦Please paste the registration text¦请粘贴登记文本¦請貼上登記文字¦Cole o texto de registro¦Collez le texte d'enregistrement¦등록 텍스트를 붙여넣으세요
-この PC の ID 用の登録テキストではありません。公式ページで発行し直してください¦This registration text is not for this PC's ID. Please issue it again on the official page¦这不是本机 ID 的登记文本，请在官方页面重新发放¦這不是本機 ID 的登記文字，請在官方頁面重新發放¦Este texto de registro não é para o ID deste PC. Emita de novo na página oficial¦Ce texte d'enregistrement ne correspond pas à l'ID de ce PC. Obtenez-le à nouveau sur la page officielle¦이 PC의 ID용 등록 텍스트가 아닙니다. 공식 페이지에서 다시 발급하세요
+パスワード（または 10 文字の短いパスワード）をここに貼り付け¦Paste the password (or the 10-character short password) here¦在此粘贴密码（或 10 位短密码）¦在此貼上密碼（或 10 位短密碼）¦Cole aqui a senha (ou a senha curta de 10 caracteres)¦Collez ici le mot de passe (ou le mot de passe court à 10 caractères)¦비밀번호(또는 10자 짧은 비밀번호)를 여기에 붙여넣기
+パスワードを貼り付けてください¦Please paste the password¦请粘贴密码¦請貼上密碼¦Cole a senha¦Collez le mot de passe¦비밀번호를 붙여넣으세요
+このブラウザの ID 用のパスワードではありません。公式ページで発行し直してください¦This password is not for this browser's ID. Please issue it again on the official page¦这不是本浏览器 ID 的密码，请在官方页面重新发放¦這不是本瀏覽器 ID 的密碼，請在官方頁面重新發放¦Esta senha não é para o ID deste navegador. Emita de novo na página oficial¦Ce mot de passe ne correspond pas à l'ID de ce navigateur. Obtenez-le à nouveau sur la page officielle¦이 브라우저의 ID용 비밀번호가 아닙니다. 공식 페이지에서 다시 발급하세요
 準備完了¦Ready¦就绪¦就緒¦Pronto¦Prêt¦준비 완료
 開く¦Open¦打开¦開啟¦Abrir¦Ouvrir¦열기
 作業を保存¦Save work¦保存工作¦儲存工作¦Salvar trabalho¦Enregistrer¦작업 저장
@@ -304,7 +304,7 @@ PDF・PNG・JPEG に対応しています。¦Supported: PDF, PNG, JPEG.¦支持
 保存をキャンセルしました¦Save cancelled¦已取消保存¦已取消儲存¦Salvamento cancelado¦Enregistrement annulé¦저장을 취소했습니다
 保存エラー¦Save error¦保存错误¦儲存錯誤¦Erro ao salvar¦Erreur d'enregistrement¦저장 오류
 作業ファイルを開けません¦Can't open work file¦无法打开工作文件¦無法開啟工作檔案¦Não foi possível abrir o arquivo de trabalho¦Impossible d'ouvrir le fichier de travail¦작업 파일을 열 수 없습니다
-PDF_KOBOの作業ファイルではありません¦This is not a PDF_KOBO work file¦这不是PDF_KOBO的工作文件¦這不是PDF_KOBO的工作檔案¦Este não é um arquivo de trabalho do PDF_KOBO¦Ce n'est pas un fichier de travail PDF_KOBO¦PDF_KOBO의 작업 파일이 아닙니다
+Front PDFの作業ファイルではありません¦This is not a Front PDF work file¦这不是Front PDF的工作文件¦這不是Front PDF的工作檔案¦Este não é um arquivo de trabalho do Front PDF¦Ce n'est pas un fichier de travail Front PDF¦Front PDF의 작업 파일이 아닙니다
 保存するページがありません。¦There are no pages to save.¦没有可保存的页面。¦沒有可儲存的頁面。¦Não há páginas para salvar.¦Aucune page à enregistrer.¦저장할 페이지가 없습니다.
 作業ファイルを保存中...¦Saving work file...¦正在保存工作文件...¦正在儲存工作檔案...¦Salvando arquivo de trabalho...¦Enregistrement du fichier de travail...¦작업 파일 저장 중...
 作業ファイルを開いています...¦Opening work file...¦正在打开工作文件...¦正在開啟工作檔案...¦Abrindo arquivo de trabalho...¦Ouverture du fichier de travail...¦작업 파일 여는 중...
@@ -374,7 +374,7 @@ PAT=r"""
 ^(\d+) 文字をコピーしました$¦Copied $1 characters¦已复制 $1 个字¦已複製 $1 個字¦$1 caracteres copiados¦$1 caractères copiés¦$1자를 복사했습니다
 ^(\d+) 文字を選択しました ― Ctrl\+C でコピー$¦Selected $1 characters — Ctrl+C to copy¦已选择 $1 个字 — 按Ctrl+C复制¦已選取 $1 個字 — 按Ctrl+C複製¦$1 caracteres selecionados — Ctrl+C para copiar¦$1 caractères sélectionnés — Ctrl+C pour copier¦$1자를 선택했습니다 — Ctrl+C로 복사
 ^(\d+) 文字を選択中$¦$1 characters selected¦已选 $1 个字¦已選 $1 個字¦$1 caracteres selecionados¦$1 caractères sélectionnés¦$1자 선택 중
-^PDF_KOBO ― (.+)$¦PDF_KOBO — $1¦PDF_KOBO — $1¦PDF_KOBO — $1¦PDF_KOBO — $1¦PDF_KOBO — $1¦PDF_KOBO — $1
+^Front PDF ― (.+)$¦Front PDF — $1¦Front PDF — $1¦Front PDF — $1¦Front PDF — $1¦Front PDF — $1¦Front PDF — $1
 ^(.+) の (\d+) ページ目$¦$1 – page $2¦$1 第 $2 页¦$1 第 $2 頁¦$1 – página $2¦$1 – page $2¦$1의 $2페이지
 ^「(.+)」が (\d+) 件見つかりました（Enterで次へ）$¦Found $2 matches for "$1" (Enter for next)¦找到"$1" $2 处（按Enter到下一个）¦找到「$1」$2 處（按Enter到下一個）¦$2 resultados para "$1" (Enter para o próximo)¦$2 résultat(s) pour « $1 » (Entrée pour suivant)¦"$1"을(를) $2건 찾았습니다 (Enter로 다음)
 ^「(.+)」は見つかりませんでした（スキャン画像のPDFは検索できません）$¦"$1" was not found (scanned PDFs can't be searched)¦未找到"$1"（扫描的PDF无法搜索）¦找不到「$1」（掃描的PDF無法搜尋）¦"$1" não encontrado (PDFs digitalizados não podem ser pesquisados)¦« $1 » introuvable (les PDF numérisés ne sont pas cherchables)¦"$1"을(를) 찾지 못했습니다 (스캔 PDF는 검색 불가)

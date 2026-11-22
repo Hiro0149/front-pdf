@@ -1,7 +1,7 @@
-# PDF_KOBO User Manual (English) v1.0.0 (2026-11-21)
+# Front PDF User Manual (English) v1.0.1 (2026-11-22)
 
 ## 1. Overview
-- PDF_KOBO is a PDF editor that runs just by opening one HTML file (about 3.7 MB) in a browser (Edge or Chrome recommended). No installation.
+- Front PDF is a PDF editor that runs just by opening one HTML file (about 3.7 MB) in a browser (Edge or Chrome recommended). No installation.
 - Fully offline. Files are never sent anywhere; everything is processed inside the browser on your PC.
 - Features: merge, split, reorder, rotate and delete pages of PDFs and images; annotate pages (pen, shapes, text, sticky notes, stamps, emoji, images); black-out / white-out; text search; rectangle text copy (tables paste straight into Excel); watermark; A4 normalize; 2-up/4-up; PNG export; work files.
 - You can also add blank pages and lay out documents freely, like a word processor.
@@ -41,7 +41,7 @@
 - Types: check mark (✓), hanamaru (flower circle for praise), box, double box, oval, round seal (1–3 characters vertical), date stamp (top row, date, bottom row), square seal (4 characters in 2 columns, right to left), image (scanned seal).
 - Edit text, color, size and date format (2026.11.20 / ’26.11.20 / R8.11.20 …). "Use the date when stamped" always inserts today's date.
 - [From image] registers a scanned seal (white becomes transparent).
-- Saved automatically in the browser (per PC and browser). [Export (backup)] writes StampBook_PDF_KOBO.json; [Import] reads it.
+- Saved automatically in the browser (per PC and browser). [Export (backup)] writes StampBook_Front_PDF.json; [Import] reads it.
 
 ## 8. Sticky notes
 - Paper-style notes like DocuWorks. Colors (yellow, pink, light blue, green, orange, purple, white), font size, text color, bold, author name (remembered).
@@ -97,7 +97,7 @@
 - Bundled software: PDF.js (Apache License 2.0); pdf-lib, pako, @pdf-lib/standard-fonts, @pdf-lib/upng, qrcode-generator (MIT); tslib (0BSD); Adobe CMaps (BSD-3-Clause); PDFium JBIG2 (BSD-3-Clause); OpenJPEG (BSD-2-Clause). License texts: [ⓘ] → Third-party licenses, and THIRD_PARTY_NOTICES.txt.
 - Official source: the GitHub releases page (the URL is shown in [ⓘ]). Files obtained elsewhere may have been modified; the author is not responsible for problems caused by modified versions.
 - The author never distributes the software by email. When recommending it, share the official source URL instead of the file ([ⓘ] → "Copy intro text and URL"). The welcome screen on first launch also shows the official source.
-- Exported PDFs carry "PDF_KOBO v1.0.0 (Front Softworks)" and the official URL in their properties (Producer/Creator).
-- On first use a free registration is needed (once per PC and browser): (1) enter "this PC's ID" shown on screen (8 random characters made by the app; contains no PC or personal information) in "Registration" on the official page, (2) paste the issued registration text (or the 10-character code) into the app. Scanning the QR code with a phone opens the official page with the ID already filled in. The registration text works only on that PC. The official page does not send the ID anywhere; it is calculated in the browser. Clearing browser data changes the ID, so register again.
+- Exported PDFs carry "Front PDF v1.0.1 (Front Softworks)" and the official URL in their properties (Producer/Creator).
+- On first use a free activation is needed (once per browser): (1) copy "this browser's ID" shown on screen (8 random characters made by the app; contains no PC or personal information), paste it into "Activation" on the official page and press "Issue"; (2) paste the password shown there (or the 10-character short password) into the app. Scanning the QR code on screen with a phone opens the official page with the ID filled in. The password works only in that browser, not on other PCs or browsers. The official page does not send the ID anywhere; it calculates inside the browser. Clearing browser data changes the ID, so activate again. The ID can be copied at any time while this screen is open (it cannot be closed, so you cannot miss it).
 - Other software by Front Softworks: ExVAN Planner (container loading optimizer, https://exvan-planner.github.io/).
-- How to verify the file is unmodified (Windows, nothing to install): run `certutil -hashfile PDF_KOBO.html SHA256` in Command Prompt and check that the value matches the SHA-256 published at the official source.
+- How to verify the file is unmodified (Windows, nothing to install): run `certutil -hashfile Front_PDF.html SHA256` in Command Prompt and check that the value matches the SHA-256 published at the official source.

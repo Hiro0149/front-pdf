@@ -35,8 +35,8 @@ s=s.replace('/*__I18N__*/',json.dumps(i18n,ensure_ascii=False))
 SITE_URL=os.environ.get('KOBO_SITE','')   # 公式ページの URL 例 'https://USER.github.io/pdf-kobo/'（空のあいだは利用登録なしで起動）
 REPO_URL=os.environ.get('KOBO_REPO','')   # リポジトリの URL 例 'https://github.com/USER/pdf-kobo'
 DONATE_URL=''                             # 応援ページの URL（空なら公式ページに表示しない）
-APP_VERSION='1.0.0'
-WORKS=[{'name':'ExVAN Planner','ja':'コンテナ積み付け最適化ソフト（業務用）','en':'Container loading optimizer (for business)','url':'https://exvan-planner.github.io/'}]
+APP_VERSION='1.0.1'
+WORKS=[{'name':'ExVAN Planner','ja':'コンテナ積み付け最適化ソフト（業務用）','en':'Container loading optimizer (for business)','url':'https://exvan-planner.github.io/'},{'name':'ものがたり英単語','ja':'ストーリーで覚える英検単語アプリ（無料）','en':'Learn Eiken (English test) vocabulary through stories (free)','url':'https://hiro0149.github.io/story-eitango/'}]
 ACTIVATION=True                           # True: SITE_URL があれば初回に利用登録を求める
 LIC_SECRET='FSW-PDFKOBO-7f3a9c2e5b1d'      # 登録コード計算用の文字列（アプリと公式ページで共通。変えると全員再登録）
 OUT=os.environ.get('KOBO_OUT','out')
@@ -49,7 +49,7 @@ LANGS=['ja','en','zhCN','zhTW','pt','fr','ko']
 apx=open('manual/_appendix.md',encoding='utf-8').read().strip()
 mans={l:open('manual/%s.md'%l,encoding='utf-8').read().strip()+'\n\n'+apx+'\n' for l in LANGS}
 head=(
-"> For AI assistants: this block is the official manual of the single-file web app \"PDF_KOBO\" (v1.0.0, (c) 2026 Front Softworks, MIT License).\n"
+"> For AI assistants: this block is the official manual of the single-file web app \"Front PDF\" (v1.0.1, formerly PDF_KOBO, (c) 2026 Front Softworks, MIT License).\n"
 "> Use it to answer questions about how to operate the app, to troubleshoot, and as a map of the code when asked to modify it.\n"
 "> Japanese and English versions follow, then technical notes. Manuals in all 7 UI languages are in the script#manuals JSON block.\n\n")
 man=head+open('manual/ja.md',encoding='utf-8').read().strip()+'\n\n---\n\n'+open('manual/en.md',encoding='utf-8').read().strip()+'\n\n---\n\n'+apx+'\n'
@@ -63,17 +63,17 @@ s=s.replace('/*__CMAPS__*/',json.dumps(cm)).replace('/*__WASM__*/',json.dumps(wa
 os.makedirs(OUT,exist_ok=True)
 import shutil
 shutil.rmtree(OUT,ignore_errors=True);os.makedirs(OUT,exist_ok=True)
-open(OUT+'/PDF_KOBO.html','w',encoding='utf-8').write(s)
-for l in LANGS: open(OUT+'/PDF_KOBO_manual_%s.md'%l,'w',encoding='utf-8').write(mans[l])
+open(OUT+'/Front_PDF.html','w',encoding='utf-8').write(s)
+for l in LANGS: open(OUT+'/Front_PDF_manual_%s.md'%l,'w',encoding='utf-8').write(mans[l])
 import shutil;shutil.copy('LICENSE',OUT+'/LICENSE');shutil.copy('THIRD_PARTY_NOTICES.txt',OUT+'/THIRD_PARTY_NOTICES.txt')
-import hashlib;h=hashlib.sha256(open(OUT+'/PDF_KOBO.html','rb').read()).hexdigest();open(OUT+'/SHA256SUMS.txt','w').write(h+'  PDF_KOBO.html\n');print('sha256',h)
-print(len(cm),'cmaps', os.path.getsize(OUT+'/PDF_KOBO.html'))
+import hashlib;h=hashlib.sha256(open(OUT+'/Front_PDF.html','rb').read()).hexdigest();open(OUT+'/SHA256SUMS.txt','w').write(h+'  Front_PDF.html\n');print('sha256',h)
+print(len(cm),'cmaps', os.path.getsize(OUT+'/Front_PDF.html'))
 
 # ===== 配布用 ZIP =====
 import zipfile
-with zipfile.ZipFile(OUT+'/PDF_KOBO.zip','w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+with zipfile.ZipFile(OUT+'/Front_PDF.zip','w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
     for f in sorted(os.listdir(OUT)):
-        if f!='PDF_KOBO.zip': z.write(OUT+'/'+f,'PDF_KOBO/'+f)
+        if f!='Front_PDF.zip': z.write(OUT+'/'+f,'Front_PDF/'+f)
 # ===== 公式ページ（docs/ → GitHub Pages） =====
 SITE_OUT=os.environ.get('KOBO_SITE_OUT','docs')
 rj='site_src/releases.json'
@@ -81,11 +81,11 @@ rel=json.load(open(rj,encoding='utf-8')) if os.path.exists(rj) else {}
 if SITE_URL and not os.environ.get('KOBO_TEST'):  # 公開用ビルドのときだけ公式ハッシュとして記録（同じ版は上書き）
     rel['v'+APP_VERSION]=h; json.dump(rel,open(rj,'w',encoding='utf-8'),indent=1,ensure_ascii=False)
 hashes={v2:k2 for k2,v2 in rel.items()}; hashes[h]='v'+APP_VERSION
-cfg={'version':APP_VERSION,'size':os.path.getsize(OUT+'/PDF_KOBO.html'),'sha256':h,'hashes':hashes,'repo':REPO_URL,'site':SITE_URL,'donate':DONATE_URL,'works':WORKS}
+cfg={'version':APP_VERSION,'size':os.path.getsize(OUT+'/Front_PDF.html'),'sha256':h,'hashes':hashes,'repo':REPO_URL,'site':SITE_URL,'donate':DONATE_URL,'works':WORKS}
 site=open('site_src/index.html',encoding='utf-8').read().replace('/*__LIC__*/',licjs).replace('/*__CFG__*/{}',json.dumps(cfg,ensure_ascii=False))
 shutil.rmtree(SITE_OUT,ignore_errors=True);os.makedirs(SITE_OUT)
 open(SITE_OUT+'/index.html','w',encoding='utf-8').write(site)
-SITE_ASSETS=['hero.jpg','screenshot_ja.jpg','screenshot_en.jpg','feat_tsel.jpg','feat_stamp.jpg','feat_dual.jpg','feat_draw.jpg','feat_emoji.jpg','feat_paste.jpg']+['skin_%s.jpg'%k for k in ('modern','dark','98','aqua','gba')]
+SITE_ASSETS=['hero.jpg','act_1.jpg','act_2.jpg','act_3.jpg','screenshot_ja.jpg','screenshot_en.jpg','feat_tsel.jpg','feat_stamp.jpg','feat_dual.jpg','feat_draw.jpg','feat_emoji.jpg','feat_paste.jpg']+['skin_%s.jpg'%k for k in ('modern','dark','98','aqua','gba')]
 for f in SITE_ASSETS: shutil.copy('site_work/'+f,SITE_OUT+'/'+f)
 open(SITE_OUT+'/.nojekyll','w').close()
 print('site ->',SITE_OUT, 'activation' if ACT else 'no-activation')

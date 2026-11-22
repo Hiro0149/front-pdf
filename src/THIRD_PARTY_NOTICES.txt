@@ -1,5 +1,5 @@
-THIRD-PARTY NOTICES for PDF_KOBO
-PDF_KOBO bundles the following open-source components. Their licenses are reproduced below.
+THIRD-PARTY NOTICES for Front PDF
+Front PDF bundles the following open-source components. Their licenses are reproduced below.
 
 ========================================================================
 pdf-lib 1.17.1 (MIT)

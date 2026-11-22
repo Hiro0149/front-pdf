@@ -1,7 +1,7 @@
-# Manual do PDF_KOBO (Português) v1.0.0 (2026-11-21)
+# Manual do Front PDF (Português) v1.0.1 (2026-11-22)
 
 ## 1. Visão geral
-- O PDF_KOBO é um editor de PDF que funciona apenas abrindo um arquivo HTML (cerca de 3,7 MB) no navegador (Edge ou Chrome recomendados). Não precisa instalar.
+- O Front PDF é um editor de PDF que funciona apenas abrindo um arquivo HTML (cerca de 3,7 MB) no navegador (Edge ou Chrome recomendados). Não precisa instalar.
 - Totalmente offline. Os arquivos nunca são enviados; tudo é processado no navegador do seu PC.
 - Recursos: mesclar, dividir, reordenar, girar e excluir páginas de PDFs e imagens; anotar (caneta, formas, texto, notas adesivas, carimbos, emoji, imagens); tarja preta / branca; busca de texto; cópia de texto por retângulo (tabelas colam direto no Excel); marca d'água; ajuste para A4; 2 ou 4 páginas por folha; exportação PNG; arquivos de trabalho.
 - Também é possível adicionar páginas em branco e montar documentos livremente, como num editor de texto.
@@ -41,7 +41,7 @@
 - Tipos: marca de verificação (✓), hanamaru (flor de elogio), retangular, borda dupla, oval, selo redondo (1–3 caracteres na vertical), carimbo de data (linha superior, data, linha inferior), selo quadrado (4 caracteres em 2 colunas, da direita), imagem (carimbo digitalizado).
 - Edite texto, cor, tamanho e formato da data (2026.11.20 / ’26.11.20 / R8.11.20 …). "Usar a data do dia" insere sempre a data de hoje.
 - [A partir de imagem] registra um carimbo digitalizado (o branco fica transparente).
-- Salvo automaticamente no navegador (por PC e navegador). [Exportar (backup)] gera StampBook_PDF_KOBO.json; [Importar] lê o arquivo.
+- Salvo automaticamente no navegador (por PC e navegador). [Exportar (backup)] gera StampBook_Front_PDF.json; [Importar] lê o arquivo.
 
 ## 8. Notas adesivas
 - Notas de papel como no DocuWorks. Cores (amarelo, rosa, azul-claro, verde, laranja, roxo, branco), tamanho e cor do texto, negrito, nome do autor (memorizado).
@@ -97,7 +97,7 @@
 - Software incluído: PDF.js (Apache License 2.0); pdf-lib, pako, @pdf-lib/standard-fonts, @pdf-lib/upng, qrcode-generator (MIT); tslib (0BSD); Adobe CMaps (BSD-3-Clause); PDFium JBIG2 (BSD-3-Clause); OpenJPEG (BSD-2-Clause). Textos das licenças: [ⓘ] → Licenças de terceiros, e THIRD_PARTY_NOTICES.txt.
 - Fonte oficial: a página de releases no GitHub (a URL aparece em [ⓘ]). Arquivos obtidos em outros lugares podem ter sido modificados; o autor não se responsabiliza por problemas causados por versões modificadas.
 - O autor nunca distribui o software por e-mail. Ao recomendá-lo, compartilhe a URL da fonte oficial em vez do arquivo ([ⓘ] → "Copiar texto e URL"). A tela de boas-vindas no primeiro uso também mostra a fonte oficial.
-- Os PDFs exportados trazem "PDF_KOBO v1.0.0 (Front Softworks)" e a URL oficial nas propriedades (Producer/Creator).
-- No primeiro uso é preciso um registro gratuito (uma vez por PC e navegador): (1) digite o "ID deste PC" mostrado na tela (8 caracteres aleatórios criados pelo app; não contém informações do PC nem pessoais) em "Registro" na página oficial; (2) cole no app o texto de registro emitido (ou o código de 10 caracteres). Lendo o QR code com o celular, a página oficial abre com o ID já preenchido. O texto de registro só funciona naquele PC. A página oficial não envia o ID; o cálculo é feito no navegador. Apagar os dados do navegador muda o ID, então registre de novo.
+- Os PDFs exportados trazem "Front PDF v1.0.1 (Front Softworks)" e a URL oficial nas propriedades (Producer/Creator).
+- No primeiro uso é preciso uma ativação gratuita (uma vez por navegador): (1) copie o "ID deste navegador" mostrado na tela (8 caracteres aleatórios gerados pelo app; sem informações do PC ou pessoais), cole em "Ativação" na página oficial e clique em "Emitir"; (2) cole no app a senha exibida (ou a senha curta de 10 caracteres). Ler o QR code da tela com o celular abre a página oficial com o ID preenchido. A senha só funciona nesse navegador, não em outros PCs ou navegadores. A página oficial não envia o ID; o cálculo é feito no navegador. Limpar os dados do navegador muda o ID; nesse caso, ative de novo. O ID pode ser copiado a qualquer momento enquanto esta tela estiver aberta (ela não pode ser fechada).
 - Outros softwares da Front Softworks: ExVAN Planner (otimizador de carregamento de contêineres, https://exvan-planner.github.io/).
-- Como verificar se o arquivo não foi alterado (Windows, sem instalar nada): execute `certutil -hashfile PDF_KOBO.html SHA256` no Prompt de Comando e confira se o valor é igual ao SHA-256 publicado na fonte oficial.
+- Como verificar se o arquivo não foi alterado (Windows, sem instalar nada): execute `certutil -hashfile Front_PDF.html SHA256` no Prompt de Comando e confira se o valor é igual ao SHA-256 publicado na fonte oficial.

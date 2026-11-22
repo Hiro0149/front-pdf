@@ -9,4 +9,4 @@
 - Browser storage (localStorage, prefix `pdfkobo98.`): stamp book, skin, language, thumbnail settings, note author, recent colors.
 
 ## Appendix B. License
-PDF_KOBO — Copyright (c) 2026 Front Softworks — released under the MIT License (full text in the LICENSE file and in the app: [ⓘ] → MIT License). Bundled third-party components and their licenses: THIRD_PARTY_NOTICES.txt and the app: [ⓘ] → Third-party licenses.
+Front PDF — Copyright (c) 2026 Front Softworks — released under the MIT License (full text in the LICENSE file and in the app: [ⓘ] → MIT License). Bundled third-party components and their licenses: THIRD_PARTY_NOTICES.txt and the app: [ⓘ] → Third-party licenses.
