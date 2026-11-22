@@ -1,4 +1,4 @@
-# Front PDF User Manual (English) v1.0.1 (2026-11-22)
+# Front PDF User Manual (English) v1.0.2 (2026-11-22)
 
 ## 1. Overview
 - Front PDF is a PDF editor that runs just by opening one HTML file (about 3.7 MB) in a browser (Edge or Chrome recommended). No installation.
@@ -19,7 +19,7 @@
 - Two-page view: click one thumbnail, then Ctrl+click another. The two pages appear side by side and both can be annotated (the active page has a frame). Click a single page to return.
 
 ## 4. Open & merge
-- [Open] (Ctrl+O) or drag & drop PDF / PNG / JPEG / work files (.pdfkobo). Any number of files. The thumbnail order is the merge order.
+- [Open] (Ctrl+O) or drag & drop PDF / PNG / JPEG / work files (.frontpdf). Any number of files. The thumbnail order is the merge order.
 - Images become one-page PDFs (according to "Image import").
 - Password-protected PDFs cannot be opened.
 
@@ -68,8 +68,8 @@
 - [Export PNG]: selected or all pages at 96 / 150 / 300 dpi.
 - Markups are burned into the PDF as images (any language is preserved). Sticky notes are annotations.
 
-## 13. Work files (.pdfkobo)
-- [Save work] (Ctrl+S) saves a .pdfkobo file. Open it with [Open] or drag & drop to continue with pages, markups, stamps, notes and watermark still editable. You can pass it to a colleague who follows the instructions in the sticky notes.
+## 13. Work files (.frontpdf)
+- [Save work] (Ctrl+S) saves a .frontpdf file. Open it with [Open] or drag & drop to continue with pages, markups, stamps, notes and watermark still editable. You can pass it to a colleague who follows the instructions in the sticky notes.
 - Caution: a work file contains the original PDF as is, including text under black-outs. Do not give it to people outside your organization; share the exported PDF instead.
 - The stamp book and the undo history are not included. Unsaved changes show "*" in the title and trigger a warning when closing.
 
@@ -97,7 +97,7 @@
 - Bundled software: PDF.js (Apache License 2.0); pdf-lib, pako, @pdf-lib/standard-fonts, @pdf-lib/upng, qrcode-generator (MIT); tslib (0BSD); Adobe CMaps (BSD-3-Clause); PDFium JBIG2 (BSD-3-Clause); OpenJPEG (BSD-2-Clause). License texts: [ⓘ] → Third-party licenses, and THIRD_PARTY_NOTICES.txt.
 - Official source: the GitHub releases page (the URL is shown in [ⓘ]). Files obtained elsewhere may have been modified; the author is not responsible for problems caused by modified versions.
 - The author never distributes the software by email. When recommending it, share the official source URL instead of the file ([ⓘ] → "Copy intro text and URL"). The welcome screen on first launch also shows the official source.
-- Exported PDFs carry "Front PDF v1.0.1 (Front Softworks)" and the official URL in their properties (Producer/Creator).
+- Exported PDFs carry "Front PDF v1.0.2 (Front Softworks)" and the official URL in their properties (Producer/Creator).
 - On first use a free activation is needed (once per browser): (1) copy "this browser's ID" shown on screen (8 random characters made by the app; contains no PC or personal information), paste it into "Activation" on the official page and press "Issue"; (2) paste the password shown there (or the 10-character short password) into the app. Scanning the QR code on screen with a phone opens the official page with the ID filled in. The password works only in that browser, not on other PCs or browsers. The official page does not send the ID anywhere; it calculates inside the browser. Clearing browser data changes the ID, so activate again. The ID can be copied at any time while this screen is open (it cannot be closed, so you cannot miss it).
 - Other software by Front Softworks: ExVAN Planner (container loading optimizer, https://exvan-planner.github.io/).
 - How to verify the file is unmodified (Windows, nothing to install): run `certutil -hashfile Front_PDF.html SHA256` in Command Prompt and check that the value matches the SHA-256 published at the official source.

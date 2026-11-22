@@ -301,8 +301,8 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
   <div class="ftxt">
    <div class="tag">KEEP EDITING</div>
    <h3><span lang="ja">編集したまま保存して、続きは明日でも、誰かでも。</span><span lang="en">Save with edits intact — continue tomorrow, or let someone else.</span></h3>
-   <p lang="ja">「作業を保存」すると、書き込みを編集できる状態のまま .pdfkobo ファイルに残せます。開けばハンコも付箋も黒塗りも、動かしたり直したりできる状態で再開できます。</p>
-   <p lang="en">"Save work" keeps everything editable in a .pdfkobo file. Open it again and every stamp, note and black-out can still be moved or changed.</p>
+   <p lang="ja">「作業を保存」すると、書き込みを編集できる状態のまま .frontpdf ファイルに残せます。開けばハンコも付箋も黒塗りも、動かしたり直したりできる状態で再開できます。</p>
+   <p lang="en">"Save work" keeps everything editable in a .frontpdf file. Open it again and every stamp, note and black-out can still be moved or changed.</p>
    <div class="scene"><div class="sct"><span lang="ja">こんな時に</span><span lang="en">Use cases</span></div><ul><li lang="ja">付箋に指示を書いて同僚へ。相手は指示どおりに直して返すだけ</li><li lang="ja">大量の書類を、途中で保存して翌日に続きから</li><li lang="ja">チェック担当と作成担当で、同じファイルを行き来</li><li lang="en">Leave instructions on notes for a colleague, who fixes and returns it</li><li lang="en">Save a big job halfway and continue the next day</li><li lang="en">Pass the same file back and forth between writer and checker</li></ul></div>
    <p class="small" lang="ja">※ 作業ファイルには元の PDF がそのまま入ります。社外に渡すときは書き出した PDF を。</p>
    <p class="small" lang="en">The work file contains the original PDF. Send the exported PDF outside your organization.</p>
@@ -311,7 +311,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
    <div class="flow">
     <div class="fstep"><div class="fic">✍️</div><b lang="ja">Aさん</b><b lang="en">You</b><small lang="ja">付箋で指示・ハンコ</small><small lang="en">Notes & stamps</small></div>
     <div class="farr">→</div>
-    <div class="fstep file"><div class="fic">📁</div><b>.pdfkobo</b><small lang="ja">作業を保存</small><small lang="en">Save work</small></div>
+    <div class="fstep file"><div class="fic">📁</div><b>.frontpdf</b><small lang="ja">作業を保存</small><small lang="en">Save work</small></div>
     <div class="farr">→</div>
     <div class="fstep"><div class="fic">🧑‍💼</div><b lang="ja">Bさん</b><b lang="en">Colleague</b><small lang="ja">開いて続きを編集</small><small lang="en">Opens & continues</small></div>
     <div class="farr">→</div>
@@ -517,7 +517,7 @@ var KoboLic=(function(){
 })();
 </script>
 <script>
-const CFG={"version": "1.0.1", "size": 3995919, "sha256": "6c1579a4780502fb8e7f4fb0b90c6dcaa887aef5748eb4d81929b585f18d9cc8", "hashes": {"010ad4810f16fc89d80fd0a5726031ebb25e0bce6211e475add79cf51a7e30db": "v1.0.0", "6c1579a4780502fb8e7f4fb0b90c6dcaa887aef5748eb4d81929b585f18d9cc8": "v1.0.1"}, "repo": "https://github.com/Hiro0149/pdf-kobo", "site": "https://hiro0149.github.io/pdf-kobo/", "donate": "", "works": [{"name": "ExVAN Planner", "ja": "コンテナ積み付け最適化ソフト（業務用）", "en": "Container loading optimizer (for business)", "url": "https://exvan-planner.github.io/"}, {"name": "ものがたり英単語", "ja": "ストーリーで覚える英検単語アプリ（無料）", "en": "Learn Eiken (English test) vocabulary through stories (free)", "url": "https://hiro0149.github.io/story-eitango/"}]};
+const CFG={"version": "1.0.2", "size": 3996004, "sha256": "5dba595ee85a740cd7b143048c642414e7e079cb50663fc67d022ccf486e452c", "hashes": {"010ad4810f16fc89d80fd0a5726031ebb25e0bce6211e475add79cf51a7e30db": "v1.0.0", "6c1579a4780502fb8e7f4fb0b90c6dcaa887aef5748eb4d81929b585f18d9cc8": "v1.0.1", "5dba595ee85a740cd7b143048c642414e7e079cb50663fc67d022ccf486e452c": "v1.0.2"}, "repo": "https://github.com/Hiro0149/front-pdf", "site": "https://hiro0149.github.io/front-pdf/", "donate": "", "works": [{"name": "ExVAN Planner", "ja": "コンテナ積み付け最適化ソフト（業務用）", "en": "Container loading optimizer (for business)", "url": "https://exvan-planner.github.io/"}, {"name": "ものがたり英単語", "ja": "ストーリーで覚える英検単語アプリ（無料）", "en": "Learn Eiken (English test) vocabulary through stories (free)", "url": "https://hiro0149.github.io/story-eitango/"}]};
 const $=s=>document.querySelector(s);
 let L='ja';
 function setL(l){L=l;document.documentElement.dataset.l=l;document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.set===l));try{localStorage.setItem('kobo.site.lang',l);}catch(e){}updSkinAlt();}

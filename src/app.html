@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- Front PDF v1.0.1 | Copyright (c) 2026 Front Softworks | MIT License (see script#lic-mit) | Official source: GitHub Releases | Third-party licenses: script#lic-3rd -->
+<!-- Front PDF v1.0.2 | Copyright (c) 2026 Front Softworks | MIT License (see script#lic-mit) | Official source: GitHub Releases | Third-party licenses: script#lic-3rd -->
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Front PDF v1.0.1 (c) 2026 Front Softworks, MIT License. Offline single-file PDF editor. Full user/AI manual is embedded in the script#ai-manual block below.">
+<meta name="description" content="Front PDF v1.0.2 (c) 2026 Front Softworks, MIT License. Offline single-file PDF editor. Full user/AI manual is embedded in the script#ai-manual block below.">
 <script type="text/markdown" id="ai-manual">
 /*__MANUAL__*/
 </script>
@@ -264,7 +264,7 @@ legend{padding:0 4px}
   <div class="title"><div class="ico"></div><span class="t" id="winTitle">Front PDF ― PDF加工ツール</span><div class="hdr"><span class="gl">画像取込</span><select id="imgMode" title="PNG/JPEGを開いたときの配置"><option value="a4">A4に配置</option><option value="raw">画像サイズのまま</option></select><span class="gl">スキン</span><select id="skinSel" title="見た目を切り替え"><option value="modern">モダン</option><option value="dark">ダーク</option><option value="98">レトロPC</option><option value="aqua">アクア</option><option value="gba">ゲーム機</option></select><span class="gl" title="言語 / Language" style="margin-left:6px"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" style="display:block"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg></span><select id="langSel" data-noi18n title="言語 / Language"></select><button id="bHelp" title="使い方">？</button><button id="bAbout" title="バージョン・ライセンス">ⓘ</button></div><button tabindex="-1" class="wb wb-min">_</button><button tabindex="-1" class="wb wb-max">□</button><button tabindex="-1" class="wb wb-close" id="aboutX">×</button></div>
   <div class="toolbar tbar">
    <div class="trow">
-    <div class="grp"><span class="gl">ファイル</span><button id="bOpen" title="PDF / PNG / JPEG / 作業ファイル(.pdfkobo) を開く (Ctrl+O)">開く</button><button id="bSave" title="作業ファイル(.pdfkobo)に保存して、あとで続きから編集 (Ctrl+S)">作業を保存</button></div>
+    <div class="grp"><span class="gl">ファイル</span><button id="bOpen" title="PDF / PNG / JPEG / 作業ファイル(.frontpdf) を開く (Ctrl+O)">開く</button><button id="bSave" title="作業ファイル(.frontpdf)に保存して、あとで続きから編集 (Ctrl+S)">作業を保存</button></div>
     <div class="sep"></div>
     <div class="grp"><span class="gl">表示</span><span class="modeb"><button id="mGrid" title="サムネイルだけを大きく並べてページを整理">▦ 一覧</button><button id="mEdit" title="左にサムネイル、右でページに書き込み">✎ 編集</button></span></div>
     <div class="sep"></div>
@@ -350,14 +350,14 @@ legend{padding:0 4px}
     <div style="display:flex;gap:14px;align-items:flex-start;padding:6px 2px">
       <div class="dico warn">!</div>
       <div style="line-height:1.7;user-select:text" data-ih>
-        作業ファイル（<b>.pdfkobo</b>）には、<b>元のPDFがそのまま</b>入っています。<br>
+        作業ファイル（<b>.frontpdf</b>）には、<b>元のPDFがそのまま</b>入っています。<br>
         <u>黒塗り・白塗りの下の文字も含まれる</u>ので、<b>この作業ファイルは人に渡さないでください。</b><br>
         人に渡すときは［PDF書き出し］で作ったPDFを使ってください。<br><br>
         <span style="opacity:.85">作業ファイルは［開く］またはドラッグ＆ドロップで開くと、書き込み・ハンコ・付箋・透かしを編集できる状態で続きから再開できます。</span>
       </div>
     </div>
     <label style="margin-left:52px"><input type="checkbox" id="saveWarnOff"> 次回からこの確認を表示しない</label>
-    <label style="margin-left:52px">ファイル名 <input type="text" id="saveName" style="width:230px"> .pdfkobo</label>
+    <label style="margin-left:52px">ファイル名 <input type="text" id="saveName" style="width:230px"> .frontpdf</label>
     <div class="btns"><button id="saveGo" class="pri"><b>保存</b></button><button data-close>キャンセル</button></div>
   </div>
 </div></div>
@@ -452,7 +452,7 @@ legend{padding:0 4px}
    <tr><td>表示の大きさ</td><td>サムネイル：上の「大きさ」スライダーと「列」（Ctrl+ホイールでも可）。ページ：［－］［＋］と倍率メニュー、Ctrl+ホイール、Ctrl+0で全体表示。</td></tr>
    <tr><td>サムネイル</td><td>クリックで右に表示。ドラッグで並べ替え。Ctrl+クリックで複数選択、Shift+クリックで範囲選択。左右の境目はドラッグで幅を変えられます。</td></tr>
    <tr><td>文字のコピー</td><td>［文字選択］ツールで範囲をドラッグで囲むと、枠の中の文字だけが選択されます。「表」形式ならタブ区切りになり、Excelに貼るとセルに分かれます。スキャン画像のPDFは文字データが無いため選択できません。</td></tr>
-   <tr><td>作業の保存</td><td>［作業を保存］（Ctrl+S）で作業ファイル（.pdfkobo）に保存し、［開く］やドラッグ＆ドロップで続きから編集できます。<b>作業ファイルには元のPDF（黒塗りの下の文字も）が入っているので人に渡さないでください。</b>渡すときは［PDF書き出し］を使います。保存していない変更があるままブラウザを閉じようとすると警告が出ます。</td></tr>
+   <tr><td>作業の保存</td><td>［作業を保存］（Ctrl+S）で作業ファイル（.frontpdf）に保存し、［開く］やドラッグ＆ドロップで続きから編集できます。<b>作業ファイルには元のPDF（黒塗りの下の文字も）が入っているので人に渡さないでください。</b>渡すときは［PDF書き出し］を使います。保存していない変更があるままブラウザを閉じようとすると警告が出ます。</td></tr>
    <tr><td>絵文字</td><td>［絵文字］ツールで右のパネルから絵文字を選び、ページをクリックすると置けます（続けて何個でも）。置いた絵文字は選んで別の絵文字に入れ替えたり、四隅で大きさを変えたりできます。Windowsなら Win + . の絵文字パネルからも入力できます。</td></tr>
    <tr><td>画像の貼り付け</td><td>Snipping Tool などで切り取った画像は、Ctrl+V でページ上に貼り付けられます（マウスがページ上にあればその位置、なければ表示中の場所の中央）。画像ファイルをページ上にドロップするとその位置に貼り付け、左のサムネイル側にドロップすると新しいページとして追加します。</td></tr>
    <tr><td>文字検索</td><td>上の検索欄（Ctrl+F）に入力してEnter。全ページから探してオレンジ色で表示し、Enter／▼で次へ、Shift+Enter／▲で前へ。［全てマーカー］［全て黒塗り］で見つかった箇所をまとめて処理できます。</td></tr>
@@ -473,7 +473,7 @@ legend{padding:0 4px}
   </div>
 </div></div>
 
-<input type="file" id="fileIn" multiple accept=".pdf,application/pdf,image/png,image/jpeg,.pdfkobo" hidden>
+<input type="file" id="fileIn" multiple accept=".pdf,application/pdf,image/png,image/jpeg,.frontpdf,.pdfkobo" hidden>
 <input type="file" id="imgIn" accept="image/png,image/jpeg,image/gif,image/webp" hidden>
 <input type="file" id="stampImgIn" accept="image/png,image/jpeg,image/gif,image/webp" hidden>
 <input type="file" id="libIn" accept=".json,application/json" hidden>
@@ -505,7 +505,7 @@ function canvasBlob(c){return new Promise(r=>c.toBlob(r,'image/png'));}
 function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},5000);}
 const isTyping=t=>t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT');
 /* ===== 公式情報（公開時に OFFICIAL_URL を GitHub Releases の URL にする） ===== */
-const APP_VER='1.0.1',OFFICIAL_URL='/*__SITEURL__*/',AUTHOR='Front Softworks';
+const APP_VER='1.0.2',OFFICIAL_URL='/*__SITEURL__*/',AUTHOR='Front Softworks';
 const OFFICIAL_SHOW=()=>OFFICIAL_URL||'GitHub Releases（公開準備中）';
 /* アクティベーション（ブラウザごとの ID 方式）。ACT は build.py で SITE_URL を設定し ACTIVATION=True のときだけ true になる */
 const ACT=/*__ACT__*/false;
@@ -675,7 +675,7 @@ async function imageToPdf(bytes,isPng){
   return await d.save();
 }
 async function anyImageToPng(file){const url=URL.createObjectURL(file);try{const im=await loadImg(url);const c=mk(im.naturalWidth,im.naturalHeight);c.getContext('2d').drawImage(im,0,0);return new Uint8Array(await (await canvasBlob(c)).arrayBuffer());}finally{URL.revokeObjectURL(url);}}
-// ================= work file (.pdfkobo)
+// ================= work file (.frontpdf)
 const KOBO_MAGIC='PDFKOBO1';
 function u8b64(u){let s='';for(let i=0;i<u.length;i+=0x8000)s+=String.fromCharCode.apply(null,u.subarray(i,i+0x8000));return btoa(s);}
 async function streamConv(u8,ts){return new Uint8Array(await new Response(new Blob([u8]).stream().pipeThrough(ts)).arrayBuffer());}
@@ -692,13 +692,13 @@ async function buildWorkFile(){
   if(window.CompressionStream){try{body=await streamConv(body,new CompressionStream('gzip'));flag='Z';}catch(e){}}
   const head=new TextEncoder().encode(KOBO_MAGIC+flag);const out=new Uint8Array(head.length+body.length);out.set(head);out.set(body,head.length);return out;}
 function openSave(){if(!state.pages.length){msg('作業を保存','保存するページがありません。');return;}
-  const base=(work.name||defaultBase().replace(tr('_加工'),'')+tr('_作業ファイル')).replace(/\.pdfkobo$/i,'');
+  const base=(work.name||defaultBase().replace(tr('_加工'),'')+tr('_作業ファイル')).replace(/\.(frontpdf|pdfkobo)$/i,'');
   if(LS.get('saveWarnOff',false)){doSave(base);return;}$('#saveName').value=base;$('#saveWarnOff').checked=false;openDlg('#dlgSave');}
-async function doSave(base){base=(base||'作業ファイル').replace(/[\\/:*?"<>|]/g,'_');const fname=base+'.pdfkobo';
+async function doSave(base){base=(base||'作業ファイル').replace(/[\\/:*?"<>|]/g,'_');const fname=base+'.frontpdf';
   try{busy('作業ファイルを保存中...',0.3);const bytes=await buildWorkFile();busy(false);
     let saved=false;
     if(window.showSaveFilePicker){try{
-        if(!work.handle||work.name!==fname)work.handle=await window.showSaveFilePicker({suggestedName:fname,types:[{description:'Front PDF 作業ファイル',accept:{'application/octet-stream':['.pdfkobo']}}]});
+        if(!work.handle||work.name!==fname)work.handle=await window.showSaveFilePicker({suggestedName:fname,types:[{description:'Front PDF 作業ファイル',accept:{'application/octet-stream':['.frontpdf']}}]});
         const w=await work.handle.createWritable();await w.write(bytes);await w.close();saved=true;work.name=work.handle.name||fname;}
       catch(e){if(e&&e.name==='AbortError'){status('保存をキャンセルしました');return;}work.handle=null;}}
     if(!saved){download(new Blob([bytes],{type:'application/octet-stream'}),fname);work.name=fname;}
@@ -726,7 +726,7 @@ async function loadWorkFile(f){
 
 async function addFiles(files,insertAt){if(LOCKED)return;
   files=[...files];if(!files.length)return;let n=0,first=null;
-  const kobo=files.find(f=>/\.pdfkobo$/i.test(f.name));if(kobo){try{await loadWorkFile(kobo);}catch(e){console.error(e);msg('作業ファイルを開けません',kobo.name+'\n'+(e.message||e));}files=files.filter(f=>f!==kobo);if(!files.length)return;}
+  const kobo=files.find(f=>/\.(frontpdf|pdfkobo)$/i.test(f.name));if(kobo){try{await loadWorkFile(kobo);}catch(e){console.error(e);msg('作業ファイルを開けません',kobo.name+'\n'+(e.message||e));}files=files.filter(f=>f!==kobo);if(!files.length)return;}
   for(const f of files){
     try{status(f.name+' を読み込み中...');const nm=f.name.toLowerCase(),t=(f.type||'').toLowerCase();let bytes;
       if(t==='application/pdf'||nm.endsWith('.pdf'))bytes=new Uint8Array(await f.arrayBuffer());

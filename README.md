@@ -3,8 +3,8 @@
 **インストール不要・完全オフラインの PDF 編集ツール（HTML ファイル1つ）**
 **A free, offline PDF editor in a single HTML file — no installation, nothing leaves your PC.**
 
-🌐 公式ページ / Official page: **https://hiro0149.github.io/pdf-kobo/**
-⬇ ダウンロード / Download: [Releases](https://github.com/Hiro0149/pdf-kobo/releases/latest)
+🌐 公式ページ / Official page: **https://hiro0149.github.io/front-pdf/**
+⬇ ダウンロード / Download: [Releases](https://github.com/Hiro0149/front-pdf/releases/latest)
 
 > ⚠ **作者はメールでは配布しません。** 必ず公式ページまたは GitHub Releases から入手してください。人に勧めるときは、ファイルではなく公式ページの URL を教えてください。
 > ⚠ **The author never distributes Front PDF by email.** Always download from the official page or GitHub Releases, and share the page URL rather than the file.
@@ -18,11 +18,11 @@
 ### 特長
 - **HTML ファイル1つ**：ダブルクリックで Edge / Chrome で開くだけ。exe ではないので管理者権限も不要です。
 - **外部と通信しない**：PDF はブラウザの中だけで処理します。アップロードもアクセス解析もありません。
-- **できること**：結合・分割・並べ替え・回転、ペン・図形・表・文字・絵文字・画像、DocuWorks 風の付箋（PDF 注釈として書き出し）、ハンコ帳（日付印・丸印・角印・✓・花まる・印影）、黒塗り／白塗りと「塗ったページの画像化書き出し」、検索、範囲指定の表コピー（Excel に貼れる）、透かし、A4 統一・2in1/4in1、PNG 書き出し、作業ファイル（.pdfkobo）。
+- **できること**：結合・分割・並べ替え・回転、ペン・図形・表・文字・絵文字・画像、DocuWorks 風の付箋（PDF 注釈として書き出し）、ハンコ帳（日付印・丸印・角印・✓・花まる・印影）、黒塗り／白塗りと「塗ったページの画像化書き出し」、検索、範囲指定の表コピー（Excel に貼れる）、透かし、A4 統一・2in1/4in1、PNG 書き出し、作業ファイル（.frontpdf）。
 - 5 種類のスキン、7 言語（日本語・English・简体中文・繁體中文・Português・Français・한국어）。
 
 ### 使い方
-1. [公式ページ](https://hiro0149.github.io/pdf-kobo/) から `Front_PDF.html` をダウンロード
+1. [公式ページ](https://hiro0149.github.io/front-pdf/) から `Front_PDF.html` をダウンロード
 2. ダブルクリックで開く
 3. 初回だけ、画面に出る「このブラウザの ID」をコピーして公式ページの「アクティベーション」に貼り付け、表示されたパスワードをアプリに貼り付け（無料・ブラウザごとに1回）
 
@@ -46,7 +46,7 @@ certutil -hashfile Front_PDF.html SHA256
 - 本ソフトは無保証です。大切な書類は書き出した結果を必ず確認してください。
 
 ### 不具合の報告・要望
-[Issues](https://github.com/Hiro0149/pdf-kobo/issues) へどうぞ。
+[Issues](https://github.com/Hiro0149/front-pdf/issues) へどうぞ。
 
 ---
 
@@ -55,11 +55,11 @@ certutil -hashfile Front_PDF.html SHA256
 ### Features
 - **One HTML file** — double-click to open in Edge / Chrome. Not an exe, so no admin rights are needed.
 - **No network access** — PDFs are processed only inside your browser. No uploads, no analytics.
-- **What it does** — merge, split, reorder, rotate; pen, shapes, tables, text, emoji, images; paper-style sticky notes exported as PDF annotations; a stamp book (date stamps, seals, ✓, "hanamaru", scanned seals); black-out / white-out with "rasterize masked pages" export; search; box-select table copy that pastes into Excel; watermark; A4 normalize and 2-up/4-up; PNG export; editable work files (.pdfkobo).
+- **What it does** — merge, split, reorder, rotate; pen, shapes, tables, text, emoji, images; paper-style sticky notes exported as PDF annotations; a stamp book (date stamps, seals, ✓, "hanamaru", scanned seals); black-out / white-out with "rasterize masked pages" export; search; box-select table copy that pastes into Excel; watermark; A4 normalize and 2-up/4-up; PNG export; editable work files (.frontpdf).
 - Five skins and seven languages.
 
 ### How to use
-1. Download `Front_PDF.html` from the [official page](https://hiro0149.github.io/pdf-kobo/)
+1. Download `Front_PDF.html` from the [official page](https://hiro0149.github.io/front-pdf/)
 2. Double-click to open it
 3. First time only: copy "This browser's ID" shown on screen, paste it into "Activation" on the official page, then paste the password shown there into the app (free, once per browser)
 

@@ -1,4 +1,4 @@
-# Manual do Front PDF (Português) v1.0.1 (2026-11-22)
+# Manual do Front PDF (Português) v1.0.2 (2026-11-22)
 
 ## 1. Visão geral
 - O Front PDF é um editor de PDF que funciona apenas abrindo um arquivo HTML (cerca de 3,7 MB) no navegador (Edge ou Chrome recomendados). Não precisa instalar.
@@ -19,7 +19,7 @@
 - Duas páginas: clique numa miniatura e depois Ctrl+clique em outra. As duas aparecem lado a lado e ambas podem ser anotadas (a página ativa tem moldura). Clique numa só página para voltar.
 
 ## 4. Abrir e mesclar
-- [Abrir] (Ctrl+O) ou arraste PDF / PNG / JPEG / arquivos de trabalho (.pdfkobo). Quantos quiser. A ordem das miniaturas é a ordem da mesclagem.
+- [Abrir] (Ctrl+O) ou arraste PDF / PNG / JPEG / arquivos de trabalho (.frontpdf). Quantos quiser. A ordem das miniaturas é a ordem da mesclagem.
 - Imagens viram PDFs de uma página (conforme "Importar imagem").
 - PDFs protegidos por senha não podem ser abertos.
 
@@ -68,8 +68,8 @@
 - [Exportar PNG]: páginas selecionadas ou todas, a 96 / 150 / 300 dpi.
 - As anotações são gravadas no PDF como imagem (qualquer idioma é preservado). Notas adesivas são anotações.
 
-## 13. Arquivos de trabalho (.pdfkobo)
-- [Salvar trabalho] (Ctrl+S) salva um .pdfkobo. Abra com [Abrir] ou arrastando para continuar com páginas, anotações, carimbos, notas e marca d'água editáveis. Dá para passar a um colega que segue as instruções das notas.
+## 13. Arquivos de trabalho (.frontpdf)
+- [Salvar trabalho] (Ctrl+S) salva um .frontpdf. Abra com [Abrir] ou arrastando para continuar com páginas, anotações, carimbos, notas e marca d'água editáveis. Dá para passar a um colega que segue as instruções das notas.
 - Atenção: o arquivo de trabalho contém o PDF original, inclusive o texto sob as tarjas. Não o entregue a pessoas de fora da organização; compartilhe o PDF exportado.
 - O caderno de carimbos e o histórico de desfazer não são incluídos. Alterações não salvas mostram "*" no título e geram aviso ao fechar.
 
@@ -97,7 +97,7 @@
 - Software incluído: PDF.js (Apache License 2.0); pdf-lib, pako, @pdf-lib/standard-fonts, @pdf-lib/upng, qrcode-generator (MIT); tslib (0BSD); Adobe CMaps (BSD-3-Clause); PDFium JBIG2 (BSD-3-Clause); OpenJPEG (BSD-2-Clause). Textos das licenças: [ⓘ] → Licenças de terceiros, e THIRD_PARTY_NOTICES.txt.
 - Fonte oficial: a página de releases no GitHub (a URL aparece em [ⓘ]). Arquivos obtidos em outros lugares podem ter sido modificados; o autor não se responsabiliza por problemas causados por versões modificadas.
 - O autor nunca distribui o software por e-mail. Ao recomendá-lo, compartilhe a URL da fonte oficial em vez do arquivo ([ⓘ] → "Copiar texto e URL"). A tela de boas-vindas no primeiro uso também mostra a fonte oficial.
-- Os PDFs exportados trazem "Front PDF v1.0.1 (Front Softworks)" e a URL oficial nas propriedades (Producer/Creator).
+- Os PDFs exportados trazem "Front PDF v1.0.2 (Front Softworks)" e a URL oficial nas propriedades (Producer/Creator).
 - No primeiro uso é preciso uma ativação gratuita (uma vez por navegador): (1) copie o "ID deste navegador" mostrado na tela (8 caracteres aleatórios gerados pelo app; sem informações do PC ou pessoais), cole em "Ativação" na página oficial e clique em "Emitir"; (2) cole no app a senha exibida (ou a senha curta de 10 caracteres). Ler o QR code da tela com o celular abre a página oficial com o ID preenchido. A senha só funciona nesse navegador, não em outros PCs ou navegadores. A página oficial não envia o ID; o cálculo é feito no navegador. Limpar os dados do navegador muda o ID; nesse caso, ative de novo. O ID pode ser copiado a qualquer momento enquanto esta tela estiver aberta (ela não pode ser fechada).
 - Outros softwares da Front Softworks: ExVAN Planner (otimizador de carregamento de contêineres, https://exvan-planner.github.io/).
 - Como verificar se o arquivo não foi alterado (Windows, sem instalar nada): execute `certutil -hashfile Front_PDF.html SHA256` no Prompt de Comando e confira se o valor é igual ao SHA-256 publicado na fonte oficial.

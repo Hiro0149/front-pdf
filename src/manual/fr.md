@@ -1,4 +1,4 @@
-# Manuel de Front PDF (Français) v1.0.1 (2026-11-22)
+# Manuel de Front PDF (Français) v1.0.2 (2026-11-22)
 
 ## 1. Présentation
 - Front PDF est un éditeur PDF qui fonctionne simplement en ouvrant un fichier HTML (environ 3,7 Mo) dans un navigateur (Edge ou Chrome recommandés). Aucune installation.
@@ -19,7 +19,7 @@
 - Deux pages : cliquez une miniature puis Ctrl+clic sur une autre. Les deux pages s'affichent côte à côte et sont toutes deux annotables (la page active est encadrée). Cliquez une seule page pour revenir.
 
 ## 4. Ouvrir et fusionner
-- [Ouvrir] (Ctrl+O) ou glisser-déposer des PDF / PNG / JPEG / fichiers de travail (.pdfkobo). Sans limite de nombre. L'ordre des miniatures est l'ordre de fusion.
+- [Ouvrir] (Ctrl+O) ou glisser-déposer des PDF / PNG / JPEG / fichiers de travail (.frontpdf). Sans limite de nombre. L'ordre des miniatures est l'ordre de fusion.
 - Les images deviennent des PDF d'une page (selon « Import d'image »).
 - Les PDF protégés par mot de passe ne peuvent pas être ouverts.
 
@@ -68,8 +68,8 @@
 - [Exporter PNG] : pages sélectionnées ou toutes, à 96 / 150 / 300 dpi.
 - Les annotations sont incrustées dans le PDF sous forme d'image (toutes les langues sont conservées). Les notes sont des annotations.
 
-## 13. Fichiers de travail (.pdfkobo)
-- [Enregistrer] (Ctrl+S) crée un fichier .pdfkobo. Ouvrez-le avec [Ouvrir] ou par glisser-déposer pour reprendre avec pages, annotations, tampons, notes et filigrane modifiables. Vous pouvez le transmettre à un collègue qui suivra les consignes des notes.
+## 13. Fichiers de travail (.frontpdf)
+- [Enregistrer] (Ctrl+S) crée un fichier .frontpdf. Ouvrez-le avec [Ouvrir] ou par glisser-déposer pour reprendre avec pages, annotations, tampons, notes et filigrane modifiables. Vous pouvez le transmettre à un collègue qui suivra les consignes des notes.
 - Attention : le fichier de travail contient le PDF d'origine tel quel, y compris le texte sous les masques. Ne le donnez pas à l'extérieur de votre organisation ; partagez plutôt le PDF exporté.
 - Le carnet de tampons et l'historique d'annulation ne sont pas inclus. Les modifications non enregistrées affichent « * » dans le titre et déclenchent un avertissement à la fermeture.
 
@@ -97,7 +97,7 @@
 - Logiciels inclus : PDF.js (Apache License 2.0) ; pdf-lib, pako, @pdf-lib/standard-fonts, @pdf-lib/upng, qrcode-generator (MIT) ; tslib (0BSD) ; CMaps Adobe (BSD-3-Clause) ; PDFium JBIG2 (BSD-3-Clause) ; OpenJPEG (BSD-2-Clause). Textes des licences : [ⓘ] → Licences tierces, et THIRD_PARTY_NOTICES.txt.
 - Source officielle : la page des versions sur GitHub (l'URL est affichée dans [ⓘ]). Les fichiers obtenus ailleurs peuvent avoir été modifiés ; l'auteur n'est pas responsable des problèmes causés par des versions modifiées.
 - L'auteur ne distribue jamais le logiciel par e-mail. Pour le recommander, partagez l'URL de la source officielle plutôt que le fichier ([ⓘ] → « Copier le texte et l'URL »). L'écran d'accueil au premier lancement affiche aussi la source officielle.
-- Les PDF exportés portent « Front PDF v1.0.1 (Front Softworks) » et l'URL officielle dans leurs propriétés (Producer/Creator).
+- Les PDF exportés portent « Front PDF v1.0.2 (Front Softworks) » et l'URL officielle dans leurs propriétés (Producer/Creator).
 - À la première utilisation, une activation gratuite est nécessaire (une fois par navigateur) : (1) copiez « l'ID de ce navigateur » affiché (8 caractères aléatoires créés par l'app ; aucune information sur le PC ou personnelle), collez-le dans « Activation » sur la page officielle et cliquez sur « Émettre » ; (2) collez dans l'app le mot de passe affiché (ou le mot de passe court à 10 caractères). Scanner le QR code avec un téléphone ouvre la page officielle avec l'ID déjà rempli. Le mot de passe ne fonctionne que dans ce navigateur, pas sur d'autres PC ou navigateurs. La page officielle n'envoie pas l'ID ; le calcul se fait dans le navigateur. Effacer les données du navigateur change l'ID : activez à nouveau. L'ID peut être copié à tout moment tant que cet écran est ouvert (il ne peut pas être fermé).
 - Autres logiciels de Front Softworks : ExVAN Planner (optimiseur de chargement de conteneurs, https://exvan-planner.github.io/).
 - Vérifier que le fichier n'a pas été modifié (Windows, rien à installer) : exécutez `certutil -hashfile Front_PDF.html SHA256` dans l'invite de commandes et vérifiez que la valeur correspond au SHA-256 publié sur la source officielle.
