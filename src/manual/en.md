@@ -1,14 +1,15 @@
-# Front PDF User Manual (English) v1.0.2 (2026-11-22)
+# Front PDF User Manual (English) v1.1.0 (2026-11-23)
 
 ## 1. Overview
-- Front PDF is a PDF editor that runs just by opening one HTML file (about 3.7 MB) in a browser (Edge or Chrome recommended). No installation.
+- Front PDF is a PDF editor that runs just by opening one HTML file (about 4 MB) in a browser (Edge or Chrome recommended). No installation.
 - Fully offline. Files are never sent anywhere; everything is processed inside the browser on your PC.
 - Features: merge, split, reorder, rotate and delete pages of PDFs and images; annotate pages (pen, shapes, text, sticky notes, stamps, emoji, images); black-out / white-out; text search; rectangle text copy (tables paste straight into Excel); watermark; A4 normalize; 2-up/4-up; PNG export; work files.
 - You can also add blank pages and lay out documents freely, like a word processor.
+- The built-in "Desk" lays out a folder's PDFs, work files and images as thumbnails you can place freely, and lets you merge, split, rename, move and print them (like DocuWorks Desk; see section 16).
 
 ## 2. Screen layout
 - Title bar (right): Image import (layout when opening PNG/JPEG: Place on A4 / Keep image size), Skin, Language (globe), ? (help), ⓘ (version and license).
-- Toolbar row 1: File (Open / Save work), View (▦ Grid / ✎ Edit), Page (Add blank, Rotate left/right, Duplicate, Delete page), Undo / Redo, and at the far right Export (Export PNG / Export PDF).
+- Toolbar row 1: the File block at the top left (Open / Save PDF / Save work file / Save as / Print / PNG), View (▦ Grid / ✎ Edit), Page (Add blank, Rotate left/right, Duplicate, Delete page), Undo / Redo. [Desk] in the title bar switches to the desk (section 16).
 - Toolbar row 2 (Edit mode only): ◀ page number ▶, Zoom (− / menu / +), Search (box, ▲▼, hit count, Highlight all, Black out all), All pages (Watermark, Clear markups).
 - Left: thumbnails (Size slider and Columns on top). Drag the divider to change its width.
 - Toolbox (5 groups), page viewer in the middle, properties panel on the right (settings of the selected markup or tool), status bar at the bottom.
@@ -62,42 +63,55 @@
 - Drop an image file on the page = place it there; drop it on the thumbnails = new page.
 - Ctrl+V of text pastes it as a text object.
 
-## 12. Export
-- [Export PDF]: all pages merged / selected pages / one file per page / every N pages / by ranges (e.g. 1-3, 4-6, 7). Options: resize to A4, trim margins (mm), 2-up / 4-up, document title.
-- If black-out or white-out is used, a confirmation appears. Masks only cover the text and the text data remains underneath, so for confidential information choose "Rasterize masked pages and export PDF (recommended)" — only those pages become images and their text data is removed.
-- [Export PNG]: selected or all pages at 96 / 150 / 300 dpi.
-- Markups are burned into the PDF as images (any language is preserved). Sticky notes are annotations.
+## 12. Save & print
+- [Save PDF] (Ctrl+S): a PDF opened from the desk is overwritten in place (the previous version is kept in the "_削除予定" folder of the same folder and can be restored with [Undo] on the desk). With a work file open, a PDF with the same name is created next to it. When the desk was not used, it works like [Save as].
+- [Save as]: choose a name and format (PDF / work file). The format of the open file is selected first. For PDF you can choose: merge all pages / selected pages only / split every page / every N pages / by ranges (e.g. 1-3, 4-6, 7), fit to A4, crop margins (mm), 2-up / 4-up, document title.
+- If there are black-outs or white-outs, you are asked before saving. Masks are only laid on top and the text underneath remains, so for confidential information choose "Save masked parts as images (recommended)" (only those pages are rasterized and the text data is removed).
+- [Print] (Ctrl+P): prints with markups, stamps, notes and watermark. Choose the printer and copies in Edge's print screen.
+- [PNG]: selected pages / all pages as PNG at 96, 150 or 300 dpi.
+- Markups are burned into the PDF as images (any language prints as is). Sticky notes become annotations.
 
 ## 13. Work files (.frontpdf)
-- [Save work] (Ctrl+S) saves a .frontpdf file. Open it with [Open] or drag & drop to continue with pages, markups, stamps, notes and watermark still editable. You can pass it to a colleague who follows the instructions in the sticky notes.
-- Caution: a work file contains the original PDF as is, including text under black-outs. Do not give it to people outside your organization; share the exported PDF instead.
-- The stamp book and the undo history are not included. Unsaved changes show "*" in the title and trigger a warning when closing.
+- [Save work file] saves a .frontpdf (overwrites when a work file is open). Open it with [Open], drag & drop, or a double-click on the desk to continue with pages, markups, stamps, notes and watermark still editable. You can hand it to a colleague to make corrections according to the notes.
+- Caution: the work file contains the original PDF as is (including the text under black-outs). Do not give it to outsiders; give them a PDF made with [Save PDF].
+- The stamp book and undo history are not included. Unsaved changes show * in the title and you are warned when closing.
 
 ## 14. View & settings
 - Zoom: Fit page / Fit width / 25–400%, Ctrl+wheel, Ctrl++ / Ctrl+−, Ctrl+0 to fit the page.
 - Thumbnails: Size slider, Columns (Auto / 1–6), Ctrl+wheel.
-- Skins: Modern / Dark / Retro PC / Aqua / Handheld. Languages: 日本語, English, 简体中文, 繁體中文, Português, Français, 한국어. Both are remembered.
+- Skins: Modern / Dark / Retro PC / Aqua / Handheld / Fluffy pets. Languages: 日本語, English, 简体中文, 繁體中文, Português, Français, 한국어. Both are remembered.
 
 ## 15. Keyboard shortcuts
-- Ctrl+O open / Ctrl+S save work / Ctrl+Z undo / Ctrl+Y or Ctrl+Shift+Z redo / Ctrl+F search / F3 or Enter next hit / Shift+Enter previous hit
+- Ctrl+O open / Ctrl+S save (Save PDF for a PDF opened from the desk, otherwise Save work file) / Ctrl+P print / Ctrl+Z undo / Ctrl+Y or Ctrl+Shift+Z redo / Ctrl+F search / F3 or Enter next hit / Shift+Enter previous hit
 - Delete: delete the selected markup (pages when the thumbnails are focused) / arrow keys nudge (Shift = bigger) / Esc deselect → Select tool
 - PageUp / PageDown change page / Ctrl+A select all thumbnails (all text in Select text) / Ctrl+C copy selected text / Ctrl+V paste image or text
 - Ctrl+wheel, Ctrl++ / −, Ctrl+0 zoom / Ctrl+Enter finish typing in a sticky note
 
-## 16. Distribution & troubleshooting
+## 16. Desk
+- The app starts on the desk. Use [Choose folder] to pick the top folder with your documents (Box Drive folders work too): the folder tree appears on the left and PDFs, work files (.frontpdf), JPG and PNG appear as thumbnails on the right. The last folder opens automatically next time (the browser may require one click). Edge / Chrome only.
+- Drag thumbnails anywhere. The layout is saved in a ".frontpdf-desk" file in the folder and shared with anyone who opens it. [Arrange] sorts by name; the slider sets the size. Frame colors: PDF = red, work file = blue, image = green.
+- Open: double-click or Enter opens the editor in a new window; the [Editor] button opens an empty editor. Preview: Space, or press and release Ctrl+Shift (←→ pages, ↑↓ documents, Enter to open, Esc to close).
+- Merge: drop a document onto another (the dragged one goes first, the target after it), or select several and right-click [Merge]. You confirm the order and name first. Images become PDF pages. If work files are included, the result is a work file and markups and notes are kept.
+- Split into pages: splits a PDF into one PDF per page (same folder / new folder).
+- Move: drag to the folder tree on the left. Dropping from Explorer imports (copies). Ctrl+C / Ctrl+V duplicates, F2 renames, Ctrl+F filters by file name, Ctrl+P prints (PDF and images). Right-click for the menu.
+- Deleted files and previous versions of overwritten files go to a "_削除予定" folder created automatically inside that folder (it is not the Windows or Mac trash). When no longer needed, right-click the "_削除予定" folder → [Empty] to delete permanently (cannot be undone).
+- Undo Ctrl+Z / Redo Ctrl+Y: moves, renames, deletions, merges, splits, overwrites and more, as many times as you like. Changes to the folder (by others or Box sync) appear automatically.
+- [Log] / [Copy log]: an activity record. Paste it when reporting a problem.
+
+## 17. Distribution & troubleshooting
 - Company mail systems may block .html attachments → send a ZIP or use a shared folder / Teams.
 - Opening the file directly from a mail or cloud preview imposes restrictions (stamp book not remembered, no save dialog, no clipboard) → save it to the PC first and double-click it.
 - Stamp book, skin, language, note author etc. are stored in each PC's browser (localStorage, prefix pdfkobo98.). Clearing browser data removes them, so back up the stamp book.
 - Not supported: editing existing PDF text in place, true redaction (removal from the PDF structure; use page rasterization instead), OCR, digital signatures, creating form fields.
 
-## 17. License, copyright and official source
+## 18. License, copyright and official source
 - Copyright © 2026 Front Softworks. License: MIT License (full text in the app via [ⓘ] → MIT License, and in the LICENSE file).
 - Under the MIT License anyone — individuals and companies — may use, copy, modify, redistribute and use it commercially for free. The only condition is to keep the copyright notice and the license text.
 - No warranty: the software is provided "as is" and the author accepts no warranty or liability. Always check the exported result of important documents.
 - Bundled software: PDF.js (Apache License 2.0); pdf-lib, pako, @pdf-lib/standard-fonts, @pdf-lib/upng, qrcode-generator (MIT); tslib (0BSD); Adobe CMaps (BSD-3-Clause); PDFium JBIG2 (BSD-3-Clause); OpenJPEG (BSD-2-Clause). License texts: [ⓘ] → Third-party licenses, and THIRD_PARTY_NOTICES.txt.
 - Official source: the GitHub releases page (the URL is shown in [ⓘ]). Files obtained elsewhere may have been modified; the author is not responsible for problems caused by modified versions.
 - The author never distributes the software by email. When recommending it, share the official source URL instead of the file ([ⓘ] → "Copy intro text and URL"). The welcome screen on first launch also shows the official source.
-- Exported PDFs carry "Front PDF v1.0.2 (Front Softworks)" and the official URL in their properties (Producer/Creator).
+- Exported PDFs carry "Front PDF v1.1.0 (Front Softworks)" and the official URL in their properties (Producer/Creator).
 - On first use a free activation is needed (once per browser): (1) copy "this browser's ID" shown on screen (8 random characters made by the app; contains no PC or personal information), paste it into "Activation" on the official page and press "Issue"; (2) paste the password shown there (or the 10-character short password) into the app. Scanning the QR code on screen with a phone opens the official page with the ID filled in. The password works only in that browser, not on other PCs or browsers. The official page does not send the ID anywhere; it calculates inside the browser. Clearing browser data changes the ID, so activate again. The ID can be copied at any time while this screen is open (it cannot be closed, so you cannot miss it).
 - Other software by Front Softworks: ExVAN Planner (container loading optimizer, https://exvan-planner.github.io/).
 - How to verify the file is unmodified (Windows, nothing to install): run `certutil -hashfile Front_PDF.html SHA256` in Command Prompt and check that the value matches the SHA-256 published at the official source.

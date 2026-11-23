@@ -19,7 +19,8 @@
 - **HTML ファイル1つ**：ダブルクリックで Edge / Chrome で開くだけ。exe ではないので管理者権限も不要です。
 - **外部と通信しない**：PDF はブラウザの中だけで処理します。アップロードもアクセス解析もありません。
 - **できること**：結合・分割・並べ替え・回転、ペン・図形・表・文字・絵文字・画像、DocuWorks 風の付箋（PDF 注釈として書き出し）、ハンコ帳（日付印・丸印・角印・✓・花まる・印影）、黒塗り／白塗りと「塗ったページの画像化書き出し」、検索、範囲指定の表コピー（Excel に貼れる）、透かし、A4 統一・2in1/4in1、PNG 書き出し、作業ファイル（.frontpdf）。
-- 5 種類のスキン、7 言語（日本語・English・简体中文・繁體中文・Português・Français・한국어）。
+- **デスク**：フォルダの PDF・作業ファイル・画像をサムネイルで自由に並べ、重ねて結合・分割・名前変更・フォルダへドラッグで移動・印刷（DocuWorks Desk のような使い方。Box Drive のフォルダにも対応。Edge / Chrome）。
+- 6 種類のスキン、7 言語（日本語・English・简体中文・繁體中文・Português・Français・한국어）。
 
 ### 使い方
 1. [公式ページ](https://hiro0149.github.io/front-pdf/) から `Front_PDF.html` をダウンロード
@@ -56,7 +57,8 @@ certutil -hashfile Front_PDF.html SHA256
 - **One HTML file** — double-click to open in Edge / Chrome. Not an exe, so no admin rights are needed.
 - **No network access** — PDFs are processed only inside your browser. No uploads, no analytics.
 - **What it does** — merge, split, reorder, rotate; pen, shapes, tables, text, emoji, images; paper-style sticky notes exported as PDF annotations; a stamp book (date stamps, seals, ✓, "hanamaru", scanned seals); black-out / white-out with "rasterize masked pages" export; search; box-select table copy that pastes into Excel; watermark; A4 normalize and 2-up/4-up; PNG export; editable work files (.frontpdf).
-- Five skins and seven languages.
+- **Desk** — lay out a folder's PDFs, work files and images as thumbnails anywhere you like; drop one onto another to merge, split, rename, drag to a folder to move, and print (like DocuWorks Desk; works with Box Drive folders; Edge / Chrome).
+- Six skins and seven languages.
 
 ### How to use
 1. Download `Front_PDF.html` from the [official page](https://hiro0149.github.io/front-pdf/)

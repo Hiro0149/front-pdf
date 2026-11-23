@@ -9,6 +9,7 @@ Front PDF の使い方¦Front PDF Help¦Front PDF 使用说明¦Front PDF 使用
 レトロPC¦Retro PC¦复古PC¦復古PC¦PC retrô¦PC rétro¦레트로 PC
 アクア¦Aqua¦Aqua¦Aqua¦Aqua¦Aqua¦아쿠아
 ゲーム機¦Handheld¦掌机¦掌機¦Portátil¦Console¦게임기
+もふもふ¦Fluffy pets¦毛茸茸¦毛茸茸¦Fofinho¦Tout doux¦몽글몽글
 画像取込¦Image import¦图片导入¦圖片匯入¦Importar imagem¦Import d'image¦이미지 가져오기
 PNG/JPEGを開いたときの配置¦Layout when opening PNG/JPEG¦打开PNG/JPEG时的排版¦開啟PNG/JPEG時的排版¦Layout ao abrir PNG/JPEG¦Mise en page à l'ouverture des PNG/JPEG¦PNG/JPEG를 열 때의 배치
 星¦Star¦星形¦星形¦Estrela¦Étoile¦별
@@ -362,9 +363,182 @@ Front PDFの作業ファイルではありません¦This is not a Front PDF wor
 _加工¦_edited¦_已编辑¦_已編輯¦_editado¦_modifie¦_편집
 _作業ファイル¦_workfile¦_工作文件¦_工作檔案¦_trabalho¦_travail¦_작업파일
 作業ファイル¦Work file¦工作文件¦工作檔案¦Arquivo de trabalho¦Fichier de travail¦작업 파일
+エディター¦Editor¦编辑器¦編輯器¦Editor¦Éditeur¦편집기
+見た目¦Skin¦皮肤¦外觀¦Tema¦Thème¦스킨
+フォルダ¦Folder¦文件夹¦資料夾¦Pasta¦Dossier¦폴더
+フォルダを選ぶ¦Choose folder¦选择文件夹¦選擇資料夾¦Escolher pasta¦Choisir un dossier¦폴더 선택
+更新¦Refresh¦刷新¦重新整理¦Atualizar¦Actualiser¦새로 고침
+整列¦Arrange¦整理排列¦整齊排列¦Organizar¦Ranger¦정렬
+文書¦Document¦文档¦文件¦Documento¦Document¦문서
+プレビュー¦Preview¦预览¦預覽¦Visualizar¦Aperçu¦미리 보기
+名前変更¦Rename¦重命名¦重新命名¦Renomear¦Renommer¦이름 변경
+印刷¦Print¦打印¦列印¦Imprimir¦Imprimer¦인쇄
+_削除予定へ¦Set aside to delete¦移到待删除¦移到待刪除¦Separar para excluir¦Mettre de côté à supprimer¦삭제 예정으로
+ログ¦Log¦日志¦日誌¦Log¦Journal¦로그
+ログコピー¦Copy log¦复制日志¦複製日誌¦Copiar log¦Copier le journal¦로그 복사
+このフォルダには PDF・作業ファイル・画像がありません¦This folder has no PDFs, work files or images¦此文件夹中没有PDF、工作文件或图片¦此資料夾中沒有PDF、工作檔案或圖片¦Esta pasta não tem PDFs, arquivos de trabalho ou imagens¦Ce dossier ne contient ni PDF, ni fichier de travail, ni image¦이 폴더에는 PDF・작업 파일・이미지가 없습니다
+エクスプローラーからドラッグ＆ドロップで取り込めます¦Drag & drop from Explorer to import¦可从资源管理器拖放导入¦可從檔案總管拖放匯入¦Arraste e solte do Explorer para importar¦Glissez-déposez depuis l'Explorateur pour importer¦탐색기에서 드래그 앤 드롭으로 가져올 수 있습니다
+← 前¦← Prev¦← 上一页¦← 上一頁¦← Anterior¦← Préc.¦← 이전
+次 →¦Next →¦下一页 →¦下一頁 →¦Próxima →¦Suiv. →¦다음 →
+ダブルクリック：開く ／ 重ねる：結合 ／ Space・Ctrl+Shift：プレビュー ／ F2：名前変更 ／ Ctrl+C・V：複製 ／ Ctrl+Z：元に戻す¦Double-click: open / Overlap: merge / Space・Ctrl+Shift: preview / F2: rename / Ctrl+C・V: duplicate / Ctrl+Z: undo¦双击：打开 ／ 重叠：合并 ／ Space・Ctrl+Shift：预览 ／ F2：重命名 ／ Ctrl+C・V：复制 ／ Ctrl+Z：撤销¦雙擊：開啟 ／ 重疊：合併 ／ Space・Ctrl+Shift：預覽 ／ F2：重新命名 ／ Ctrl+C・V：複製 ／ Ctrl+Z：復原¦Clique duplo: abrir / Sobrepor: unir / Space・Ctrl+Shift: visualizar / F2: renomear / Ctrl+C・V: duplicar / Ctrl+Z: desfazer¦Double-clic : ouvrir / Superposer : fusionner / Space・Ctrl+Shift : aperçu / F2 : renommer / Ctrl+C・V : dupliquer / Ctrl+Z : annuler¦더블클릭: 열기 / 겹치기: 결합 / Space・Ctrl+Shift: 미리 보기 / F2: 이름 변경 / Ctrl+C・V: 복제 / Ctrl+Z: 실행 취소
+前回のフォルダを開きます¦Open the last folder¦打开上次的文件夹¦開啟上次的資料夾¦Abrir a última pasta¦Ouvrir le dernier dossier¦지난번 폴더를 엽니다
+フォルダを開きます¦Open folder¦打开文件夹¦開啟資料夾¦Abrir pasta¦Ouvrir le dossier¦폴더를 엽니다
+クリックすると開きます（ブラウザの決まりで、起動時に1回だけ確認が出ることがあります）¦Click to open (the browser may ask for permission once at startup)¦点击即可打开（按浏览器规则，启动时可能会确认一次）¦點擊即可開啟（依瀏覽器規定，啟動時可能會確認一次）¦Clique para abrir (o navegador pode pedir permissão uma vez ao iniciar)¦Cliquez pour ouvrir (le navigateur peut demander une autorisation une fois au démarrage)¦클릭하면 열립니다 (브라우저 규칙상 시작 시 한 번 확인이 나올 수 있습니다)
+クリックすると開きます¦Click to open¦点击即可打开¦點擊即可開啟¦Clique para abrir¦Cliquez pour ouvrir¦클릭하면 열립니다
+結合¦Merge¦合并¦合併¦Unir¦Fusionner¦결합
+この順番で1つにまとめます（↑↓で並べ替え）¦Combine into one in this order (↑↓ to reorder)¦按此顺序合并为一个（↑↓调整顺序）¦依此順序合併為一個（↑↓調整順序）¦Juntar em um, nesta ordem (↑↓ para reordenar)¦Regrouper en un seul, dans cet ordre (↑↓ pour réordonner)¦이 순서로 하나로 합칩니다 (↑↓로 순서 변경)
+画像は PDF のページに変換してから結合します¦Images are converted to PDF pages before merging¦图片会先转换为PDF页面再合并¦圖片會先轉換為PDF頁面再合併¦As imagens são convertidas em páginas PDF antes de unir¦Les images sont converties en pages PDF avant la fusion¦이미지는 PDF 페이지로 변환한 뒤 결합합니다
+作業ファイルを含むので、結果は作業ファイル（.frontpdf）になります。書き込み・付箋などはそのまま残り、エディターで続きから編集できます¦Because work files are included, the result is a work file (.frontpdf). Markups, notes etc. are kept, and you can continue editing in the editor¦由于包含工作文件，结果将是工作文件（.frontpdf）。标注、便签等会保留，可在编辑器中继续编辑¦由於包含工作檔案，結果將是工作檔案（.frontpdf）。標註、便籤等會保留，可在編輯器中繼續編輯¦Como há arquivos de trabalho, o resultado será um arquivo de trabalho (.frontpdf). Anotações, notas etc. são mantidas e você pode continuar editando no editor¦Comme des fichiers de travail sont inclus, le résultat sera un fichier de travail (.frontpdf). Annotations, notes, etc. sont conservées et vous pouvez continuer dans l'éditeur¦작업 파일이 포함되어 있으므로 결과는 작업 파일(.frontpdf)이 됩니다. 주석・메모 등은 그대로 남고 편집기에서 이어서 편집할 수 있습니다
+新しいファイル名¦New file name¦新文件名¦新檔名¦Novo nome do arquivo¦Nouveau nom de fichier¦새 파일 이름
+元のファイルを「_削除予定」へ移す¦Move the original files to "_削除予定" (to-delete folder)¦将原文件移到"_削除予定"（待删除文件夹）¦將原檔案移到「_削除予定」（待刪除資料夾）¦Mover os originais para "_削除予定" (pasta de exclusão)¦Déplacer les originaux vers « _削除予定 » (dossier à supprimer)¦원본 파일을 '_削除予定'(삭제 예정 폴더)으로 이동
+結合しても、デスクの［元に戻す］（Ctrl+Z）で結合前に戻せます¦You can undo the merge with [Undo] (Ctrl+Z) on the desk¦合并后也可用桌面的［撤销］（Ctrl+Z）恢复¦合併後也可用桌面的［復原］（Ctrl+Z）還原¦Você pode desfazer a união com [Desfazer] (Ctrl+Z) na mesa¦Vous pouvez annuler la fusion avec [Annuler] (Ctrl+Z) sur le bureau¦결합해도 데스크의 [실행 취소](Ctrl+Z)로 되돌릴 수 있습니다
+結合する¦Merge¦合并¦合併¦Unir¦Fusionner¦결합
+ページごとにばらす¦Split into pages¦按页拆分¦按頁拆分¦Separar por página¦Séparer par page¦페이지별로 나누기
+同じフォルダに保存¦Save in the same folder¦保存到同一文件夹¦儲存到同一資料夾¦Salvar na mesma pasta¦Enregistrer dans le même dossier¦같은 폴더에 저장
+新しいフォルダにまとめる¦Put them in a new folder¦放入新文件夹¦放入新資料夾¦Colocar numa nova pasta¦Les mettre dans un nouveau dossier¦새 폴더에 모으기
+ばらしても、デスクの［元に戻す］（Ctrl+Z）で元に戻せます¦You can undo the split with [Undo] (Ctrl+Z) on the desk¦拆分后也可用桌面的［撤销］（Ctrl+Z）恢复¦拆分後也可用桌面的［復原］（Ctrl+Z）還原¦Você pode desfazer com [Desfazer] (Ctrl+Z) na mesa¦Vous pouvez annuler avec [Annuler] (Ctrl+Z) sur le bureau¦나눠도 데스크의 [실행 취소](Ctrl+Z)로 되돌릴 수 있습니다
+ばらす¦Split¦拆分¦拆分¦Separar¦Séparer¦나누기
+デスクへ¦Desk¦桌面¦桌面¦Mesa¦Bureau¦데스크
+デスクを表示¦Show desk¦显示桌面¦顯示桌面¦Mostrar mesa¦Afficher le bureau¦데스크 표시
+デスク¦Desk¦桌面¦桌面¦Mesa¦Bureau¦데스크
+PDF保存¦Save PDF¦保存PDF¦儲存PDF¦Salvar PDF¦Enregistrer PDF¦PDF 저장
+作業ファイル保存¦Save work file¦保存工作文件¦儲存工作檔案¦Salvar arq. de trabalho¦Enreg. fichier de travail¦작업 파일 저장
+別名で保存¦Save as¦另存为¦另存新檔¦Salvar como¦Enregistrer sous¦다른 이름으로 저장
+形式¦Format¦格式¦格式¦Formato¦Format¦형식
+作業ファイル（.frontpdf：続きから編集できる）¦Work file (.frontpdf: continue editing later)¦工作文件（.frontpdf：可继续编辑）¦工作檔案（.frontpdf：可繼續編輯）¦Arquivo de trabalho (.frontpdf: continuar editando depois)¦Fichier de travail (.frontpdf : reprendre l'édition plus tard)¦작업 파일(.frontpdf: 이어서 편집 가능)
+保存前の確認（黒塗り）¦Check before saving (black-out)¦保存前确认（涂黑）¦儲存前確認（塗黑）¦Verificação antes de salvar (tarjas)¦Vérification avant l'enregistrement (masquage)¦저장 전 확인 (검게 칠하기)
+塗った部分を画像にして保存（推奨・下の文字は消える）¦Save masked parts as images (recommended; text underneath is removed)¦将涂抹部分转为图像保存（推荐・下方文字会被删除）¦將塗抹部分轉為影像儲存（推薦・下方文字會被刪除）¦Salvar as partes tarjadas como imagem (recomendado; o texto embaixo é removido)¦Enregistrer les zones masquées en image (recommandé ; le texte dessous est supprimé)¦칠한 부분을 이미지로 저장 (권장・아래 텍스트는 지워짐)
+元のデータのまま保存（下の文字は残る）¦Save the original data as is (text underneath remains)¦按原数据保存（下方文字会保留）¦按原資料儲存（下方文字會保留）¦Salvar os dados originais (o texto embaixo permanece)¦Enregistrer les données d'origine (le texte dessous reste)¦원본 데이터 그대로 저장 (아래 텍스트는 남음)
+エディター（PDF に書き込む画面）を別ウインドウで開く¦Open the editor (where you mark up PDFs) in a new window¦在新窗口打开编辑器（在PDF上书写的界面）¦在新視窗開啟編輯器（在PDF上書寫的畫面）¦Abrir o editor (onde você anota PDFs) em nova janela¦Ouvrir l'éditeur (pour annoter les PDF) dans une nouvelle fenêtre¦편집기(PDF에 쓰는 화면)를 새 창으로 열기
+デスクに並べるいちばん上のフォルダを選ぶ（Box のフォルダも可）¦Choose the top folder to show on the desk (Box folders work too)¦选择要在桌面上显示的顶层文件夹（也可选Box文件夹）¦選擇要在桌面上顯示的最上層資料夾（也可選Box資料夾）¦Escolha a pasta superior a exibir na mesa (pastas do Box também)¦Choisissez le dossier racine à afficher sur le bureau (dossiers Box acceptés)¦데스크에 표시할 최상위 폴더 선택 (Box 폴더도 가능)
+一覧を読み直す¦Reload the list¦重新读取列表¦重新讀取清單¦Recarregar a lista¦Recharger la liste¦목록 다시 읽기
+ファイル名で絞り込み¦Filter by file name¦按文件名筛选¦依檔名篩選¦Filtrar por nome¦Filtrer par nom de fichier¦파일 이름으로 필터
+名前順にきれいに並べ直す¦Rearrange neatly by name¦按名称重新整齐排列¦依名稱重新整齊排列¦Reorganizar por nome¦Réorganiser proprement par nom¦이름순으로 깔끔하게 다시 정렬
+別ウインドウのエディターで開く（ダブルクリックでも開けます）¦Open in the editor in a new window (double-click also works)¦在新窗口的编辑器中打开（也可双击）¦在新視窗的編輯器中開啟（也可雙擊）¦Abrir no editor em nova janela (clique duplo também)¦Ouvrir dans l'éditeur dans une nouvelle fenêtre (double-clic aussi)¦새 창 편집기로 열기 (더블클릭으로도 열림)
+開かずに大きく確認（スペースキー）¦View large without opening (Space)¦不打开直接放大查看（空格键）¦不開啟直接放大查看（空白鍵）¦Ver ampliado sem abrir (Espaço)¦Voir en grand sans ouvrir (Espace)¦열지 않고 크게 확인 (스페이스)
+名前を変える（F2）¦Rename (F2)¦重命名（F2）¦重新命名（F2）¦Renomear (F2)¦Renommer (F2)¦이름 변경 (F2)
+選んだ PDF・画像を印刷（Ctrl+P）¦Print the selected PDFs and images (Ctrl+P)¦打印所选PDF和图片（Ctrl+P）¦列印所選PDF和圖片（Ctrl+P）¦Imprimir PDFs e imagens selecionados (Ctrl+P)¦Imprimer les PDF et images sélectionnés (Ctrl+P)¦선택한 PDF・이미지 인쇄 (Ctrl+P)
+「_削除予定」フォルダへ移す（Delete）¦Move to the "_削除予定" (to-delete folder) folder (Delete)¦移到"_削除予定"（待删除文件夹）文件夹（Delete）¦移到「_削除予定」（待刪除資料夾）資料夾（Delete）¦Mover para a pasta "_削除予定" (pasta de exclusão) (Delete)¦Déplacer vers le dossier « _削除予定 » (dossier à supprimer) (Suppr)¦'_削除予定'(삭제 예정 폴더) 폴더로 이동 (Delete)
+元に戻す（Ctrl+Z）何回でも戻せます¦Undo (Ctrl+Z) — as many times as you like¦撤销（Ctrl+Z）可多次撤销¦復原（Ctrl+Z）可多次復原¦Desfazer (Ctrl+Z) — quantas vezes quiser¦Annuler (Ctrl+Z) — autant de fois que nécessaire¦실행 취소 (Ctrl+Z) 몇 번이든 가능
+やり直し（Ctrl+Y）¦Redo (Ctrl+Y)¦重做（Ctrl+Y）¦重做（Ctrl+Y）¦Refazer (Ctrl+Y)¦Rétablir (Ctrl+Y)¦다시 실행 (Ctrl+Y)
+前のページ（←）¦Previous page (←)¦上一页（←）¦上一頁（←）¦Página anterior (←)¦Page précédente (←)¦이전 페이지 (←)
+次のページ（→）¦Next page (→)¦下一页（→）¦下一頁（→）¦Próxima página (→)¦Page suivante (→)¦다음 페이지 (→)
+エディターで開く（Enter）¦Open in the editor (Enter)¦在编辑器中打开（Enter）¦在編輯器中開啟（Enter）¦Abrir no editor (Enter)¦Ouvrir dans l'éditeur (Entrée)¦편집기로 열기 (Enter)
+閉じる（Esc）¦Close (Esc)¦关闭（Esc）¦關閉（Esc）¦Fechar (Esc)¦Fermer (Échap)¦닫기 (Esc)
+デスク（フォルダの書類を並べる画面）に切り替え¦Switch to the desk (shows a folder's documents)¦切换到桌面（排列文件夹文档的界面）¦切換到桌面（排列資料夾文件的畫面）¦Mudar para a mesa (mostra os documentos da pasta)¦Passer au bureau (affiche les documents du dossier)¦데스크(폴더의 문서를 늘어놓는 화면)로 전환
+PDF で保存。デスクから開いた PDF はそのまま書き換えます（前の版は「_削除予定」に残ります）¦Save as PDF. A PDF opened from the desk is overwritten (the previous version is kept in "_削除予定")¦保存为PDF。从桌面打开的PDF会直接覆盖（旧版本保留在"_削除予定"）¦儲存為PDF。從桌面開啟的PDF會直接覆寫（舊版本保留在「_削除予定」）¦Salvar como PDF. Um PDF aberto pela mesa é sobrescrito (a versão anterior fica em "_削除予定")¦Enregistrer en PDF. Un PDF ouvert depuis le bureau est écrasé (l'ancienne version reste dans « _削除予定 »)¦PDF로 저장. 데스크에서 연 PDF는 그대로 덮어씁니다 (이전 버전은 '_削除予定'에 남음)
+作業ファイル(.frontpdf)で保存。作業ファイルを開いているときは上書き。あとで続きから編集できます¦Save as a work file (.frontpdf). Overwrites when a work file is open. You can continue editing later¦保存为工作文件(.frontpdf)。打开工作文件时会覆盖。之后可继续编辑¦儲存為工作檔案(.frontpdf)。開啟工作檔案時會覆寫。之後可繼續編輯¦Salvar como arquivo de trabalho (.frontpdf). Sobrescreve se um estiver aberto. Dá para continuar depois¦Enregistrer en fichier de travail (.frontpdf). Écrase s'il est déjà ouvert. Vous pourrez reprendre plus tard¦작업 파일(.frontpdf)로 저장. 작업 파일을 열고 있으면 덮어씀. 나중에 이어서 편집 가능
+名前と形式（PDF / 作業ファイル）を選んで保存。分割・A4揃え・まとめ印刷も選べます¦Choose a name and format (PDF / work file) to save. Splitting, A4 fit and n-up are also available¦选择名称和格式（PDF / 工作文件）保存。也可选择拆分、A4统一、多页合印¦選擇名稱和格式（PDF / 工作檔案）儲存。也可選擇拆分、A4統一、多頁合印¦Escolha nome e formato (PDF / arquivo de trabalho). Também há divisão, ajuste A4 e várias por folha¦Choisissez nom et format (PDF / fichier de travail). Découpage, format A4 et plusieurs pages par feuille disponibles¦이름과 형식(PDF / 작업 파일)을 골라 저장. 분할・A4 맞춤・모아 찍기도 선택 가능
+印刷 (Ctrl+P)¦Print (Ctrl+P)¦打印 (Ctrl+P)¦列印 (Ctrl+P)¦Imprimir (Ctrl+P)¦Imprimer (Ctrl+P)¦인쇄 (Ctrl+P)
+印刷（Ctrl+P）¦Print (Ctrl+P)¦打印（Ctrl+P）¦列印（Ctrl+P）¦Imprimir (Ctrl+P)¦Imprimer (Ctrl+P)¦인쇄 (Ctrl+P)
+ページを PNG 画像で保存¦Save pages as PNG images¦将页面保存为PNG图片¦將頁面儲存為PNG圖片¦Salvar páginas como imagens PNG¦Enregistrer les pages en images PNG¦페이지를 PNG 이미지로 저장
+読み込み中…¦Loading…¦加载中…¦載入中…¦Carregando…¦Chargement…¦불러오는 중…
+表示できません¦Cannot display¦无法显示¦無法顯示¦Não é possível exibir¦Impossible d'afficher¦표시할 수 없습니다
+このブラウザではフォルダを開けません。Microsoft Edge か Google Chrome をお使いください。¦This browser cannot open folders. Please use Microsoft Edge or Google Chrome.¦此浏览器无法打开文件夹。请使用 Microsoft Edge 或 Google Chrome。¦此瀏覽器無法開啟資料夾。請使用 Microsoft Edge 或 Google Chrome。¦Este navegador não abre pastas. Use o Microsoft Edge ou o Google Chrome.¦Ce navigateur ne peut pas ouvrir de dossiers. Utilisez Microsoft Edge ou Google Chrome.¦이 브라우저에서는 폴더를 열 수 없습니다. Microsoft Edge 또는 Google Chrome을 사용하세요.
+フォルダへのアクセスが許可されませんでした¦Access to the folder was not allowed¦未获得文件夹访问权限¦未取得資料夾存取權限¦O acesso à pasta não foi permitido¦L'accès au dossier n'a pas été autorisé¦폴더 접근이 허용되지 않았습니다
+やり直す操作がありません¦Nothing to redo¦没有可重做的操作¦沒有可重做的操作¦Nada para refazer¦Rien à rétablir¦다시 실행할 작업이 없습니다
+新しい名前¦New name¦新名称¦新名稱¦Novo nome¦Nouveau nom¦새 이름
+次の文字は使えません： \ / : * ? " < > |¦These characters cannot be used: \ / : * ? " < > |¦不能使用以下字符： \ / : * ? " < > |¦不能使用以下字元： \ / : * ? " < > |¦Estes caracteres não podem ser usados: \ / : * ? " < > |¦Ces caractères sont interdits : \ / : * ? " < > |¦다음 문자는 사용할 수 없습니다: \ / : * ? " < > |
+同じ名前のファイルがあります。¦A file with the same name already exists.¦已有同名文件。¦已有同名檔案。¦Já existe um arquivo com esse nome.¦Un fichier du même nom existe déjà.¦같은 이름의 파일이 있습니다.
+名前変更できません¦Cannot rename¦无法重命名¦無法重新命名¦Não foi possível renomear¦Impossible de renommer¦이름을 바꿀 수 없습니다
+移動できません¦Cannot move¦无法移动¦無法移動¦Não foi possível mover¦Impossible de déplacer¦이동할 수 없습니다
+_削除予定へ移せません¦Cannot move to "_削除予定"¦无法移到"_削除予定"¦無法移到「_削除予定」¦Não foi possível mover para "_削除予定"¦Impossible de déplacer vers « _削除予定 »¦'_削除予定'(으)로 옮길 수 없습니다
+貼り付けできません¦Cannot paste¦无法粘贴¦無法貼上¦Não foi possível colar¦Impossible de coller¦붙여넣을 수 없습니다
+取り込めません¦Cannot import¦无法导入¦無法匯入¦Não foi possível importar¦Impossible d'importer¦가져올 수 없습니다
+結合できません¦Cannot merge¦无法合并¦無法合併¦Não foi possível unir¦Impossible de fusionner¦결합할 수 없습니다
+ばらせません¦Cannot split¦无法拆分¦無法拆分¦Não foi possível separar¦Impossible de séparer¦나눌 수 없습니다
+PDF を選んでください（作業ファイル・画像はばらせません）。¦Please select PDFs (work files and images cannot be split).¦请选择PDF（工作文件和图片无法拆分）。¦請選擇PDF（工作檔案和圖片無法拆分）。¦Selecione PDFs (arquivos de trabalho e imagens não podem ser separados).¦Sélectionnez des PDF (les fichiers de travail et images ne peuvent pas être séparés).¦PDF를 선택하세요 (작업 파일・이미지는 나눌 수 없습니다).
+ページ別¦pages¦按页¦按頁¦paginas¦pages¦페이지별
+_ページ別¦_pages¦_按页¦_按頁¦_paginas¦_pages¦_페이지별
+ページごとに分けています...¦Splitting into pages...¦正在按页拆分...¦正在按頁拆分...¦Separando por página...¦Séparation par page...¦페이지별로 나누는 중...
+新しいフォルダの名前¦Name of the new folder¦新文件夹名称¦新資料夾名稱¦Nome da nova pasta¦Nom du nouveau dossier¦새 폴더 이름
+新しいフォルダ¦New folder¦新建文件夹¦新資料夾¦Nova pasta¦Nouveau dossier¦새 폴더
+同じ名前のフォルダがあります。¦A folder with the same name already exists.¦已有同名文件夹。¦已有同名資料夾。¦Já existe uma pasta com esse nome.¦Un dossier du même nom existe déjà.¦같은 이름의 폴더가 있습니다.
+フォルダを作れません¦Cannot create the folder¦无法创建文件夹¦無法建立資料夾¦Não foi possível criar a pasta¦Impossible de créer le dossier¦폴더를 만들 수 없습니다
+印刷する PDF・画像を選んでください（作業ファイルはエディターで開いて印刷してください）。¦Select PDFs or images to print (open work files in the editor to print them).¦请选择要打印的PDF或图片（工作文件请在编辑器中打开后打印）。¦請選擇要列印的PDF或圖片（工作檔案請在編輯器中開啟後列印）。¦Selecione PDFs ou imagens para imprimir (abra arquivos de trabalho no editor para imprimir).¦Sélectionnez des PDF ou images à imprimer (ouvrez les fichiers de travail dans l'éditeur pour les imprimer).¦인쇄할 PDF・이미지를 선택하세요 (작업 파일은 편집기에서 열어 인쇄하세요).
+印刷の準備中...¦Preparing to print...¦正在准备打印...¦正在準備列印...¦Preparando impressão...¦Préparation de l'impression...¦인쇄 준비 중...
+印刷できません¦Cannot print¦无法打印¦無法列印¦Não foi possível imprimir¦Impossible d'imprimer¦인쇄할 수 없습니다
+印刷するページがありません。¦There are no pages to print.¦没有要打印的页面。¦沒有要列印的頁面。¦Não há páginas para imprimir.¦Aucune page à imprimer.¦인쇄할 페이지가 없습니다.
+このフォルダを開く¦Open this folder¦打开此文件夹¦開啟此資料夾¦Abrir esta pasta¦Ouvrir ce dossier¦이 폴더 열기
+ここに貼り付け¦Paste here¦粘贴到此处¦貼上到此處¦Colar aqui¦Coller ici¦여기에 붙여넣기
+この中に新しいフォルダ¦New folder inside¦在此新建文件夹¦在此新增資料夾¦Nova pasta aqui dentro¦Nouveau dossier à l'intérieur¦이 안에 새 폴더
+名前の変更¦Rename¦重命名¦重新命名¦Renomear¦Renommer¦이름 변경
+貼り付け¦Paste¦粘贴¦貼上¦Colar¦Coller¦붙여넣기
+複製（このフォルダに）¦Duplicate (in this folder)¦复制（到此文件夹）¦複製（到此資料夾）¦Duplicar (nesta pasta)¦Dupliquer (dans ce dossier)¦복제 (이 폴더에)
+結合（2件以上を選んでください）¦Merge (select 2 or more)¦合并（请选择2个以上）¦合併（請選擇2個以上）¦Unir (selecione 2 ou mais)¦Fusionner (sélectionnez-en 2 ou plus)¦결합 (2개 이상 선택)
+すべて選択¦Select all¦全选¦全選¦Selecionar tudo¦Tout sélectionner¦모두 선택
+名前順に整列¦Arrange by name¦按名称排列¦依名稱排列¦Organizar por nome¦Ranger par nom¦이름순 정렬
+ポップアップがブロックされました。¦The pop-up was blocked.¦弹出窗口被阻止了。¦彈出視窗被封鎖了。¦O pop-up foi bloqueado.¦La fenêtre pop-up a été bloquée.¦팝업이 차단되었습니다.
+別ウインドウ¦New window¦新窗口¦新視窗¦Nova janela¦Nouvelle fenêtre¦새 창
+別ウインドウで開けません¦Cannot open in a new window¦无法在新窗口打开¦無法在新視窗開啟¦Não foi possível abrir em nova janela¦Impossible d'ouvrir dans une nouvelle fenêtre¦새 창으로 열 수 없습니다
+開けません¦Cannot open¦无法打开¦無法開啟¦Não foi possível abrir¦Impossible d'ouvrir¦열 수 없습니다
+エディターで編集中の内容が保存されていません。閉じて別の文書を開きますか？¦Your edits in the editor are not saved. Close them and open another document?¦编辑器中的内容尚未保存。要关闭并打开其他文档吗？¦編輯器中的內容尚未儲存。要關閉並開啟其他文件嗎？¦As edições no editor não foram salvas. Fechar e abrir outro documento?¦Vos modifications dans l'éditeur ne sont pas enregistrées. Fermer et ouvrir un autre document ?¦편집기에서 편집 중인 내용이 저장되지 않았습니다. 닫고 다른 문서를 열까요?
+作業ファイルを表示できません¦Cannot display the work file¦无法显示工作文件¦無法顯示工作檔案¦Não é possível exibir o arquivo de trabalho¦Impossible d'afficher le fichier de travail¦작업 파일을 표시할 수 없습니다
+名前順に並べ直しました¦Rearranged by name¦已按名称重新排列¦已依名稱重新排列¦Reorganizado por nome¦Réorganisé par nom¦이름순으로 다시 정렬했습니다
+前回のフォルダを開けませんでした。もう一度選んでください¦Could not open the last folder. Please choose it again¦无法打开上次的文件夹，请重新选择¦無法開啟上次的資料夾，請重新選擇¦Não foi possível abrir a última pasta. Escolha de novo¦Impossible d'ouvrir le dernier dossier. Choisissez-le à nouveau¦지난번 폴더를 열 수 없었습니다. 다시 선택하세요
+フォルダを開けません¦Cannot open the folder¦无法打开文件夹¦無法開啟資料夾¦Não foi possível abrir a pasta¦Impossible d'ouvrir le dossier¦폴더를 열 수 없습니다
+結合しています...¦Merging...¦正在合并...¦正在合併...¦Unindo...¦Fusion...¦결합하는 중...
+このブラウザではデスクを使えません（Microsoft Edge か Google Chrome をお使いください）。［エディター］から PDF の編集はできます。¦The desk is not available in this browser (please use Microsoft Edge or Google Chrome). You can still edit PDFs with [Editor].¦此浏览器无法使用桌面（请使用 Microsoft Edge 或 Google Chrome）。可通过［编辑器］编辑PDF。¦此瀏覽器無法使用桌面（請使用 Microsoft Edge 或 Google Chrome）。可透過［編輯器］編輯PDF。¦A mesa não funciona neste navegador (use o Microsoft Edge ou o Google Chrome). Você ainda pode editar PDFs com [Editor].¦Le bureau n'est pas disponible dans ce navigateur (utilisez Microsoft Edge ou Google Chrome). Vous pouvez quand même éditer des PDF avec [Éditeur].¦이 브라우저에서는 데스크를 사용할 수 없습니다 (Microsoft Edge 또는 Google Chrome을 사용하세요). [편집기]에서 PDF 편집은 가능합니다.
+［フォルダを選ぶ］で、書類のあるフォルダ（Box のフォルダも可）を選んでください。その下のフォルダがここに並びます。¦Use [Choose folder] to pick the folder with your documents (Box folders work too). Its subfolders appear here.¦请用［选择文件夹］选择存放文档的文件夹（也可选Box文件夹）。其下的文件夹会显示在这里。¦請用［選擇資料夾］選擇存放文件的資料夾（也可選Box資料夾）。其下的資料夾會顯示在這裡。¦Use [Escolher pasta] para selecionar a pasta dos documentos (pastas do Box também). As subpastas aparecem aqui.¦Utilisez [Choisir un dossier] pour sélectionner le dossier de vos documents (dossiers Box acceptés). Ses sous-dossiers apparaissent ici.¦[폴더 선택]으로 문서가 있는 폴더(Box 폴더도 가능)를 고르세요. 그 아래 폴더가 여기에 표시됩니다.
+フォルダを選んでください¦Please choose a folder¦请选择文件夹¦請選擇資料夾¦Escolha uma pasta¦Choisissez un dossier¦폴더를 선택하세요
+Front PDF ― デスク¦Front PDF ― Desk¦Front PDF ― 桌面¦Front PDF ― 桌面¦Front PDF ― Mesa¦Front PDF ― Bureau¦Front PDF ― 데스크
+Front PDF デスク¦Front PDF Desk¦Front PDF 桌面¦Front PDF 桌面¦Front PDF Mesa¦Front PDF Bureau¦Front PDF 데스크
+フォルダの PDF・作業ファイル・画像をサムネイルで並べて、整理・確認・編集できます¦Lay out a folder's PDFs, work files and images as thumbnails to organize, check and edit them¦将文件夹中的PDF、工作文件和图片以缩略图排列，便于整理、查看和编辑¦將資料夾中的PDF、工作檔案和圖片以縮圖排列，方便整理、檢視和編輯¦Organize, confira e edite os PDFs, arquivos de trabalho e imagens de uma pasta em miniaturas¦Disposez en vignettes les PDF, fichiers de travail et images d'un dossier pour les ranger, vérifier et modifier¦폴더의 PDF・작업 파일・이미지를 썸네일로 늘어놓고 정리・확인・편집할 수 있습니다
+上へ¦Up¦上移¦上移¦Para cima¦Monter¦위로
+下へ¦Down¦下移¦下移¦Para baixo¦Descendre¦아래로
+動作ログを表示（不具合の報告用）¦Show the activity log (for bug reports)¦显示操作日志（用于报告问题）¦顯示操作日誌（用於回報問題）¦Mostrar o log de atividade (para relatar problemas)¦Afficher le journal d'activité (pour signaler un problème)¦동작 로그 표시 (문제 보고용)
+動作ログをコピー（不具合の報告に貼り付けてください）¦Copy the activity log (paste it into your bug report)¦复制操作日志（请粘贴到问题报告中）¦複製操作日誌（請貼到問題回報中）¦Copiar o log de atividade (cole no relato do problema)¦Copier le journal d'activité (collez-le dans votre signalement)¦동작 로그 복사 (문제 보고에 붙여넣으세요)
+ログをコピーしました。不具合の報告に貼り付けてください¦Log copied. Please paste it into your bug report¦已复制日志。请粘贴到问题报告中¦已複製日誌。請貼到問題回報中¦Log copiado. Cole-o no relato do problema¦Journal copié. Collez-le dans votre signalement¦로그를 복사했습니다. 문제 보고에 붙여넣으세요
+空にする（完全に削除）¦Empty (delete permanently)¦清空（永久删除）¦清空（永久刪除）¦Esvaziar (excluir definitivamente)¦Vider (supprimer définitivement)¦비우기 (완전히 삭제)
+空にする¦Empty¦清空¦清空¦Esvaziar¦Vider¦비우기
+「_削除予定」フォルダは空です。¦The "_削除予定" folder is empty.¦"_削除予定"文件夹是空的。¦「_削除予定」資料夾是空的。¦A pasta "_削除予定" está vazia.¦Le dossier « _削除予定 » est vide.¦'_削除予定' 폴더는 비어 있습니다.
+削除しています...¦Deleting...¦正在删除...¦正在刪除...¦Excluindo...¦Suppression...¦삭제하는 중...
+「_削除予定」フォルダについて¦About the "_削除予定" folder¦关于"_削除予定"文件夹¦關於「_削除予定」資料夾¦Sobre a pasta "_削除予定"¦À propos du dossier « _削除予定 »¦'_削除予定' 폴더에 대해
+このフォルダの中身は、左の一覧でこのフォルダを右クリックして［空にする］で削除してください。¦To delete the contents of this folder, right-click it in the list on the left and choose [Empty].¦要删除此文件夹的内容，请在左侧列表中右键单击此文件夹并选择［清空］。¦要刪除此資料夾的內容，請在左側清單中右鍵點擊此資料夾並選擇［清空］。¦Para excluir o conteúdo desta pasta, clique com o botão direito nela na lista à esquerda e escolha [Esvaziar].¦Pour supprimer le contenu de ce dossier, faites un clic droit dessus dans la liste de gauche et choisissez [Vider].¦이 폴더의 내용은 왼쪽 목록에서 이 폴더를 오른쪽 클릭하고 [비우기]로 삭제하세요.
 """
 # dynamic patterns: regex ¦ en ¦ zhCN ¦ zhTW ¦ pt ¦ fr ¦ ko   ($1.. = groups; Japanese groups get translated if known)
 PAT=r"""
+^「(.+)」の中の (\d+) 件を完全に削除します。\nWindows や Mac のごみ箱には入らず、元に戻せません。\n（デスクの［元に戻す］の履歴もリセットされます）$¦Permanently delete $2 item(s) in "$1"?\nThey do not go to the Windows or Mac trash and cannot be restored.\n(The desk's [Undo] history is also reset)¦将永久删除"$1"中的 $2 项。\n不会进入 Windows 或 Mac 的回收站，无法恢复。\n（桌面的［撤销］记录也会被清除）¦將永久刪除「$1」中的 $2 項。\n不會進入 Windows 或 Mac 的垃圾桶，無法還原。\n（桌面的［復原］記錄也會被清除）¦Excluir definitivamente $2 item(s) em "$1"?\nEles não vão para a lixeira do Windows ou do Mac e não podem ser recuperados.\n(O histórico de [Desfazer] da mesa também é apagado)¦Supprimer définitivement $2 élément(s) dans « $1 » ?\nIls ne vont pas dans la corbeille de Windows ou du Mac et ne peuvent pas être restaurés.\n(L'historique [Annuler] du bureau est aussi réinitialisé)¦'$1' 안의 $2건을 완전히 삭제합니다.\nWindows나 Mac의 휴지통에 들어가지 않으며 되돌릴 수 없습니다.\n(데스크의 [실행 취소] 기록도 초기화됩니다)
+^(\d+) 件を完全に削除しました$¦Permanently deleted $1 item(s)¦已永久删除 $1 项¦已永久刪除 $1 項¦$1 item(s) excluído(s) definitivamente¦$1 élément(s) supprimé(s) définitivement¦$1건을 완전히 삭제했습니다
+^(\d+) 件を完全に削除しました（(\d+) 件は削除できませんでした）$¦Permanently deleted $1 item(s) ($2 could not be deleted)¦已永久删除 $1 项（$2 项无法删除）¦已永久刪除 $1 項（$2 項無法刪除）¦$1 item(s) excluído(s) definitivamente ($2 não puderam ser excluídos)¦$1 élément(s) supprimé(s) définitivement ($2 n'ont pas pu être supprimés)¦$1건을 완전히 삭제했습니다 ($2건은 삭제할 수 없었습니다)
+^デスクで削除した書類や、上書きする前の版は、そのフォルダの中に作る「_削除予定」フォルダに移します（必要になったときに自動で作ります）。\nこれは Windows や Mac のごみ箱ではありません。中の書類はデスクの［元に戻す］で戻せます。\n不要になったら、左の一覧で「_削除予定」フォルダを右クリックし、［空にする］で完全に削除できます。$¦Documents you delete on the desk, and the previous versions of overwritten files, are moved to a "_削除予定" folder created inside that folder (only when needed).\nThis is not the Windows or Mac trash. You can bring documents back with [Undo] on the desk.\nWhen you no longer need them, right-click the "_削除予定" folder in the list on the left and choose [Empty] to delete them permanently.¦在桌面上删除的文档以及覆盖前的旧版本，会移到该文件夹内的"_削除予定"文件夹（需要时自动创建）。\n这不是 Windows 或 Mac 的回收站。可用桌面的［撤销］恢复其中的文档。\n不再需要时，在左侧列表中右键单击"_削除予定"文件夹，选择［清空］即可永久删除。¦在桌面上刪除的文件以及覆寫前的舊版本，會移到該資料夾內的「_削除予定」資料夾（需要時自動建立）。\n這不是 Windows 或 Mac 的垃圾桶。可用桌面的［復原］還原其中的文件。\n不再需要時，在左側清單中右鍵點擊「_削除予定」資料夾，選擇［清空］即可永久刪除。¦Os documentos excluídos na mesa e as versões anteriores de arquivos sobrescritos vão para uma pasta "_削除予定" criada dentro dessa pasta (só quando necessário).\nEla não é a lixeira do Windows ou do Mac. Você pode recuperar os documentos com [Desfazer] na mesa.\nQuando não precisar mais deles, clique com o botão direito na pasta "_削除予定" na lista à esquerda e escolha [Esvaziar] para excluí-los definitivamente.¦Les documents supprimés sur le bureau et les anciennes versions des fichiers écrasés sont déplacés dans un dossier « _削除予定 » créé à l'intérieur de ce dossier (seulement si nécessaire).\nCe n'est pas la corbeille de Windows ou du Mac. Vous pouvez récupérer les documents avec [Annuler] sur le bureau.\nQuand vous n'en avez plus besoin, faites un clic droit sur le dossier « _削除予定 » dans la liste de gauche et choisissez [Vider] pour les supprimer définitivement.¦데스크에서 삭제한 문서와 덮어쓰기 전의 이전 버전은 그 폴더 안에 만드는 '_削除予定' 폴더로 옮깁니다 (필요할 때 자동으로 만듭니다).\n이것은 Windows나 Mac의 휴지통이 아닙니다. 안의 문서는 데스크의 [실행 취소]로 되돌릴 수 있습니다.\n필요 없어지면 왼쪽 목록에서 '_削除予定' 폴더를 오른쪽 클릭하고 [비우기]로 완전히 삭제할 수 있습니다.
+^(\d+) 件$¦$1 item(s)¦$1 项¦$1 項¦$1 item(s)¦$1 élément(s)¦$1건
+^(\d+) 件 ／ 選択 (\d+)$¦$1 item(s) / $2 selected¦$1 项 ／ 已选 $2¦$1 項 ／ 已選 $2¦$1 item(s) / $2 selecionado(s)¦$1 élément(s) / $2 sélectionné(s)¦$1건 / 선택 $2
+^(\d+) 件（絞り込み中） ／ 選択 (\d+)$¦$1 item(s) (filtered) / $2 selected¦$1 项（筛选中） ／ 已选 $2¦$1 項（篩選中） ／ 已選 $2¦$1 item(s) (filtrado) / $2 selecionado(s)¦$1 élément(s) (filtré) / $2 sélectionné(s)¦$1건 (필터 중) / 선택 $2
+^(\d+) 件を「_削除予定」へ移しました（Ctrl\+Z で戻せます）$¦Moved $1 item(s) to "_削除予定" (Ctrl+Z to undo)¦已将 $1 项移到"_削除予定"（可按Ctrl+Z撤销）¦已將 $1 項移到「_削除予定」（可按Ctrl+Z復原）¦$1 item(s) movido(s) para "_削除予定" (Ctrl+Z para desfazer)¦$1 élément(s) déplacé(s) vers « _削除予定 » (Ctrl+Z pour annuler)¦$1건을 '_削除予定'(으)로 옮겼습니다 (Ctrl+Z로 되돌리기)
+^(\d+) 件を「(.+)」へ移動しました（Ctrl\+Z で戻せます）$¦Moved $1 item(s) to "$2" (Ctrl+Z to undo)¦已将 $1 项移到"$2"（可按Ctrl+Z撤销）¦已將 $1 項移到「$2」（可按Ctrl+Z復原）¦$1 item(s) movido(s) para "$2" (Ctrl+Z para desfazer)¦$1 élément(s) déplacé(s) vers « $2 » (Ctrl+Z pour annuler)¦$1건을 '$2'(으)로 이동했습니다 (Ctrl+Z로 되돌리기)
+^(\d+) 件を貼り付けました（Ctrl\+Z で戻せます）$¦Pasted $1 item(s) (Ctrl+Z to undo)¦已粘贴 $1 项（可按Ctrl+Z撤销）¦已貼上 $1 項（可按Ctrl+Z復原）¦$1 item(s) colado(s) (Ctrl+Z para desfazer)¦$1 élément(s) collé(s) (Ctrl+Z pour annuler)¦$1건을 붙여넣었습니다 (Ctrl+Z로 되돌리기)
+^(\d+) 件をコピーしました（Ctrl\+V で貼り付け）$¦Copied $1 item(s) (Ctrl+V to paste)¦已复制 $1 项（按Ctrl+V粘贴）¦已複製 $1 項（按Ctrl+V貼上）¦$1 item(s) copiado(s) (Ctrl+V para colar)¦$1 élément(s) copié(s) (Ctrl+V pour coller)¦$1건을 복사했습니다 (Ctrl+V로 붙여넣기)
+^(\d+) 件を「(.+)」に取り込みました（コピー）$¦Imported $1 item(s) into "$2" (copied)¦已将 $1 项导入"$2"（复制）¦已將 $1 項匯入「$2」（複製）¦$1 item(s) importado(s) para "$2" (cópia)¦$1 élément(s) importé(s) dans « $2 » (copie)¦$1건을 '$2'에 가져왔습니다 (복사)
+^PDF・作業ファイル・JPG・PNG 以外は取り込めません：(.+)$¦Only PDF, work files, JPG and PNG can be imported: $1¦只能导入PDF、工作文件、JPG、PNG：$1¦只能匯入PDF、工作檔案、JPG、PNG：$1¦Só é possível importar PDF, arquivos de trabalho, JPG e PNG: $1¦Seuls les PDF, fichiers de travail, JPG et PNG peuvent être importés : $1¦PDF・작업 파일・JPG・PNG 외에는 가져올 수 없습니다: $1
+^「(.+)」を作りました（Ctrl\+Z で結合前に戻せます）$¦Created "$1" (Ctrl+Z to undo the merge)¦已创建"$1"（可按Ctrl+Z恢复到合并前）¦已建立「$1」（可按Ctrl+Z還原到合併前）¦"$1" criado (Ctrl+Z para desfazer a união)¦« $1 » créé (Ctrl+Z pour annuler la fusion)¦'$1'을(를) 만들었습니다 (Ctrl+Z로 결합 전으로 되돌리기)
+^「(.+)」がすでにあります。別の名前（番号付き）で保存します。$¦"$1" already exists. It will be saved under another name (numbered).¦"$1"已存在。将以其他名称（带编号）保存。¦「$1」已存在。將以其他名稱（帶編號）儲存。¦"$1" já existe. Será salvo com outro nome (numerado).¦« $1 » existe déjà. Il sera enregistré sous un autre nom (numéroté).¦'$1'이(가) 이미 있습니다. 다른 이름(번호 붙임)으로 저장합니다.
+^結合しています\.\.\. (\d+) / (\d+)$¦Merging... $1 / $2¦正在合并... $1 / $2¦正在合併... $1 / $2¦Unindo... $1 / $2¦Fusion... $1 / $2¦결합하는 중... $1 / $2
+^分けています\.\.\. (.+) (\d+) / (\d+)$¦Splitting... $1 $2 / $3¦正在拆分... $1 $2 / $3¦正在拆分... $1 $2 / $3¦Separando... $1 $2 / $3¦Séparation... $1 $2 / $3¦나누는 중... $1 $2 / $3
+^(\d+) 個の PDF に分けました（フォルダ「(.+)」）。Ctrl\+Z で元に戻せます$¦Split into $1 PDF(s) (folder "$2"). Ctrl+Z to undo¦已拆分为 $1 个PDF（文件夹"$2"）。可按Ctrl+Z撤销¦已拆分為 $1 個PDF（資料夾「$2」）。可按Ctrl+Z復原¦Separado em $1 PDF(s) (pasta "$2"). Ctrl+Z para desfazer¦Séparé en $1 PDF (dossier « $2 »). Ctrl+Z pour annuler¦PDF $1개로 나눴습니다 (폴더 '$2'). Ctrl+Z로 되돌리기
+^(\d+) 個の PDF に分けました。Ctrl\+Z で元に戻せます$¦Split into $1 PDF(s). Ctrl+Z to undo¦已拆分为 $1 个PDF。可按Ctrl+Z撤销¦已拆分為 $1 個PDF。可按Ctrl+Z復原¦Separado em $1 PDF(s). Ctrl+Z para desfazer¦Séparé en $1 PDF. Ctrl+Z pour annuler¦PDF $1개로 나눴습니다. Ctrl+Z로 되돌리기
+^(\d+) 個の PDFを、1ページずつ別の PDF（合計 (\d+) 個）に分けます。名前は「元の名前_p01\.pdf」のようになります。$¦Split $1 PDF(s) into one PDF per page ($2 in total). Names will look like "original_p01.pdf".¦将 $1 个PDF按每页拆分为单独的PDF（共 $2 个）。名称类似"原名_p01.pdf"。¦將 $1 個PDF按每頁拆分為單獨的PDF（共 $2 個）。名稱類似「原名_p01.pdf」。¦Separar $1 PDF(s) em um PDF por página ($2 no total). Os nomes ficarão como "original_p01.pdf".¦Séparer $1 PDF en un PDF par page ($2 au total). Les noms seront du type « original_p01.pdf ».¦PDF $1개를 1페이지씩 별도 PDF(총 $2개)로 나눕니다. 이름은 '원래이름_p01.pdf'처럼 됩니다.
+^「(.+)」を、1ページずつ別の PDF（合計 (\d+) 個）に分けます。名前は「元の名前_p01\.pdf」のようになります。$¦Split "$1" into one PDF per page ($2 in total). Names will look like "original_p01.pdf".¦将"$1"按每页拆分为单独的PDF（共 $2 个）。名称类似"原名_p01.pdf"。¦將「$1」按每頁拆分為單獨的PDF（共 $2 個）。名稱類似「原名_p01.pdf」。¦Separar "$1" em um PDF por página ($2 no total). Os nomes ficarão como "original_p01.pdf".¦Séparer « $1 » en un PDF par page ($2 au total). Les noms seront du type « original_p01.pdf ».¦'$1'을(를) 1페이지씩 별도 PDF(총 $2개)로 나눕니다. 이름은 '원래이름_p01.pdf'처럼 됩니다.
+^フォルダ「(.+)」を作りました$¦Created folder "$1"¦已创建文件夹"$1"¦已建立資料夾「$1」¦Pasta "$1" criada¦Dossier « $1 » créé¦폴더 '$1'을(를) 만들었습니다
+^移動先に同じ名前の「(.+)」があります$¦"$1" already exists in the destination¦目标位置已有同名的"$1"¦目的地已有同名的「$1」¦"$1" já existe no destino¦« $1 » existe déjà dans la destination¦이동할 곳에 같은 이름의 '$1'이(가) 있습니다
+^フォルダを読めませんでした: (.+)$¦Could not read the folder: $1¦无法读取文件夹：$1¦無法讀取資料夾：$1¦Não foi possível ler a pasta: $1¦Impossible de lire le dossier : $1¦폴더를 읽을 수 없었습니다: $1
+^戻せませんでした（ファイルが移動・変更されている可能性）：(.+)$¦Could not undo (the file may have been moved or changed): $1¦无法撤销（文件可能已被移动或更改）：$1¦無法復原（檔案可能已被移動或變更）：$1¦Não foi possível desfazer (o arquivo pode ter sido movido ou alterado): $1¦Impossible d'annuler (le fichier a peut-être été déplacé ou modifié) : $1¦되돌릴 수 없었습니다 (파일이 이동・변경되었을 수 있음): $1
+^元に戻しました：(.+)$¦Undone: $1¦已撤销：$1¦已復原：$1¦Desfeito: $1¦Annulé : $1¦실행 취소했습니다: $1
+^やり直しました：(.+)$¦Redone: $1¦已重做：$1¦已重做：$1¦Refeito: $1¦Rétabli : $1¦다시 실행했습니다: $1
+^選んだ (\d+) 件を印刷$¦Print $1 selected¦打印所选 $1 项¦列印所選 $1 項¦Imprimir $1 selecionado(s)¦Imprimer les $1 sélectionnés¦선택한 $1건 인쇄
+^選んだ (\d+) 件を結合$¦Merge $1 selected¦合并所选 $1 项¦合併所選 $1 項¦Unir $1 selecionado(s)¦Fusionner les $1 sélectionnés¦선택한 $1건 결합
+^同じフォルダに「(.+)」があります。上書きしますか？$¦"$1" already exists in this folder. Overwrite it?¦同一文件夹中已有"$1"。要覆盖吗？¦同一資料夾中已有「$1」。要覆寫嗎？¦"$1" já existe nesta pasta. Sobrescrever?¦« $1 » existe déjà dans ce dossier. L'écraser ?¦같은 폴더에 '$1'이(가) 있습니다. 덮어쓸까요?
+^同じフォルダに「(.+)」があります。上書きしますか？\n（上書き前の版は「_削除予定」フォルダに残します）$¦"$1" already exists in this folder. Overwrite it?\n(The previous version is kept in the "_削除予定" folder)¦同一文件夹中已有"$1"。要覆盖吗？\n（旧版本会保留在"_削除予定"文件夹）¦同一資料夾中已有「$1」。要覆寫嗎？\n（舊版本會保留在「_削除予定」資料夾）¦"$1" já existe nesta pasta. Sobrescrever?\n(A versão anterior fica na pasta "_削除予定")¦« $1 » existe déjà dans ce dossier. L'écraser ?\n(L'ancienne version est conservée dans le dossier « _削除予定 »)¦같은 폴더에 '$1'이(가) 있습니다. 덮어쓸까요?\n(이전 버전은 '_削除予定' 폴더에 남깁니다)
+^元のファイル「(.+)」に上書きします。\n上書き前の版は「_削除予定」フォルダに残し、デスクの［元に戻す］で戻せます。$¦Overwrite the original file "$1".\nThe previous version is kept in the "_削除予定" folder and can be restored with [Undo] on the desk.¦将覆盖原文件"$1"。\n旧版本会保留在"_削除予定"文件夹，可用桌面的［撤销］恢复。¦將覆寫原檔案「$1」。\n舊版本會保留在「_削除予定」資料夾，可用桌面的［復原］還原。¦O arquivo original "$1" será sobrescrito.\nA versão anterior fica na pasta "_削除予定" e pode ser recuperada com [Desfazer] na mesa.¦Le fichier d'origine « $1 » va être écrasé.\nL'ancienne version est conservée dans « _削除予定 » et peut être restaurée avec [Annuler] sur le bureau.¦원본 파일 '$1'에 덮어씁니다.\n이전 버전은 '_削除予定' 폴더에 남기며, 데스크의 [실행 취소]로 되돌릴 수 있습니다.
+^「(.+)」に上書きしました（前の版は _削除予定 に残しました）$¦Overwrote "$1" (the previous version is in _削除予定)¦已覆盖"$1"（旧版本保留在 _削除予定）¦已覆寫「$1」（舊版本保留在 _削除予定）¦"$1" sobrescrito (a versão anterior está em _削除予定)¦« $1 » écrasé (l'ancienne version est dans _削除予定)¦'$1'에 덮어썼습니다 (이전 버전은 _削除予定에 남김)
+^「(.+)」を元のフォルダに保存しました$¦Saved "$1" in the original folder¦已将"$1"保存到原文件夹¦已將「$1」儲存到原資料夾¦"$1" salvo na pasta original¦« $1 » enregistré dans le dossier d'origine¦'$1'을(를) 원래 폴더에 저장했습니다
+^上書き保存しました（前の版はデスクの「_削除予定」に残しています）$¦Saved (overwritten). The previous version is in "_削除予定" on the desk¦已覆盖保存（旧版本保留在桌面的"_削除予定"）¦已覆寫儲存（舊版本保留在桌面的「_削除予定」）¦Salvo (sobrescrito). A versão anterior está em "_削除予定" na mesa¦Enregistré (écrasé). L'ancienne version est dans « _削除予定 » sur le bureau¦덮어써서 저장했습니다 (이전 버전은 데스크의 '_削除予定'에 있음)
+^上書き保存しました（前の版はデスクの「_削除予定」に残しています）（(\d+) ページは画像化）$¦Saved (overwritten). The previous version is in "_削除予定" on the desk ($1 page(s) rasterized)¦已覆盖保存（旧版本保留在桌面的"_削除予定"）（$1 页已转为图像）¦已覆寫儲存（舊版本保留在桌面的「_削除予定」）（$1 頁已轉為影像）¦Salvo (sobrescrito). A versão anterior está em "_削除予定" na mesa ($1 página(s) rasterizada(s))¦Enregistré (écrasé). L'ancienne version est dans « _削除予定 » sur le bureau ($1 page(s) rastérisée(s))¦덮어써서 저장했습니다 (이전 버전은 데스크의 '_削除予定'에 있음) ($1페이지 이미지화)
+^PDF「(.+)」を保存しました$¦Saved PDF "$1"¦已保存PDF"$1"¦已儲存PDF「$1」¦PDF "$1" salvo¦PDF « $1 » enregistré¦PDF '$1'을(를) 저장했습니다
+^PDF「(.+)」を保存しました（(\d+) ページは画像化）$¦Saved PDF "$1" ($2 page(s) rasterized)¦已保存PDF"$1"（$2 页已转为图像）¦已儲存PDF「$1」（$2 頁已轉為影像）¦PDF "$1" salvo ($2 página(s) rasterizada(s))¦PDF « $1 » enregistré ($2 page(s) rastérisée(s))¦PDF '$1'을(를) 저장했습니다 ($2페이지 이미지화)
+^(\d+) 個のPDFを保存しました$¦Saved $1 PDF(s)¦已保存 $1 个PDF¦已儲存 $1 個PDF¦$1 PDF(s) salvo(s)¦$1 PDF enregistré(s)¦PDF $1개를 저장했습니다
+^(\d+) 個のPDFを保存しました（(\d+) ページは画像化：文字データなし）$¦Saved $1 PDF(s) ($2 page(s) rasterized: no text data)¦已保存 $1 个PDF（$2 页已转为图像：无文字数据）¦已儲存 $1 個PDF（$2 頁已轉為影像：無文字資料）¦$1 PDF(s) salvo(s) ($2 página(s) rasterizada(s): sem texto)¦$1 PDF enregistré(s) ($2 page(s) rastérisée(s) : sans texte)¦PDF $1개를 저장했습니다 ($2페이지 이미지화: 텍스트 없음)
+^作業ファイル「(.+)」を保存しました（人に渡すときは［PDF保存］を使ってください）$¦Saved work file "$1" (use [Save PDF] when sharing with others)¦已保存工作文件"$1"（交给他人时请使用［保存PDF］）¦已儲存工作檔案「$1」（交給他人時請使用［儲存PDF］）¦Arquivo de trabalho "$1" salvo (use [Salvar PDF] para compartilhar)¦Fichier de travail « $1 » enregistré (utilisez [Enregistrer PDF] pour partager)¦작업 파일 '$1'을(를) 저장했습니다 (다른 사람에게 줄 때는 [PDF 저장]을 사용하세요)
 ^(\d+) ページ ／ 選択 (\d+)$¦$1 pages / $2 selected¦$1 页 / 已选 $2¦$1 頁 / 已選 $2¦$1 páginas / $2 selecionadas¦$1 pages / $2 sélectionnées¦$1페이지 / 선택 $2
 ^(\d+)件$¦$1 hits¦$1 个¦$1 個¦$1 resultados¦$1 résultats¦$1건
 ^(\d+) 箇所を黒塗りしました（書き出し時は「画像化してPDF出力」を選んでください）　※Ctrl\+Z で戻せます$¦Blacked out $1 places (when exporting, choose "Rasterize masked pages") * Ctrl+Z to undo¦已涂黑 $1 处（导出时请选择"转为图像后导出PDF"）※可按Ctrl+Z撤销¦已塗黑 $1 處（匯出時請選擇「轉為影像後匯出PDF」）※可按Ctrl+Z復原¦$1 locais tarjados (ao exportar, escolha "converter em imagem") * Ctrl+Z para desfazer¦$1 zones noircies (à l'export, choisissez « convertir en image ») * Ctrl+Z pour annuler¦$1곳을 검게 칠했습니다 (내보낼 때 "이미지로 바꿔 PDF 출력"을 선택하세요) ※Ctrl+Z로 되돌리기

@@ -1,14 +1,15 @@
-# Manual do Front PDF (Português) v1.0.2 (2026-11-22)
+# Manual do Front PDF (Português) v1.1.0 (2026-11-23)
 
 ## 1. Visão geral
-- O Front PDF é um editor de PDF que funciona apenas abrindo um arquivo HTML (cerca de 3,7 MB) no navegador (Edge ou Chrome recomendados). Não precisa instalar.
+- O Front PDF é um editor de PDF que funciona apenas abrindo um arquivo HTML (cerca de 4 MB) no navegador (Edge ou Chrome recomendados). Não precisa instalar.
 - Totalmente offline. Os arquivos nunca são enviados; tudo é processado no navegador do seu PC.
 - Recursos: mesclar, dividir, reordenar, girar e excluir páginas de PDFs e imagens; anotar (caneta, formas, texto, notas adesivas, carimbos, emoji, imagens); tarja preta / branca; busca de texto; cópia de texto por retângulo (tabelas colam direto no Excel); marca d'água; ajuste para A4; 2 ou 4 páginas por folha; exportação PNG; arquivos de trabalho.
 - Também é possível adicionar páginas em branco e montar documentos livremente, como num editor de texto.
+- A "Mesa" incluída mostra os PDFs, arquivos de trabalho e imagens de uma pasta como miniaturas que você posiciona livremente, e permite unir, separar, renomear, mover e imprimir (como o DocuWorks Desk; seção 16).
 
 ## 2. Tela
 - Barra de título (direita): Importar imagem (layout ao abrir PNG/JPEG: Colocar em A4 / Manter tamanho), Tema, Idioma (globo), ? (ajuda), ⓘ (versão e licença).
-- Barra 1: Arquivo (Abrir / Salvar trabalho), Exibir (▦ Grade / ✎ Editar), Página (Pág. em branco, girar à esquerda/direita, Duplicar, Excluir página), Desfazer / Refazer e, à direita, Exportar (Exportar PNG / Exportar PDF).
+- Barra 1: o bloco Arquivo no canto superior esquerdo (Abrir / Salvar PDF / Salvar arquivo de trabalho / Salvar como / Imprimir / PNG), Exibir (▦ Grade / ✎ Editar), Página (Página em branco, Girar à esquerda/direita, Duplicar, Excluir página), Desfazer / Refazer. [Mesa] na barra de título muda para a mesa (seção 16).
 - Barra 2 (só no modo de edição): ◀ número da página ▶, Zoom (− / menu / +), Buscar (caixa, ▲▼, total, Destacar tudo, Tarjar tudo), Todas (Marca d'água, Limpar anotações).
 - Esquerda: miniaturas (controle Tamanho e Colunas no topo). Arraste a divisa para mudar a largura.
 - Caixa de ferramentas (5 grupos), visualizador no centro, painel de propriedades à direita, barra de status embaixo.
@@ -62,42 +63,55 @@
 - Soltar um arquivo de imagem na página = colocar ali; nas miniaturas = nova página.
 - Ctrl+V de texto cola como objeto de texto.
 
-## 12. Exportar
-- [Exportar PDF]: todas as páginas mescladas / só as selecionadas / um arquivo por página / a cada N páginas / por intervalos (ex.: 1-3, 4-6, 7). Opções: ajustar para A4, cortar margens (mm), 2 ou 4 por folha, título do documento.
-- Se houver tarja preta ou branca, aparece uma confirmação. As tarjas só cobrem o texto e os dados continuam embaixo; para informações confidenciais escolha "Converter páginas tarjadas em imagem e exportar PDF (recomendado)" — só essas páginas viram imagem e o texto delas é removido.
-- [Exportar PNG]: páginas selecionadas ou todas, a 96 / 150 / 300 dpi.
-- As anotações são gravadas no PDF como imagem (qualquer idioma é preservado). Notas adesivas são anotações.
+## 12. Salvar e imprimir
+- [Salvar PDF] (Ctrl+S): um PDF aberto pela mesa é sobrescrito no lugar (a versão anterior fica na pasta "_削除予定" da mesma pasta e pode ser recuperada com [Desfazer] na mesa). Com um arquivo de trabalho aberto, cria um PDF com o mesmo nome ao lado. Sem a mesa, funciona como [Salvar como].
+- [Salvar como]: escolha o nome e o formato (PDF / arquivo de trabalho). O formato do arquivo aberto vem selecionado. Para PDF: unir todas as páginas / só as selecionadas / separar cada página / a cada N páginas / por intervalos (ex. 1-3, 4-6, 7), ajustar a A4, cortar margens (mm), 2 por folha / 4 por folha, título do documento.
+- Se houver tarjas pretas ou brancas, há uma confirmação antes de salvar. As tarjas ficam só por cima e o texto embaixo permanece; para informações confidenciais escolha "Salvar as partes tarjadas como imagem (recomendado)" (só essas páginas viram imagem e o texto é removido).
+- [Imprimir] (Ctrl+P): imprime com anotações, carimbos, notas e marca d'água. Escolha impressora e cópias na tela de impressão do Edge.
+- [PNG]: páginas selecionadas / todas em PNG a 96, 150 ou 300 dpi.
+- As anotações são gravadas no PDF como imagem (qualquer idioma sai como está). As notas viram anotações de PDF.
 
 ## 13. Arquivos de trabalho (.frontpdf)
-- [Salvar trabalho] (Ctrl+S) salva um .frontpdf. Abra com [Abrir] ou arrastando para continuar com páginas, anotações, carimbos, notas e marca d'água editáveis. Dá para passar a um colega que segue as instruções das notas.
-- Atenção: o arquivo de trabalho contém o PDF original, inclusive o texto sob as tarjas. Não o entregue a pessoas de fora da organização; compartilhe o PDF exportado.
-- O caderno de carimbos e o histórico de desfazer não são incluídos. Alterações não salvas mostram "*" no título e geram aviso ao fechar.
+- [Salvar arquivo de trabalho] salva um .frontpdf (sobrescreve se um estiver aberto). Abra com [Abrir], arrastando, ou com clique duplo na mesa para continuar com páginas, anotações, carimbos, notas e marca d'água editáveis. Dá para entregar a um colega corrigir conforme as notas.
+- Atenção: o arquivo de trabalho contém o PDF original (inclusive o texto sob as tarjas). Não o entregue a terceiros; entregue um PDF feito com [Salvar PDF].
+- O livro de carimbos e o histórico de desfazer não são incluídos. Alterações não salvas mostram * no título e há um aviso ao fechar.
 
 ## 14. Exibição e configurações
 - Zoom: Página inteira / Largura da página / 25–400%, Ctrl+roda, Ctrl++ / Ctrl+−, Ctrl+0 para página inteira.
 - Miniaturas: controle Tamanho, Colunas (Auto / 1–6), Ctrl+roda.
-- Temas: Moderno / Escuro / PC retrô / Aqua / Portátil. Idiomas: 日本語, English, 简体中文, 繁體中文, Português, Français, 한국어. Ambos são memorizados.
+- Temas: Moderno / Escuro / PC retrô / Aqua / Portátil / Fofinho. Idiomas: 日本語, English, 简体中文, 繁體中文, Português, Français, 한국어. Ambos são memorizados.
 
 ## 15. Atalhos de teclado
-- Ctrl+O abrir / Ctrl+S salvar trabalho / Ctrl+Z desfazer / Ctrl+Y ou Ctrl+Shift+Z refazer / Ctrl+F buscar / F3 ou Enter próximo / Shift+Enter anterior
+- Ctrl+O abrir / Ctrl+S salvar (Salvar PDF para um PDF aberto pela mesa; senão, Salvar arquivo de trabalho) / Ctrl+P imprimir / Ctrl+Z desfazer / Ctrl+Y ou Ctrl+Shift+Z refazer / Ctrl+F buscar / F3 ou Enter próximo / Shift+Enter anterior
 - Delete exclui a anotação selecionada (páginas quando o foco está nas miniaturas) / setas ajuste fino (Shift = maior) / Esc desmarcar → Selecionar
 - PageUp / PageDown trocar página / Ctrl+A todas as miniaturas (todo o texto em Sel. texto) / Ctrl+C copiar texto selecionado / Ctrl+V colar imagem ou texto
 - Ctrl+roda, Ctrl++ / −, Ctrl+0 zoom / Ctrl+Enter concluir a digitação numa nota
 
-## 16. Distribuição e solução de problemas
+## 16. Mesa (Desk)
+- O app abre na mesa. Use [Escolher pasta] para selecionar a pasta superior dos documentos (pastas do Box Drive também): a árvore de pastas aparece à esquerda e os PDFs, arquivos de trabalho (.frontpdf), JPG e PNG aparecem como miniaturas à direita. A última pasta abre automaticamente da próxima vez (o navegador pode pedir um clique). Só Edge / Chrome.
+- Arraste as miniaturas para qualquer lugar. A disposição fica salva num arquivo ".frontpdf-desk" na pasta e é compartilhada com quem a abrir. [Organizar] ordena por nome; o controle deslizante muda o tamanho. Cores da borda: PDF = vermelho, arquivo de trabalho = azul, imagem = verde.
+- Abrir: clique duplo ou Enter abre o editor em nova janela; o botão [Editor] abre um editor vazio. Visualizar: Espaço, ou pressionar e soltar Ctrl+Shift (←→ páginas, ↑↓ documentos, Enter abre, Esc fecha).
+- Unir: solte um documento sobre outro (o arrastado vem primeiro, o alvo depois) ou selecione vários e clique com o botão direito em [Unir]. Você confirma ordem e nome antes. Imagens viram páginas PDF. Se houver arquivos de trabalho, o resultado é um arquivo de trabalho e as anotações e notas são mantidas.
+- Separar por página: separa um PDF em um PDF por página (mesma pasta / nova pasta).
+- Mover: arraste para a árvore de pastas à esquerda. Soltar a partir do Explorer importa (copia). Ctrl+C / Ctrl+V duplica, F2 renomeia, Ctrl+F filtra pelo nome, Ctrl+P imprime (PDF e imagens). Botão direito abre o menu.
+- Arquivos excluídos e versões anteriores de arquivos sobrescritos vão para uma pasta "_削除予定" criada automaticamente dentro daquela pasta (não é a lixeira do Windows ou do Mac). Quando não precisar mais, clique com o botão direito na pasta "_削除予定" → [Esvaziar] para excluir definitivamente (não dá para desfazer).
+- Desfazer Ctrl+Z / Refazer Ctrl+Y: movimentos, renomeações, exclusões, uniões, separações, sobrescritas etc., quantas vezes quiser. Mudanças na pasta (de outras pessoas ou da sincronização do Box) aparecem automaticamente.
+- [Log] / [Copiar log]: registro de atividade. Cole-o ao relatar um problema.
+
+## 17. Distribuição e solução de problemas
 - O e-mail corporativo pode bloquear anexos .html → envie em ZIP ou use uma pasta compartilhada / Teams.
 - Abrir direto da visualização do e-mail ou da nuvem impõe restrições (caderno não é memorizado, sem diálogo de salvar, sem área de transferência) → salve no PC primeiro e abra com clique duplo.
 - Caderno, tema, idioma, autor das notas etc. ficam no navegador de cada PC (localStorage, prefixo pdfkobo98.). Limpar os dados do navegador apaga tudo, então faça backup do caderno.
 - Não suportado: editar o texto existente do PDF, tarja real (remoção da estrutura do PDF; use a conversão da página em imagem), OCR, assinatura digital, criação de formulários.
 
-## 17. Licença, direitos autorais e fonte oficial
+## 18. Licença, direitos autorais e fonte oficial
 - Copyright © 2026 Front Softworks. Licença: MIT License (texto completo no app em [ⓘ] → Licença MIT, e no arquivo LICENSE).
 - Pela MIT License, qualquer pessoa ou empresa pode usar, copiar, modificar, redistribuir e usar comercialmente de graça. A única condição é manter o aviso de copyright e o texto da licença.
 - Sem garantia: o software é fornecido "no estado em que se encontra" e o autor não assume garantia nem responsabilidade. Sempre confira o resultado exportado de documentos importantes.
 - Software incluído: PDF.js (Apache License 2.0); pdf-lib, pako, @pdf-lib/standard-fonts, @pdf-lib/upng, qrcode-generator (MIT); tslib (0BSD); Adobe CMaps (BSD-3-Clause); PDFium JBIG2 (BSD-3-Clause); OpenJPEG (BSD-2-Clause). Textos das licenças: [ⓘ] → Licenças de terceiros, e THIRD_PARTY_NOTICES.txt.
 - Fonte oficial: a página de releases no GitHub (a URL aparece em [ⓘ]). Arquivos obtidos em outros lugares podem ter sido modificados; o autor não se responsabiliza por problemas causados por versões modificadas.
 - O autor nunca distribui o software por e-mail. Ao recomendá-lo, compartilhe a URL da fonte oficial em vez do arquivo ([ⓘ] → "Copiar texto e URL"). A tela de boas-vindas no primeiro uso também mostra a fonte oficial.
-- Os PDFs exportados trazem "Front PDF v1.0.2 (Front Softworks)" e a URL oficial nas propriedades (Producer/Creator).
+- Os PDFs exportados trazem "Front PDF v1.1.0 (Front Softworks)" e a URL oficial nas propriedades (Producer/Creator).
 - No primeiro uso é preciso uma ativação gratuita (uma vez por navegador): (1) copie o "ID deste navegador" mostrado na tela (8 caracteres aleatórios gerados pelo app; sem informações do PC ou pessoais), cole em "Ativação" na página oficial e clique em "Emitir"; (2) cole no app a senha exibida (ou a senha curta de 10 caracteres). Ler o QR code da tela com o celular abre a página oficial com o ID preenchido. A senha só funciona nesse navegador, não em outros PCs ou navegadores. A página oficial não envia o ID; o cálculo é feito no navegador. Limpar os dados do navegador muda o ID; nesse caso, ative de novo. O ID pode ser copiado a qualquer momento enquanto esta tela estiver aberta (ela não pode ser fechada).
 - Outros softwares da Front Softworks: ExVAN Planner (otimizador de carregamento de contêineres, https://exvan-planner.github.io/).
 - Como verificar se o arquivo não foi alterado (Windows, sem instalar nada): execute `certutil -hashfile Front_PDF.html SHA256` no Prompt de Comando e confira se o valor é igual ao SHA-256 publicado na fonte oficial.

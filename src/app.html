@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- Front PDF v1.0.2 | Copyright (c) 2026 Front Softworks | MIT License (see script#lic-mit) | Official source: GitHub Releases | Third-party licenses: script#lic-3rd -->
+<!-- Front PDF v1.1.0 | Copyright (c) 2026 Front Softworks | MIT License (see script#lic-mit) | Official source: GitHub Releases | Third-party licenses: script#lic-3rd -->
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Front PDF v1.0.2 (c) 2026 Front Softworks, MIT License. Offline single-file PDF editor. Full user/AI manual is embedded in the script#ai-manual block below.">
+<meta name="description" content="Front PDF v1.1.0 (c) 2026 Front Softworks, MIT License. Offline single-file PDF editor. Full user/AI manual is embedded in the script#ai-manual block below.">
 <script type="text/markdown" id="ai-manual">
 /*__MANUAL__*/
 </script>
@@ -121,6 +121,35 @@ body.skin-gba .wb{width:18px;height:18px;border-radius:50%;padding:0!important;m
 body.skin-gba .edarea{border:3px solid #15103a;border-radius:10px}
 body.skin-gba #props h4{border-left-color:#e8484f}
 body.skin-gba .lib button.on{outline-color:#e8484f}
+/* ===== skin: mofu（わんこ＋にゃんこ） ===== */
+body.skin-mofu{
+ --desk:#fff3e6 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg transform='translate(8 10) rotate(-15 12 12)'%3E%3Cg fill='%23e9b9a0' opacity='0.55'%3E%3Cellipse cx='12' cy='15.5' rx='5.2' ry='4.4'/%3E%3Cellipse cx='5.6' cy='9.6' rx='2.1' ry='2.7' transform='rotate(-20 5.6 9.6)'/%3E%3Cellipse cx='9.6' cy='5.8' rx='2.1' ry='2.8'/%3E%3Cellipse cx='14.4' cy='5.8' rx='2.1' ry='2.8'/%3E%3Cellipse cx='18.4' cy='9.6' rx='2.1' ry='2.7' transform='rotate(20 18.4 9.6)'/%3E%3C/g%3E%3C/g%3E%3Cg transform='translate(70 60) scale(.9)'%3E%3Cg%3E%3Cg fill='%23f7b6c8'%3E%3Ccircle cx='12' cy='6.5' r='4'/%3E%3Ccircle cx='17.2' cy='10.3' r='4'/%3E%3Ccircle cx='15.2' cy='16.4' r='4'/%3E%3Ccircle cx='8.8' cy='16.4' r='4'/%3E%3Ccircle cx='6.8' cy='10.3' r='4'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='3' fill='%23ffe08a'/%3E%3C/g%3E%3C/g%3E%3Cg transform='translate(66 6) rotate(20 12 12) scale(.8)'%3E%3Cg fill='%23e9b9a0' opacity='0.45'%3E%3Cellipse cx='12' cy='15.5' rx='5.2' ry='4.4'/%3E%3Cellipse cx='5.6' cy='9.6' rx='2.1' ry='2.7' transform='rotate(-20 5.6 9.6)'/%3E%3Cellipse cx='9.6' cy='5.8' rx='2.1' ry='2.8'/%3E%3Cellipse cx='14.4' cy='5.8' rx='2.1' ry='2.8'/%3E%3Cellipse cx='18.4' cy='9.6' rx='2.1' ry='2.7' transform='rotate(20 18.4 9.6)'/%3E%3C/g%3E%3C/g%3E%3Cg transform='translate(14 74) scale(.7)'%3E%3Cg%3E%3Cg fill='%23bfe3c8'%3E%3Ccircle cx='12' cy='6.5' r='4'/%3E%3Ccircle cx='17.2' cy='10.3' r='4'/%3E%3Ccircle cx='15.2' cy='16.4' r='4'/%3E%3Ccircle cx='8.8' cy='16.4' r='4'/%3E%3Ccircle cx='6.8' cy='10.3' r='4'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='3' fill='%23fff3b0'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");--face:#fffaf3;--text:#5a3a28;--muted:#a07a62;
+ --font:"Zen Maru Gothic","M PLUS Rounded 1c","HG丸ｺﾞｼｯｸM-PRO","Hiragino Maru Gothic ProN","Meiryo UI",sans-serif;--fs:13px;
+ --win-sh:0 0 0 3px #f2c9a8,0 0 0 7px #fff,0 0 0 9px #f7b6c8,0 14px 34px rgba(160,100,70,.25);--win-r:26px;--win-pad:6px;
+ --title-bg:repeating-linear-gradient(100deg,#f7b878 0 16px,#eb9a55 16px 26px);--title-fg:#5a3218;--title-h:32px;--title-bd:0;--title-r:20px 20px 10px 10px;
+ --btn-bg:#fffdf8;--btn-fg:#6b4430;--btn-bd:2px solid #ecc3a3;--btn-sh:0 2px 0 #ecc3a3;--btn-r:999px;--btn-hov:#fff0e2;--btn-in-sh:inset 0 2px 3px rgba(160,100,70,.2);
+ --btn-on-bg:#ffd9a8;--btn-on-fg:#6b3a12;--btn-on-bd:2px solid #eb9a55;--pri-bg:#f58fb0;--pri-fg:#fff;--pri-bd:2px solid #e0698f;
+ --sunk-bg:#fffdf9;--sunk-fg:#5a3a28;--sunk-muted:#a07a62;--sunk-sh:none;--sunk-bd:2px dashed #f2c9a8;--sunk-r:16px;
+ --field-bg:#fff;--field-fg:#5a3a28;--field-bd:2px solid #f2c9a8;--field-sh:none;--field-r:12px;
+ --fs-bd:2px dotted #f2c9a8;--sep:#f2c9a8;--sep2:transparent;--sel-bg:#f58fb0;--sel-fg:#fff;--cur:#f58fb0;--accent:#eb9a55;
+ --area-bg:#f9ece0 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cg transform='translate(10 12) rotate(-15 12 12)'%3E%3Cg fill='%23d9a789' opacity='0.16'%3E%3Cellipse cx='12' cy='15.5' rx='5.2' ry='4.4'/%3E%3Cellipse cx='5.6' cy='9.6' rx='2.1' ry='2.7' transform='rotate(-20 5.6 9.6)'/%3E%3Cellipse cx='9.6' cy='5.8' rx='2.1' ry='2.8'/%3E%3Cellipse cx='14.4' cy='5.8' rx='2.1' ry='2.8'/%3E%3Cellipse cx='18.4' cy='9.6' rx='2.1' ry='2.7' transform='rotate(20 18.4 9.6)'/%3E%3C/g%3E%3C/g%3E%3Cg transform='translate(58 56) rotate(15 12 12)'%3E%3Cg fill='%23d9a789' opacity='0.16'%3E%3Cellipse cx='12' cy='15.5' rx='5.2' ry='4.4'/%3E%3Cellipse cx='5.6' cy='9.6' rx='2.1' ry='2.7' transform='rotate(-20 5.6 9.6)'/%3E%3Cellipse cx='9.6' cy='5.8' rx='2.1' ry='2.8'/%3E%3Cellipse cx='14.4' cy='5.8' rx='2.1' ry='2.8'/%3E%3Cellipse cx='18.4' cy='9.6' rx='2.1' ry='2.7' transform='rotate(20 18.4 9.6)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");--page-sh:0 4px 16px rgba(160,100,70,.25);--empty-fg:#a07a62;--empty-big:#f2c9a8;
+ --panel-bg:#fff6fa;--panel-fg:#5a3a28;--ptitle-bg:#ffe3ec;--ptitle-fg:#c9577d;--h4-bg:#ffeef3;
+ --cell-bg:transparent;--cell-sh:none;--cell-bd:0;--tb-line:2px dotted #f2c9a8;--tb-bg:transparent;
+ --thumb-bd:2px solid #f2c9a8;--thumb-sh:0 3px 8px rgba(160,100,70,.18);--lib-bg:#fff;
+}
+body.skin-mofu .title .t{text-shadow:0 1px 0 #ffe9cf,1px 0 0 #ffe9cf,-1px 0 0 #ffe9cf,0 -1px 0 #ffe9cf;letter-spacing:.5px}
+body.skin-mofu .title .t::after{content:'';display:inline-block;width:15px;height:15px;margin-left:8px;vertical-align:-2px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg%3E%3Cg fill='%23f59ab5'%3E%3Ccircle cx='12' cy='6.5' r='4'/%3E%3Ccircle cx='17.2' cy='10.3' r='4'/%3E%3Ccircle cx='15.2' cy='16.4' r='4'/%3E%3Ccircle cx='8.8' cy='16.4' r='4'/%3E%3Ccircle cx='6.8' cy='10.3' r='4'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='3' fill='%23ffd66b'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat}
+body.skin-mofu .ico{width:18px;height:18px;border:0;box-shadow:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='%237a4a2e' opacity='1'%3E%3Cellipse cx='12' cy='15.5' rx='5.2' ry='4.4'/%3E%3Cellipse cx='5.6' cy='9.6' rx='2.1' ry='2.7' transform='rotate(-20 5.6 9.6)'/%3E%3Cellipse cx='9.6' cy='5.8' rx='2.1' ry='2.8'/%3E%3Cellipse cx='14.4' cy='5.8' rx='2.1' ry='2.8'/%3E%3Cellipse cx='18.4' cy='9.6' rx='2.1' ry='2.7' transform='rotate(20 18.4 9.6)'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat}
+body.skin-mofu .ico::before,body.skin-mofu .ico::after{display:none}
+body.skin-mofu button{transition:transform .08s}
+body.skin-mofu button:active{transform:translateY(2px)}
+body.skin-mofu .wb{width:16px;height:16px;border-radius:50%;padding:0!important;min-width:0;min-height:0;font-size:0;border:2px solid #fff;box-shadow:0 1px 2px rgba(120,60,30,.35)}
+body.skin-mofu .wb-close{background:#f58fb0}body.skin-mofu .wb-min{background:#ffd66b}body.skin-mofu .wb-max{background:#9ad8b0}
+body.skin-mofu .ptitle::before{content:'';display:inline-block;width:13px;height:13px;margin-right:5px;vertical-align:-2px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg%3E%3Cg fill='%23f59ab5'%3E%3Ccircle cx='12' cy='6.5' r='4'/%3E%3Ccircle cx='17.2' cy='10.3' r='4'/%3E%3Ccircle cx='15.2' cy='16.4' r='4'/%3E%3Ccircle cx='8.8' cy='16.4' r='4'/%3E%3Ccircle cx='6.8' cy='10.3' r='4'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='3' fill='%23ffd66b'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat}
+body.skin-mofu #props h4{border-left-color:#f58fb0}
+body.skin-mofu .lib button.on{outline-color:#f58fb0}
+body.skin-mofu .edarea{border-radius:18px}
+body.skin-mofu .hdr select,body.skin-mofu .hdr button{height:22px}
 /* ===== common layout (uses variables) ===== */
 *{box-sizing:border-box}
 html,body{margin:0;height:100%}
@@ -130,7 +159,7 @@ body{background:var(--desk);font:var(--fs) var(--font);color:var(--text);overflo
 .title{height:var(--title-h);background:var(--title-bg);color:var(--title-fg);border-bottom:var(--title-bd);border-radius:var(--title-r);font-weight:bold;display:flex;align-items:center;padding:0 4px 0 6px;gap:5px;flex:none}
 .title .t{flex:1;white-space:nowrap;overflow:hidden}
 .title button{min-height:0;padding:0 6px;height:20px}
-body:not(.skin-98):not(.skin-aqua):not(.skin-gba) .wb{display:none}
+body:not(.skin-98):not(.skin-aqua):not(.skin-gba):not(.skin-mofu) .wb{display:none}
 body.skin-dark{color-scheme:dark}
 .ico{width:13px;height:15px;background:#fff;border:1px solid #000;position:relative;flex:none;box-shadow:1px 1px 0 #000}
 .ico:after{content:"";position:absolute;right:-1px;top:-1px;border-style:solid;border-width:0 5px 5px 0;border-color:transparent var(--accent) #c0c0c0 transparent}
@@ -148,10 +177,18 @@ u{text-decoration:underline}
 .tbar{display:block!important;padding:0!important}
 .trow{display:flex;align-items:center;gap:4px;padding:4px 5px;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin}
 .trow+.trow{padding-top:1px}
+.tbx{display:flex;align-items:stretch;min-width:0}.trs{flex:1;min-width:0}
+.fblk{display:flex;align-items:center;gap:6px;padding:4px 8px 4px 6px;border-right:1px solid rgba(128,128,128,.3);margin-right:2px;flex:none}
+.fbl{writing-mode:vertical-rl;font-size:11px;opacity:.7;letter-spacing:.15em}
+.fbg{display:grid;grid-template-columns:auto auto auto auto;grid-template-rows:auto auto;gap:4px}
+.fbg #bOpen{grid-row:1/3;grid-column:1;height:auto}.fbg #bOver{grid-row:1;grid-column:2}
+.fbg #bSave{grid-row:1;grid-column:3}.fbg #bExport{grid-row:1;grid-column:4}.fbg #bPrint{grid-row:2;grid-column:2}.fbg #bPng{grid-row:2;grid-column:3}
+#printArea{display:none}
+@media print{body>*:not(#printArea){display:none!important}#printArea{display:block!important}#printArea img{display:block;width:100%;height:auto;break-after:page;page-break-after:always}#printArea img:last-child{break-after:auto;page-break-after:auto}@page{margin:0}}
 .grp{display:flex;align-items:center;gap:3px;flex:none}
 .sp{flex:1 1 8px;min-width:8px}
 .gl{font-size:11px;color:var(--muted);margin:0 3px 0 1px;white-space:nowrap}
-#skinSel,#langSel{max-width:120px}#imgMode{max-width:140px}
+#skinSel,#langSel,#dkSkin,#dkLang{max-width:120px}#imgMode{max-width:140px}
 .hdr{display:flex;align-items:center;gap:4px;font-weight:normal;flex:none;margin-right:6px}
 .hdr .gl{color:inherit;opacity:.8;margin:0 1px 0 6px}
 .hdr select{height:24px;padding:1px 3px;font-size:12px}
@@ -256,23 +293,32 @@ legend{padding:0 4px}
 .hk{font-family:"MS Gothic",monospace;background:var(--field-bg);color:var(--field-fg);padding:0 3px;border:1px solid #808080}
 .help td{padding:3px 6px;vertical-align:top}
 .help td:first-child{white-space:nowrap;font-weight:bold}
+/*__DESK_CSS__*/
 </style>
 </head>
-<body class="skin-modern">
+<body class="skin-modern" data-view="editor">
+<!--__DESK_HTML__-->
 
 <div class="win" id="main">
-  <div class="title"><div class="ico"></div><span class="t" id="winTitle">Front PDF ― PDF加工ツール</span><div class="hdr"><span class="gl">画像取込</span><select id="imgMode" title="PNG/JPEGを開いたときの配置"><option value="a4">A4に配置</option><option value="raw">画像サイズのまま</option></select><span class="gl">スキン</span><select id="skinSel" title="見た目を切り替え"><option value="modern">モダン</option><option value="dark">ダーク</option><option value="98">レトロPC</option><option value="aqua">アクア</option><option value="gba">ゲーム機</option></select><span class="gl" title="言語 / Language" style="margin-left:6px"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" style="display:block"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg></span><select id="langSel" data-noi18n title="言語 / Language"></select><button id="bHelp" title="使い方">？</button><button id="bAbout" title="バージョン・ライセンス">ⓘ</button></div><button tabindex="-1" class="wb wb-min">_</button><button tabindex="-1" class="wb wb-max">□</button><button tabindex="-1" class="wb wb-close" id="aboutX">×</button></div>
-  <div class="toolbar tbar">
+  <div class="title"><div class="ico"></div><span class="t" id="winTitle">Front PDF ― PDF加工ツール</span><div class="hdr"><span class="vsw"><button id="toDesk" title="デスク（フォルダの書類を並べる画面）に切り替え">デスクへ</button></span><span class="gl">画像取込</span><select id="imgMode" title="PNG/JPEGを開いたときの配置"><option value="a4">A4に配置</option><option value="raw">画像サイズのまま</option></select><span class="gl">スキン</span><select id="skinSel" title="見た目を切り替え"><option value="modern">モダン</option><option value="dark">ダーク</option><option value="98">レトロPC</option><option value="aqua">アクア</option><option value="gba">ゲーム機</option><option value="mofu">もふもふ</option></select><span class="gl" title="言語 / Language" style="margin-left:6px"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" style="display:block"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg></span><select id="langSel" data-noi18n title="言語 / Language"></select><button id="bHelp" title="使い方">？</button><button id="bAbout" title="バージョン・ライセンス">ⓘ</button></div><button tabindex="-1" class="wb wb-min">_</button><button tabindex="-1" class="wb wb-max">□</button><button tabindex="-1" class="wb wb-close" id="aboutX">×</button></div>
+  <div class="toolbar tbar"><div class="tbx">
+   <div class="fblk"><div class="fbl">ファイル</div>
+    <div class="fbg">
+     <button id="bOpen" title="PDF / PNG / JPEG / 作業ファイル(.frontpdf) を開く (Ctrl+O)">開く</button>
+     <button id="bOver" class="pri" title="PDF で保存。デスクから開いた PDF はそのまま書き換えます（前の版は「_削除予定」に残ります）"><b>PDF保存</b></button>
+     <button id="bSave" title="作業ファイル(.frontpdf)で保存。作業ファイルを開いているときは上書き。あとで続きから編集できます">作業ファイル保存</button>
+     <button id="bExport" title="名前と形式（PDF / 作業ファイル）を選んで保存。分割・A4揃え・まとめ印刷も選べます">別名で保存</button>
+     <button id="bPrint" title="印刷 (Ctrl+P)">印刷</button>
+     <button id="bPng" title="ページを PNG 画像で保存">PNG</button>
+    </div></div>
+   <div class="trs">
    <div class="trow">
-    <div class="grp"><span class="gl">ファイル</span><button id="bOpen" title="PDF / PNG / JPEG / 作業ファイル(.frontpdf) を開く (Ctrl+O)">開く</button><button id="bSave" title="作業ファイル(.frontpdf)に保存して、あとで続きから編集 (Ctrl+S)">作業を保存</button></div>
-    <div class="sep"></div>
     <div class="grp"><span class="gl">表示</span><span class="modeb"><button id="mGrid" title="サムネイルだけを大きく並べてページを整理">▦ 一覧</button><button id="mEdit" title="左にサムネイル、右でページに書き込み">✎ 編集</button></span></div>
     <div class="sep"></div>
     <div class="grp"><span class="gl">ページ</span><button id="bBlank" title="白紙のA4ページを追加">白紙追加</button><button id="bRotL" title="選択ページを左に90°回転">↺</button><button id="bRotR" title="選択ページを右に90°回転">↻</button><button id="bDup" title="選択ページを複製">複製</button><button id="bDel" title="選択ページを削除">ページ削除</button></div>
     <div class="sep"></div>
     <div class="grp"><button id="bUndo" title="元に戻す (Ctrl+Z)">元に戻す</button><button id="bRedo" title="やり直し (Ctrl+Y)">やり直し</button></div>
     <div class="sp"></div>
-    <div class="grp"><span class="gl">書き出し</span><button id="bPng" title="ページをPNG画像で書き出し">PNG書き出し</button><button id="bExport" class="pri" title="結合・分割・A4揃えなどを選んでPDFに書き出し"><b>PDF書き出し</b></button></div>
    </div>
    <div class="trow">
     <div class="grp eo"><button id="bPrev" title="前のページ (PageUp)">◀</button><div class="pgno sunken" id="pgNo">0 / 0</div><button id="bNext" title="次のページ (PageDown)">▶</button></div>
@@ -284,6 +330,7 @@ legend{padding:0 4px}
     <div class="grp eo"><span class="gl">全体</span><button id="bWm" title="全ページ共通の透かし文字">透かし</button><button id="bClear" title="表示中ページの書き込みを全部消す">書き込み全消去</button></div>
     <div class="sp"></div>
    </div>
+   </div></div>
   </div>
   <div class="body">
     <div id="sideWrap"><div class="shead">大きさ<input type="range" id="tSize" min="60" max="480" step="10" title="サムネイルの大きさ（Ctrl+ホイールでも変更）"><span>列</span><select id="tCols" title="横に並べる数"><option value="auto">自動</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></div>
@@ -301,8 +348,13 @@ legend{padding:0 4px}
 
 <!-- ===== Dialogs ===== -->
 <div class="modal" id="dlgExport"><div class="win" style="width:440px">
-  <div class="title"><span class="t">PDF書き出し</span><button data-close>×</button></div>
+  <div class="title"><span class="t">別名で保存</span><button data-close>×</button></div>
   <div class="dbody">
+    <fieldset><legend>形式</legend>
+      <label style="display:inline-block;margin-right:16px"><input type="radio" name="xf" value="pdf" checked> PDF</label>
+      <label style="display:inline-block"><input type="radio" name="xf" value="work"> 作業ファイル（.frontpdf：続きから編集できる）</label>
+    </fieldset>
+    <div id="xPdfOpts">
     <fieldset><legend>出力方法</legend>
       <label><input type="radio" name="xm" value="merge" checked> 全ページを1つのPDFに（結合）</label>
       <label><input type="radio" name="xm" value="sel"> 選択したページだけ</label>
@@ -315,30 +367,31 @@ legend{padding:0 4px}
       <label>余白トリミング <input type="number" id="xCrop" value="0" min="0" max="60" style="width:56px"> mm（四辺）</label>
       <label>まとめ印刷 <select id="xNup"><option value="1">なし</option><option value="2">2in1（A4横に2ページ）</option><option value="4">4in1（A4縦に4ページ）</option></select></label>
     </fieldset>
+    </div>
     <fieldset><legend>ファイル</legend>
-      <label>ファイル名 <input type="text" id="xName" style="width:250px"> .pdf</label>
-      <label>文書タイトル <input type="text" id="xTitle" style="width:236px" placeholder="（任意）"></label>
+      <label>ファイル名 <input type="text" id="xName" style="width:250px"> <span id="xExt">.pdf</span></label>
+      <label id="xTitleL">文書タイトル <input type="text" id="xTitle" style="width:236px" placeholder="（任意）"></label>
     </fieldset>
-    <div class="btns"><button id="xGo"><b>書き出し</b></button><button data-close>キャンセル</button></div>
+    <div class="btns"><button id="xGo" class="pri"><b>保存</b></button><button data-close>キャンセル</button></div>
   </div>
 </div></div>
 
 <div class="modal" id="dlgSecure"><div class="win" style="width:500px">
-  <div class="title"><span class="t">書き出し前の確認</span><button data-close>×</button></div>
+  <div class="title"><span class="t">保存前の確認（黒塗り）</span><button data-close>×</button></div>
   <div class="dbody">
     <div style="display:flex;gap:14px;align-items:flex-start;padding:6px 2px">
       <div class="dico warn">!</div>
       <div style="line-height:1.7;user-select:text">
         <div><b data-ih>黒塗り・白塗りなどで隠した部分があります</b> <span data-noi18n>（<span id="secPages"></span>）</span></div><div data-ih>
-        PDFで書き出すと、塗りは<b>上に重ねているだけ</b>なので、<u>下の文字データはファイル内に残ります</u>。文字のコピーやPDF編集ソフトで読み取れてしまいます。<br><br>
-        <b>機密情報を消す目的なら「塗ったページを画像化してPDF出力」をおすすめします。</b><br>
+        PDFで保存すると、塗りは<b>上に重ねているだけ</b>なので、<u>下の文字データはファイル内に残ります</u>。文字のコピーやPDF編集ソフトで読み取れてしまいます。<br><br>
+        <b>機密情報を消す目的なら「塗った部分を画像にして保存」をおすすめします。</b><br>
         <span style="opacity:.85">塗ったページだけを画像に変換するので、隠した部分の文字データは残りません。他のページは今まで通り文字選択・検索ができます（画像化したページは文字選択・検索ができなくなります）。画像ファイルで渡したい場合は「PNGで書き出す」も使えます。</span>
       </div></div>
     </div>
     <div class="btns">
-      <button id="secRaster" class="pri"><b>塗ったページを画像化してPDF出力（推奨）</b></button>
+      <button id="secRaster" class="pri"><b>塗った部分を画像にして保存（推奨・下の文字は消える）</b></button>
       <button id="secPng">PNGで書き出す</button>
-      <button id="secGo">このまま書き出す</button>
+      <button id="secGo">元のデータのまま保存（下の文字は残る）</button>
       <button data-close>キャンセル</button>
     </div>
   </div>
@@ -352,7 +405,7 @@ legend{padding:0 4px}
       <div style="line-height:1.7;user-select:text" data-ih>
         作業ファイル（<b>.frontpdf</b>）には、<b>元のPDFがそのまま</b>入っています。<br>
         <u>黒塗り・白塗りの下の文字も含まれる</u>ので、<b>この作業ファイルは人に渡さないでください。</b><br>
-        人に渡すときは［PDF書き出し］で作ったPDFを使ってください。<br><br>
+        人に渡すときは［PDF保存］で作ったPDFを使ってください。<br><br>
         <span style="opacity:.85">作業ファイルは［開く］またはドラッグ＆ドロップで開くと、書き込み・ハンコ・付箋・透かしを編集できる状態で続きから再開できます。</span>
       </div>
     </div>
@@ -452,7 +505,7 @@ legend{padding:0 4px}
    <tr><td>表示の大きさ</td><td>サムネイル：上の「大きさ」スライダーと「列」（Ctrl+ホイールでも可）。ページ：［－］［＋］と倍率メニュー、Ctrl+ホイール、Ctrl+0で全体表示。</td></tr>
    <tr><td>サムネイル</td><td>クリックで右に表示。ドラッグで並べ替え。Ctrl+クリックで複数選択、Shift+クリックで範囲選択。左右の境目はドラッグで幅を変えられます。</td></tr>
    <tr><td>文字のコピー</td><td>［文字選択］ツールで範囲をドラッグで囲むと、枠の中の文字だけが選択されます。「表」形式ならタブ区切りになり、Excelに貼るとセルに分かれます。スキャン画像のPDFは文字データが無いため選択できません。</td></tr>
-   <tr><td>作業の保存</td><td>［作業を保存］（Ctrl+S）で作業ファイル（.frontpdf）に保存し、［開く］やドラッグ＆ドロップで続きから編集できます。<b>作業ファイルには元のPDF（黒塗りの下の文字も）が入っているので人に渡さないでください。</b>渡すときは［PDF書き出し］を使います。保存していない変更があるままブラウザを閉じようとすると警告が出ます。</td></tr>
+   <tr><td>作業の保存</td><td>［作業ファイル保存］で作業ファイル（.frontpdf）に保存し、［開く］やドラッグ＆ドロップで続きから編集できます。<b>作業ファイルには元のPDF（黒塗りの下の文字も）が入っているので人に渡さないでください。</b>渡すときは［PDF保存］を使います。保存していない変更があるままブラウザを閉じようとすると警告が出ます。</td></tr>
    <tr><td>絵文字</td><td>［絵文字］ツールで右のパネルから絵文字を選び、ページをクリックすると置けます（続けて何個でも）。置いた絵文字は選んで別の絵文字に入れ替えたり、四隅で大きさを変えたりできます。Windowsなら Win + . の絵文字パネルからも入力できます。</td></tr>
    <tr><td>画像の貼り付け</td><td>Snipping Tool などで切り取った画像は、Ctrl+V でページ上に貼り付けられます（マウスがページ上にあればその位置、なければ表示中の場所の中央）。画像ファイルをページ上にドロップするとその位置に貼り付け、左のサムネイル側にドロップすると新しいページとして追加します。</td></tr>
    <tr><td>文字検索</td><td>上の検索欄（Ctrl+F）に入力してEnter。全ページから探してオレンジ色で表示し、Enter／▼で次へ、Shift+Enter／▲で前へ。［全てマーカー］［全て黒塗り］で見つかった箇所をまとめて処理できます。</td></tr>
@@ -465,7 +518,7 @@ legend{padding:0 4px}
    <tr><td>透かし</td><td>［透かし］で全ページに透かしが入り、選択状態になります。右のパネルで文字・大きさ・角度・濃さの変更や削除ができます。ページ上の透かし文字をクリックしても選べます。</td></tr>
    <tr><td>全ページに押す</td><td>書き込みを選んで［全ページへ］で、他の全ページの同じ位置にも入ります。</td></tr>
    <tr><td>書き出し</td><td>結合／選択ページ／1ページずつ／Nページごと／範囲指定で分割。A4揃え・余白トリミング・2in1/4in1も可能。</td></tr>
-   <tr><td>スキン</td><td>タイトルバー右の「スキン」で見た目を切り替えられます（モダン／ダーク／レトロPC／アクア／ゲーム機）。地球のマークの欄で言語も切り替えられます。選んだ設定は記憶されます。</td></tr>
+   <tr><td>スキン</td><td>タイトルバー右の「スキン」で見た目を切り替えられます（モダン／ダーク／レトロPC／アクア／ゲーム機／もふもふ）。地球のマークの欄で言語も切り替えられます。選んだ設定は記憶されます。</td></tr>
    <tr><td>ライセンス</td><td>［ⓘ］で、バージョン、著作権（© 2026 Front Softworks）、MIT ライセンス、公式配布元、改変されていないかの確認方法、同梱ソフトのライセンスを確認できます。</td></tr>
    <tr><td>ご注意</td><td>書き込みは画像としてPDFに焼き込まれます（日本語もそのまま出ます）。黒塗り・白塗りは「上から隠す」だけで、下の文字データは残ります。PDF書き出し時に確認が出るので、機密情報なら「塗ったページを画像化してPDF出力」（推奨）を選んでください。<br>ファイルは外部に送信されず、このPCのブラウザ内だけで処理されます。</td></tr>
   </table>
@@ -505,7 +558,7 @@ function canvasBlob(c){return new Promise(r=>c.toBlob(r,'image/png'));}
 function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},5000);}
 const isTyping=t=>t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT');
 /* ===== 公式情報（公開時に OFFICIAL_URL を GitHub Releases の URL にする） ===== */
-const APP_VER='1.0.2',OFFICIAL_URL='/*__SITEURL__*/',AUTHOR='Front Softworks';
+const APP_VER='1.1.0',OFFICIAL_URL='/*__SITEURL__*/',AUTHOR='Front Softworks';
 const OFFICIAL_SHOW=()=>OFFICIAL_URL||'GitHub Releases（公開準備中）';
 /* アクティベーション（ブラウザごとの ID 方式）。ACT は build.py で SITE_URL を設定し ACTIVATION=True のときだけ true になる */
 const ACT=/*__ACT__*/false;
@@ -536,7 +589,7 @@ function tr(s){if(LANG==='ja'||s==null)return s;s=String(s);const k=s.trim();if(
 const normH=h=>h.replace(/\s+/g,' ').trim();
 function trHtml(h){if(LANG==='ja')return h;const e=I18N.html[normH(h)];return e&&e[LANG]?e[LANG]:h;}
 const RICH='.hint,.help td,[data-ih]';
-function skipNode(el){return !el||el.closest('script,style,textarea,#side .card .nm')||(el.closest('[data-noi18n]'));}
+function skipNode(el){return !el||el.closest('script,style,textarea,#side .card .nm,.dcard .nm,#dkTree .tn,#mgList .n,#dkResumeName,#dkTitle,#pvInfo')||(el.closest('[data-noi18n]'));}
 function trText(n){const el=n.parentElement;if(skipNode(el))return;if(el.closest(RICH))return;if(n.__out!==n.nodeValue)n.__src=n.nodeValue;const out=tr(n.__src);n.__out=out;if(out!==n.nodeValue)n.nodeValue=out;}
 function trRich(el,force){const cur=el.innerHTML;if(!force&&el.__out===cur)return;if(el.__out!==cur)el.__src=cur;const out=trHtml(el.__src);if(out!==cur)el.innerHTML=out;el.__out=el.innerHTML;}
 function trAttr(el,a){const v=el.getAttribute(a);if(v==null)return;const ks='__s_'+a,ko='__o_'+a;if(el[ko]!==v)el[ks]=v;const out=tr(el[ks]);el[ko]=out;if(out!==v)el.setAttribute(a,out);}
@@ -549,7 +602,7 @@ const i18nObs=new MutationObserver(ms=>{for(const m of ms){
   const t=m.target.nodeType===3?m.target.parentElement:m.target;const r=t&&t.closest?t.closest(RICH):null;if(r){trRich(r);continue;}
   if(m.type==='characterData'){trText(m.target);continue;}m.addedNodes.forEach(n=>trTree(n));}});
 function setLang(l){LANG=l;try{localStorage.setItem('pdfkobo98.lang',JSON.stringify(l));}catch(e){}document.documentElement.lang=HTMLLANG[l]||l;document.title=tr('Front PDF');
-  const ls=document.getElementById('langSel');if(ls)ls.value=l;const ul=document.getElementById('ulLang');if(ul)ul.value=l;trTree(document.body,true);}
+  const ls=document.getElementById('langSel');if(ls)ls.value=l;const dl=document.getElementById('dkLang');if(dl)dl.value=l;if(typeof DK!=='undefined'){const dt=document.getElementById('dkTitle');if(dt)dt.textContent=tr('Front PDF ― デスク')+(DK.path&&DK.path.length?' ― '+DK.path.join(' / '):'');}const ul=document.getElementById('ulLang');if(ul)ul.value=l;trTree(document.body,true);}
 
 // ================= state
 const state={sources:{},pages:[],sel:new Set(),anchor:null,cur:null,images:{},hist:[],fut:[],last:'',area:'view',
@@ -679,15 +732,20 @@ async function anyImageToPng(file){const url=URL.createObjectURL(file);try{const
 const KOBO_MAGIC='PDFKOBO1';
 function u8b64(u){let s='';for(let i=0;i<u.length;i+=0x8000)s+=String.fromCharCode.apply(null,u.subarray(i,i+0x8000));return btoa(s);}
 async function streamConv(u8,ts){return new Uint8Array(await new Response(new Blob([u8]).stream().pipeThrough(ts)).arrayBuffer());}
-const work={handle:null,name:'',saved:''};
+const work={handle:null,name:'',saved:'',dir:null,origin:null,path:null};
 function isDirty(){return state.pages.length>0&&serialize()!==work.saved;}
 function updateDirty(){updatePgNo();}
+async function workThumb(){// デスクのサムネ用：1ページ目を書き込み込みで小さな画像にする
+  try{const p=state.pages[0];if(!p)return null;const R=totalRot(p),[dw,dh]=dims(p,R);const c=mk(1,1);const ctx=await renderPdfPage(p,c,Math.min(2,360/dw));
+    ctx.save();ctx.scale(c.width/dw,c.height/dh);drawWatermark(ctx,dw,dh);drawObjects(ctx,p,R,false);ctx.restore();
+    const o=mk(c.width,c.height),g=o.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,o.width,o.height);g.drawImage(c,0,0);return o.toDataURL('image/jpeg',.82);}
+  catch(e){console.warn('thumb',e);return null;}}
 async function buildWorkFile(){
   const used=new Set(state.pages.map(p=>p.srcId)),imgs={};
   for(const p of state.pages)for(const o of p.objects)if(o.imgId&&state.images[o.imgId])imgs[o.imgId]=state.images[o.imgId].url;
   const data={app:'Front PDF',ver:1,saved:new Date().toISOString(),cur:state.cur,wm:state.wm,
     sources:[...used].map(id=>({id,name:state.sources[id].name,b64:u8b64(state.sources[id].bytes)})),
-    pages:JSON.parse(serialize()).pages,images:imgs};
+    pages:JSON.parse(serialize()).pages,images:imgs,thumb:await workThumb()};
   let body=new TextEncoder().encode(JSON.stringify(data)),flag='J';
   if(window.CompressionStream){try{body=await streamConv(body,new CompressionStream('gzip'));flag='Z';}catch(e){}}
   const head=new TextEncoder().encode(KOBO_MAGIC+flag);const out=new Uint8Array(head.length+body.length);out.set(head);out.set(body,head.length);return out;}
@@ -697,12 +755,13 @@ function openSave(){if(!state.pages.length){msg('作業を保存','保存する�
 async function doSave(base){base=(base||'作業ファイル').replace(/[\\/:*?"<>|]/g,'_');const fname=base+'.frontpdf';
   try{busy('作業ファイルを保存中...',0.3);const bytes=await buildWorkFile();busy(false);
     let saved=false;
+    if(work.dir&&(!work.handle||work.name!==fname)){try{work.handle=await deskSaveHandle(work.dir,fname);}catch(e){if(e&&e.name==='AbortError'){status('保存をキャンセルしました');return;}work.handle=null;}}
     if(window.showSaveFilePicker){try{
         if(!work.handle||work.name!==fname)work.handle=await window.showSaveFilePicker({suggestedName:fname,types:[{description:'Front PDF 作業ファイル',accept:{'application/octet-stream':['.frontpdf']}}]});
         const w=await work.handle.createWritable();await w.write(bytes);await w.close();saved=true;work.name=work.handle.name||fname;}
       catch(e){if(e&&e.name==='AbortError'){status('保存をキャンセルしました');return;}work.handle=null;}}
     if(!saved){download(new Blob([bytes],{type:'application/octet-stream'}),fname);work.name=fname;}
-    work.saved=serialize();updateDirty();status('作業ファイル「'+work.name+'」を保存しました（人に渡すときは［PDF書き出し］を使ってください）');
+    work.saved=serialize();updateDirty();status('作業ファイル「'+work.name+'」を保存しました（人に渡すときは［PDF保存］を使ってください）');
   }catch(e){busy(false);console.error(e);msg('保存エラー',e.message||String(e));}}
 async function loadWorkFile(f){
   const raw=new Uint8Array(await f.arrayBuffer());const magic=new TextDecoder().decode(raw.subarray(0,8));if(magic!==KOBO_MAGIC)throw new Error('Front PDFの作業ファイルではありません');
@@ -716,7 +775,7 @@ async function loadWorkFile(f){
     for(let i=0;i<data.sources.length;i++){const s=data.sources[i];busy('作業ファイルを開いています... '+(i+1)+'/'+data.sources.length,0.1+0.6*i/data.sources.length);bump(s.id);
       const bytes=b64u8(s.b64);const doc=await pdfjsLib.getDocument({data:bytes.slice(),...PDFOPTS}).promise;state.sources[s.id]={id:s.id,name:s.name,bytes,doc,lib:null};}
     for(const[id,url]of Object.entries(data.images||{})){if(!state.images[id]){try{state.images[id]={url,img:await loadImg(url)};}catch(e){}}}
-    state.pages=data.pages.filter(p=>state.sources[p.srcId]);state.pages.forEach(p=>{bump(p.uid);});uidc=mx;
+    state.pages=data.pages.filter(p=>state.sources[p.srcId]);for(const m of JSON.stringify(data.pages).matchAll(/"u(\d+)"/g))mx=Math.max(mx,+m[1]+1);uidc=mx;
     if(data.wm)state.wm=data.wm;state.hist=[];state.fut=[];state.last=serialize();
     work.name=f.name;work.handle=null;work.saved=serialize();
     renderGrid();const cur=pageBy(data.cur)?data.cur:state.pages[0]?.uid;if(cur){state.sel.add(cur);state.anchor=cur;}showPage(cur||null);busy(false);
@@ -869,8 +928,14 @@ function parseRanges(s,n){const gs=[];for(const part of z2h(s).split(/[,\s]+/).f
   const a=+m[1],b=m[2]?+m[2]:a;if(a<1||b>n||a>b)throw new Error('範囲外です: '+part+'（全'+n+'ページ）');gs.push({label:part,pages:state.pages.slice(a-1,b)});}
   if(!gs.length)throw new Error('範囲を入力してください（例: 1-3, 4-6）');return gs;}
 function defaultBase(){const f=state.pages[0];return f?state.sources[f.srcId].name.replace(/\.[^.]+$/,'')+tr('_加工'):'output';}
-function openExport(){if(!state.pages.length){msg('ページがありません','先にファイルを開いてください。');return;}$('#xName').value=defaultBase();openDlg('#dlgExport');}
+function xFmt(){const w=document.querySelector('input[name=xf]:checked').value==='work';$('#xPdfOpts').style.display=w?'none':'';$('#xTitleL').style.display=w?'none':'';$('#xExt').textContent=w?'.frontpdf':'.pdf';}
+document.querySelectorAll('input[name=xf]').forEach(r=>r.addEventListener('change',xFmt));
+function openExport(){if(!state.pages.length){msg('ページがありません','先にファイルを開いてください。');return;}
+  const isWork=/\.(frontpdf|pdfkobo)$/i.test(work.name||'');document.querySelector('input[name=xf][value='+(isWork?'work':'pdf')+']').checked=true;xFmt();
+  $('#xName').value=isWork?work.name.replace(/\.(frontpdf|pdfkobo)$/i,''):defaultBase();openDlg('#dlgExport');}
 async function doExport(){
+  if(document.querySelector('input[name=xf]:checked').value==='work'){const b=($('#xName').value.trim()||'作業ファイル');closeDlg($('#xGo'));
+    if(work.handle&&work.name!==b+'.frontpdf')work.handle=null;doSave(b);return;}
   const mode=document.querySelector('input[name=xm]:checked').value;const base=($('#xName').value.trim()||'output').replace(/[\\/:*?"<>|]/g,'_');
   const o={a4:$('#xA4').checked,crop:+$('#xCrop').value||0,nup:+$('#xNup').value,title:$('#xTitle').value.trim()};
   let groups;
@@ -909,8 +974,9 @@ $('#secPng').onclick=()=>{closeDlg($('#secGo'));pendingExport=null;$('#pName').v
 async function runExport(groups,o){
   try{for(let gi=0;gi<groups.length;gi++){const g=groups[gi];
       const bytes=await buildPdf(g.pages,o,(i,n)=>busy((groups.length>1?'ファイル '+(gi+1)+' / '+groups.length+'　':'')+'ページ '+(i+1)+' / '+n+' を処理中...',(gi+(i/n))/groups.length));
-      download(new Blob([bytes],{type:'application/pdf'}),g.name+'.pdf');if(groups.length>1)await sleep(450);}
-    busy(false);status(groups.length+' 個のPDFを書き出しました'+(o.raster?'（'+o.raster.size+' ページは画像化：文字データなし）':''));
+      if(work.dir)await saveOut(new Blob([bytes],{type:'application/pdf'}),g.name+'.pdf',{force:!!o.overwrite});else{download(new Blob([bytes],{type:'application/pdf'}),g.name+'.pdf');if(groups.length>1)await sleep(450);}}
+    busy(false);if(o.overwrite){work.saved=serialize();updatePgNo();status((work.origin?'上書き保存しました（前の版はデスクの「_削除予定」に残しています）':'PDF「'+groups[0].name+'.pdf」を保存しました')+(o.raster?'（'+o.raster.size+' ページは画像化）':''));}
+    else status(groups.length+' 個のPDFを保存しました'+(o.raster?'（'+o.raster.size+' ページは画像化：文字データなし）':''));
   }catch(e){busy(false);console.error(e);msg('書き出しエラー',e.message||String(e));}
 }
 async function doPng(){
@@ -1074,8 +1140,8 @@ function showPage(u,keepSel){endInline();
   setupPanes();$('#viewEmpty').style.display=p?'none':'';
   updatePgNo();refreshSel();renderPanel();if(p&&VS.mode!=='grid'){edRenderBase();const c=cards.get(p.uid);if(c){const r=c.getBoundingClientRect(),sr=$('#side').getBoundingClientRect();if(r.top<sr.top||r.bottom>sr.bottom)c.scrollIntoView({block:'nearest'});}}
 }
-function updatePgNo(){const i=ed.p?state.pages.indexOf(ed.p):-1;$('#pgNo').textContent=(i+1)+' / '+state.pages.length;$('#bPrev').disabled=i<=0;$('#bNext').disabled=i<0||i>=state.pages.length-1;
-  $('#winTitle').textContent='Front PDF'+(work.name?' ― '+work.name+(isDirty()?' *':''):(ed.p?' ― '+state.sources[ed.p.srcId].name:''));}
+function updatePgNo(){{const b=$('#bOver');if(b)b.disabled=!canOverwrite();}const i=ed.p?state.pages.indexOf(ed.p):-1;$('#pgNo').textContent=(i+1)+' / '+state.pages.length;$('#bPrev').disabled=i<=0;$('#bNext').disabled=i<0||i>=state.pages.length-1;
+  $('#winTitle').textContent='Front PDF'+(work.path?' ― '+work.path.join(' / '):'')+(work.name?' ― '+work.name+(isDirty()?' *':''):(ed.p?' ― '+state.sources[ed.p.srcId].name+(work.origin&&isDirty()?' *':''):''));}
 function goPage(delta){if(!ed.p)return;const i=state.pages.indexOf(ed.p)+delta;if(i<0||i>=state.pages.length)return;const u=state.pages[i].uid;state.sel.clear();state.sel.add(u);state.anchor=u;showPage(u);}
 const ZL=[0.25,0.33,0.5,0.67,0.75,1,1.25,1.5,2,3,4,5];
 function setZoom(z){const sel=$('#edZoom'),a=$('#edArea');const rx=(a.scrollLeft+a.clientWidth/2)/Math.max(1,a.scrollWidth),ry=(a.scrollTop+a.clientHeight/2)/Math.max(1,a.scrollHeight);
@@ -1468,7 +1534,35 @@ $('#bWm').onclick=toggleWm;
 $('#q').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();searchStep(e.shiftKey?-1:1);}else if(e.key==='Escape'){clearSearch();$('#q').blur();}});
 $('#qNext').onclick=()=>searchStep(1);$('#qPrev').onclick=()=>searchStep(-1);$('#qMark').onclick=()=>bulkSearch('marker');$('#qBlack').onclick=()=>bulkSearch('black');
 $('#bClear').onclick=()=>{if(!ed.p||!ed.p.objects.length)return;ed.p.objects=[];ed.sel=null;afterEdit();renderPanel();edRedraw();status('このページの書き込みを全消去しました（元に戻す で戻せます）');};
-$('#bExport').onclick=openExport;$('#xGo').onclick=doExport;
+$('#bPrint').onclick=()=>printEditor();
+async function printEditor(){if(!state.pages.length){msg('印刷','印刷するページがありません。');return;}
+  try{busy('印刷の準備中...',0.02);const bytes=await buildPdf(state.pages,{a4:false,crop:0,nup:1,title:''},(i,n)=>busy('印刷の準備中... '+(i+1)+' / '+n,0.6*i/n));await printDocs([{bytes}]);}
+  catch(e){busy(false);msg('印刷できません',e.message||String(e));}}
+async function printDocs(list){// list: [{bytes:Uint8Array}|{blob:Blob(画像)}]
+  let area=$('#printArea');if(!area){area=document.createElement('div');area.id='printArea';document.body.appendChild(area);}
+  for(const u of area.querySelectorAll('img'))URL.revokeObjectURL(u.src);area.innerHTML='';
+  const imgs=[];
+  for(const it of list){
+    if(it.blob){imgs.push(URL.createObjectURL(it.blob));continue;}
+    const task=(typeof dDoc==='function')?dDoc(it.bytes):pdfjsLib.getDocument({data:it.bytes,...PDFOPTS});const doc=await task.promise;
+    for(let i=1;i<=doc.numPages;i++){busy('印刷の準備中... '+i+' / '+doc.numPages,0.6+0.4*i/doc.numPages);const pg=await doc.getPage(i);const vp=pg.getViewport({scale:200/72});
+      const c=document.createElement('canvas');c.width=Math.round(vp.width);c.height=Math.round(vp.height);const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);
+      await pg.render({canvasContext:x,viewport:vp}).promise;imgs.push(URL.createObjectURL(await new Promise(r=>c.toBlob(r,'image/jpeg',.92))));}
+    try{await task.destroy();}catch(e){}}
+  await Promise.all(imgs.map(src=>new Promise(r=>{const im=new Image();im.onload=im.onerror=r;im.src=src;area.appendChild(im);})));
+  busy(false);await new Promise(r=>setTimeout(r,60));window.print();}
+$('#bExport').onclick=openExport;$('#xGo').onclick=doExport;$('#bOver').onclick=()=>doOverwrite();
+function canOverwrite(){return!!state.pages.length;}
+function doOverwrite(){
+  if(!state.pages.length){msg('ページがありません','先にファイルを開いてください。');return;}
+  let base;
+  if(work.origin&&work.dir)base=work.origin.name.replace(/\.pdf$/i,'');// 開いた PDF をそのまま書き換える
+  else if(work.dir&&/\.(frontpdf|pdfkobo)$/i.test(work.name||''))base=work.name.replace(/\.(frontpdf|pdfkobo)$/i,'').replace(new RegExp(tr('_作業ファイル')+'$'),'');// 作業ファイルの隣に PDF を作る
+  else{openExport();return;}const o={a4:false,crop:0,nup:1,title:'',overwrite:true};const groups=[{name:base,pages:state.pages}];
+  const masked=state.pages.filter(p=>p.objects.some(isMask));
+  if(masked.length){pendingExport={groups,o,masked};$('#secPages').textContent=masked.length<=8?'P.'+masked.map(p=>state.pages.indexOf(p)+1).join(', P.'):masked.length+' P';openDlg('#dlgSecure');return;}
+  runExport(groups,o);
+}
 $('#bPng').onclick=()=>{if(!state.pages.length){msg('ページがありません','先にファイルを開いてください。');return;}$('#pName').value=defaultBase();openDlg('#dlgPng');};$('#pGo').onclick=doPng;
 function manualText(){try{const m=JSON.parse($('#manuals').textContent);if(m[LANG])return m[LANG];}catch(e){}return $('#ai-manual').textContent.trim();}
 $('#bManCopy').onclick=()=>{copyText(manualText()).then(ok=>status(ok?'説明書をコピーしました。AIのチャットに貼り付けて質問できます':'コピーできませんでした'));};
@@ -1504,20 +1598,22 @@ $('#edArea').addEventListener('pointerdown',e=>{state.area='view';if((e.target==
 new ResizeObserver(()=>{clearTimeout(window._rz);window._rz=setTimeout(()=>{if(ed.p&&$('#edZoom').value.startsWith('fit'))edRenderBase();},120);}).observe($('#edArea'));
 function dropZone(e){const el=e.target;return el&&el.closest?(el.closest('#edArea')&&ed.p&&VS.mode!=='grid'?'view':'page'):'page';}
 function clearDZ(){$('#edArea').classList.remove('dz');$('#side').classList.remove('dz');}
-document.addEventListener('dragover',e=>{if(dragging)return;e.preventDefault();const types=[...(e.dataTransfer.types||[])];if(!types.includes('Files'))return;clearDZ();(dropZone(e)==='view'?$('#edArea'):$('#side')).classList.add('dz');});
+document.addEventListener('dragover',e=>{if(document.body.dataset.view==='desk')return;if(dragging)return;e.preventDefault();const types=[...(e.dataTransfer.types||[])];if(!types.includes('Files'))return;clearDZ();(dropZone(e)==='view'?$('#edArea'):$('#side')).classList.add('dz');});
 document.addEventListener('dragleave',e=>{if(!e.relatedTarget)clearDZ();});
-document.addEventListener('drop',async e=>{clearDZ();if(dragging)return;e.preventDefault();if(LOCKED)return;const fs=[...e.dataTransfer.files];if(!fs.length)return;
+document.addEventListener('drop',async e=>{if(document.body.dataset.view==='desk')return;clearDZ();if(dragging)return;e.preventDefault();if(LOCKED)return;const fs=[...e.dataTransfer.files];if(!fs.length)return;
   const imgs=fs.filter(f=>f.type.startsWith('image/'));
   if(dropZone(e)==='view'&&imgs.length===fs.length){{const st=e.target.closest&&e.target.closest('.stage');const k=st?PANES.findIndex(Q=>$(Q.st)===st):-1;if(k>=0&&k<ed.panes.length)activatePane(k);}let P=clientToPage(e.clientX,e.clientY);for(const f of imgs){await addImageObj(f,P);P={x:P.x+18,y:P.y+18};}return;}
   addFiles(fs);});
-document.addEventListener('paste',async e=>{if(isTyping(e.target)||LOCKED)return;const items=[...(e.clipboardData?.items||[])];const im=items.find(i=>i.type.startsWith('image/'));
+document.addEventListener('paste',async e=>{if(document.body.dataset.view==='desk'||isTyping(e.target)||LOCKED)return;const items=[...(e.clipboardData?.items||[])];const im=items.find(i=>i.type.startsWith('image/'));
   if(im){e.preventDefault();const f=im.getAsFile();if(pasteTarget()==='view')await addImageObj(f);else await addFiles([new File([f],'貼り付け画像.png',{type:f.type})]);return;}
   if(ed.p){const t=e.clipboardData.getData('text/plain');if(t){e.preventDefault();const[dw,dh]=edDisp().dims;const o=newObj('text',{text:t,x:0,y:0});o.x=(dw-o.w)/2;o.y=(dh-o.h)/2;ed.p.objects.push(o);afterEdit();setTool('select');selectObj(o);}}});
 document.addEventListener('keydown',e=>{
   if(document.querySelector('.modal.show')){if(e.key==='Escape'){const m=document.querySelector('.modal.show');if(m.id!=='dlgBusy'&&m.id!=='dlgUnlock')m.classList.remove('show');}return;}
+  if(document.body.dataset.view==='desk')return;
   const typing=isTyping(e.target),ctrl=e.ctrlKey||e.metaKey,k=e.key.toLowerCase();
   if(ctrl&&k==='o'){e.preventDefault();$('#fileIn').click();return;}
-  if(ctrl&&k==='s'){e.preventDefault();openSave();return;}
+  if(ctrl&&k==='s'){e.preventDefault();if(work.origin&&work.dir&&!/\.(frontpdf|pdfkobo)$/i.test(work.name||''))doOverwrite();else openSave();return;}
+  if(ctrl&&k==='p'){e.preventDefault();printEditor();return;}
   if(ctrl&&k==='f'){e.preventDefault();if(VS.mode==='grid')setMode('edit');$('#q').focus();$('#q').select();return;}
   if(e.key==='F3'){e.preventDefault();searchStep(e.shiftKey?-1:1);return;}
   if(typing)return;
@@ -1536,11 +1632,14 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){if(ed.sel){ed.sel=null;renderPanel();edRedraw();}else if(ed.tool!=='select')setTool('select');return;}
   if(ed.sel&&typeof ed.sel==='object'&&e.key.startsWith('Arrow')){e.preventDefault();const s=e.shiftKey?10:1;const v={ArrowLeft:[-s,0],ArrowRight:[s,0],ArrowUp:[0,-s],ArrowDown:[0,s]}[e.key];const w=vecToObj(ed.sel,v[0],v[1]);ed.sel.x+=w.x;ed.sel.y+=w.y;edRedraw();clearTimeout(ed._nt);ed._nt=setTimeout(afterEdit,400);return;}
 });
-function setSkin(k){document.body.className='skin-'+k;$('#skinSel').value=k;LS.set('skin',k);}
-$('#skinSel').onchange=()=>setSkin($('#skinSel').value);setSkin(LS.get('skin','modern'));
+function setSkin(k){document.body.className='skin-'+k;$('#skinSel').value=k;const d=$('#dkSkin');if(d)d.value=k;LS.set('skin',k);}
+$('#skinSel').onchange=()=>setSkin($('#skinSel').value);setSkin(LS.get('skin',/*__DEV__*/false?'gba':'modern'));
+$('#toDesk').onclick=()=>{if(typeof setView==='function')setView('desk');};
 (function(){const ls=$('#langSel');for(const[v,t]of LANGS){const o=document.createElement('option');o.value=v;o.textContent=t;ls.appendChild(o);}ls.value=LANG;ls.onchange=()=>{setLang(ls.value);renderPanel();updatePgNo();updateCount();};
+  const dl=$('#dkLang');if(dl){for(const[v,t]of LANGS){const o=document.createElement('option');o.value=v;o.textContent=t;dl.appendChild(o);}dl.value=LANG;dl.onchange=()=>{setLang(dl.value);renderPanel();updatePgNo();updateCount();if(typeof dLayout==='function'&&DK.cur)dLayout();};}
   const ul=$('#ulLang');ul.innerHTML=ls.innerHTML;ul.value=LANG;ul.onchange=()=>{ls.value=ul.value;ls.onchange();};})();
 libLoad();state.last=serialize();updateCount();setTool('select');setMode(VS.mode);
+/*__DESK_JS__*/
 setLang(LANG);i18nObs.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['title','placeholder']});
 </script>
 </body>

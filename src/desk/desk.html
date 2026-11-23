@@ -1,0 +1,53 @@
+<div class="win" id="deskWin">
+  <button id="dkEdBig" class="pri" title="エディター（PDF に書き込む画面）を別ウインドウで開く"><span class="ei"></span><b>エディター</b></button>
+  <div class="title"><div class="ico"></div><span class="t" id="dkTitle">Front PDF ― デスク</span><div class="hdr"><button id="toEditor" style="display:none"></button><span class="gl">見た目</span><select id="dkSkin" title="見た目を切り替え"><option value="modern">モダン</option><option value="dark">ダーク</option><option value="98">レトロPC</option><option value="aqua">アクア</option><option value="gba">ゲーム機</option><option value="mofu">もふもふ</option></select><span class="gl" title="言語 / Language" style="margin-left:6px"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" style="display:block"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg></span><select id="dkLang" data-noi18n title="言語 / Language"></select></div></div>
+  <div class="toolbar tbar">
+   <div class="trow">
+    <div class="grp"><span class="gl">フォルダ</span><button id="dkPick" title="デスクに並べるいちばん上のフォルダを選ぶ（Box のフォルダも可）">フォルダを選ぶ</button><button id="dkReload" title="一覧を読み直す">更新</button></div>
+    <div class="sep"></div>
+    <div class="grp"><span class="gl">検索</span><input type="text" id="dkQ" placeholder="ファイル名で絞り込み" style="width:160px"></div>
+    <div class="sep"></div>
+    <div class="grp"><span class="gl">大きさ</span><input type="range" id="dkSize" min="100" max="340" step="10"><button id="dkAlign" title="名前順にきれいに並べ直す">整列</button></div>
+    <div class="sep"></div>
+    <div class="grp"><span class="gl">文書</span><button id="dkOpen" class="pri" title="別ウインドウのエディターで開く（ダブルクリックでも開けます）"><b>開く</b></button><button id="dkWin" style="display:none"></button><button id="dkPrevB" title="開かずに大きく確認（スペースキー）">プレビュー</button><button id="dkRen" title="名前を変える（F2）">名前変更</button><button id="dkPrint" title="選んだ PDF・画像を印刷（Ctrl+P）">印刷</button><button id="dkTrash" title="「_削除予定」フォルダへ移す（Delete）">_削除予定へ</button></div>
+    <div class="sep"></div>
+    <div class="grp"><button id="dkUndo" title="元に戻す（Ctrl+Z）何回でも戻せます">元に戻す</button><button id="dkRedo" title="やり直し（Ctrl+Y）">やり直し</button></div>
+    <div class="sp"></div>
+    <div class="grp" id="dkDevG"><button id="dkLogB" title="動作ログを表示（不具合の報告用）">ログ</button><button id="dkCopyLog" title="動作ログをコピー（不具合の報告に貼り付けてください）">ログコピー</button></div>
+   </div>
+  </div>
+  <div class="dbody">
+    <div id="dkTree" class="sunken"><div class="empty">［フォルダを選ぶ］で、書類のあるフォルダ（Box のフォルダも可）を選んでください。その下のフォルダがここに並びます。</div></div>
+    <div id="dkArea"><div id="dkDesk"></div><div id="dkHello"><div><div class="big">Front PDF デスク</div>フォルダの PDF・作業ファイル・画像をサムネイルで並べて、整理・確認・編集できます</div></div>
+      <div id="dkPrev"><div class="pb"><button id="pvPrev" title="前のページ（←）">← 前</button><span id="pvInfo"></span><button id="pvNext" title="次のページ（→）">次 →</button><span style="width:14px"></span><button id="pvOpen" class="pri" title="エディターで開く（Enter）"><b>開く</b></button><button id="pvClose" title="閉じる（Esc）">閉じる</button></div><div class="pc" id="pvBody"></div></div>
+    </div>
+  </div>
+  <div id="dkLog" class="sunken"></div>
+  <div class="statusbar" id="dkStat"><div class="cell" id="dkCount" style="width:150px"></div><div class="cell grow" id="dkMsg">フォルダを選んでください</div><div class="cell" id="dkHint" style="opacity:.75">ダブルクリック：開く ／ 重ねる：結合 ／ Space・Ctrl+Shift：プレビュー ／ F2：名前変更 ／ Ctrl+C・V：複製 ／ Ctrl+Z：元に戻す</div></div>
+</div>
+<div id="dkResume"><div>前回のフォルダを開きます<br><b id="dkResumeName"></b><br><small style="opacity:.75">クリックすると開きます（ブラウザの決まりで、起動時に1回だけ確認が出ることがあります）</small></div></div>
+<div class="modal" id="dkMergeDlg"><div class="win" style="width:480px">
+  <div class="title"><span class="t">結合</span><button data-close>×</button></div>
+  <div class="dbody">
+    <div style="margin:2px 0 6px">この順番で1つにまとめます（↑↓で並べ替え）</div>
+    <div id="mgList" class="sunken" style="padding:4px;max-height:220px;overflow:auto"></div>
+    <div id="mgImgNote" style="display:none;margin:6px 0;opacity:.85">画像は PDF のページに変換してから結合します</div>
+    <div id="mgFpNote" style="display:none;margin:6px 0;opacity:.85">作業ファイルを含むので、結果は作業ファイル（.frontpdf）になります。書き込み・付箋などはそのまま残り、エディターで続きから編集できます</div>
+    <label>新しいファイル名 <input type="text" id="mgName" style="width:250px"> <span id="mgExt">.pdf</span></label>
+    <label><input type="checkbox" id="mgTrash"> 元のファイルを「_削除予定」へ移す</label>
+    <div style="opacity:.75;font-size:12px;margin:2px 0 6px">結合しても、デスクの［元に戻す］（Ctrl+Z）で結合前に戻せます</div>
+    <div class="btns"><button id="mgGo" class="pri"><b>結合する</b></button><button data-close>キャンセル</button></div>
+  </div>
+</div></div>
+<div id="dkMenu"></div>
+<div class="modal" id="dkSplitDlg"><div class="win" style="width:460px">
+  <div class="title"><span class="t">ページごとにばらす</span><button data-close>×</button></div>
+  <div class="dbody">
+    <div id="spInfo" style="margin:2px 0 8px;line-height:1.7"></div>
+    <label><input type="radio" name="spWhere" value="same" checked> 同じフォルダに保存</label>
+    <label><input type="radio" name="spWhere" value="folder"> 新しいフォルダにまとめる <span id="spFolder" data-noi18n style="opacity:.8"></span></label>
+    <label><input type="checkbox" id="spTrash"> 元のファイルを「_削除予定」へ移す</label>
+    <div style="opacity:.75;font-size:12px;margin:2px 0 6px">ばらしても、デスクの［元に戻す］（Ctrl+Z）で元に戻せます</div>
+    <div class="btns"><button id="spGo" class="pri"><b>ばらす</b></button><button data-close>キャンセル</button></div>
+  </div>
+</div></div>
