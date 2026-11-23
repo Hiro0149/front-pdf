@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src https://api.github.com; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#f7f5f0">
 <title>Front PDF — インストール不要・完全オフラインの PDF 編集ツール | Front Softworks</title>
@@ -228,7 +228,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
 <main id="top">
 <div class="hero"><div class="wrap">
  <div class="kicker fade">Offline PDF Editor</div>
- <h1 class="fade">Front PDF<span lang="ja">どこでも、安心して、PDF を仕上げる。</span><span lang="en">Finish your PDFs anywhere, safely.</span></h1>
+ <h1 class="fade">Front PDF<span lang="ja">PDF を、思いどおりに編集。</span><span lang="en">Edit your PDFs, exactly how you want.</span></h1>
  <p class="lead fade"><span lang="ja">HTML ファイルひとつ。インストールも通信もいりません。表を Excel へそのまま写し、付箋を貼り、ハンコを押す。仕事の PDF を、手元だけで仕上げます。</span><span lang="en">One HTML file. No installation, no network. Copy tables straight into Excel, add sticky notes and stamps — finish your work PDFs entirely on your own PC.</span></p>
  <div class="cta fade">
   <a class="btn" href="#download"><span lang="ja">無料でダウンロード</span><span lang="en">Download free</span> <span class="ver" style="font-weight:500;opacity:.75"></span></a>
@@ -393,7 +393,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
 </div></section>
 
 <section id="download"><div class="wrap">
- <div class="sec-head fade"><div class="num">05</div><div><h2><span lang="ja">ダウンロード</span><span lang="en">Download</span></h2><p><span lang="ja">最新版</span><span lang="en">Latest</span> <b class="ver" style="color:var(--mist)"></b> · <span class="size"></span></p></div></div>
+ <div class="sec-head fade"><div class="num">05</div><div><h2><span lang="ja">ダウンロード</span><span lang="en">Download</span></h2><p><span lang="ja">最新版</span><span lang="en">Latest</span> <b class="ver" style="color:var(--mist)"></b> · <span class="size"></span> · <span id="relDate">2026-11-23</span> <span lang="ja">公開</span><span lang="en">released</span><span id="dlCntW" style="display:none"> · <span lang="ja">ダウンロード </span><span lang="en">Downloads: </span><b id="dlCnt"></b><span lang="ja"> 回</span></span></p></div></div>
  <div class="two fade">
   <div class="panel box">
    <ol class="steps">
@@ -447,7 +447,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
 <section id="faq"><div class="wrap">
  <div class="sec-head fade"><div class="num">08</div><div><h2><span lang="ja">よくある質問</span><span lang="en">FAQ</span></h2></div></div>
  <div class="fade">
- <details><summary><span lang="ja">本当に無料ですか？会社で使ってもいいですか？</span><span lang="en">Is it really free? Can I use it at work?</span></summary><p lang="ja">はい。MIT ライセンスなので、個人・会社・学校を問わず無料で使えます。商用利用も可能です。</p><p lang="en">Yes. Under the MIT License it is free for individuals, companies and schools, including commercial use.</p></details>
+ <details><summary><span lang="ja">本当に無料ですか？会社で使ってもいいですか？</span><span lang="en">Is it really free? Can I use it at work?</span></summary><p lang="ja">はい、無料です。MIT ライセンスなので、個人・会社・学校を問わず無料で使え、商用利用もできます。Windows・Mac の Edge / Chrome で動きます（Safari・Firefox ではデスク機能を除いて使えます）。会社でお使いになる場合は、ソフトの利用に関する社内の規程をご確認のうえご利用ください。詳しい仕様は <a href="https://github.com/Hiro0149/front-pdf" target="_blank" rel="noopener">GitHub のページ</a>でご確認いただけます。</p><p lang="en">Yes, it is free. Under the MIT License it can be used by individuals, companies and schools, including for commercial purposes. It runs in Edge / Chrome on Windows and Mac (Safari and Firefox work except for the desk). If you use it at work, please check your organization's software policy first. Full technical details are on the <a href="https://github.com/Hiro0149/front-pdf" target="_blank" rel="noopener">GitHub page</a>.</p></details>
  <details><summary><span lang="ja">開いた PDF が外部に送られることはありますか？</span><span lang="en">Are my PDFs sent anywhere?</span></summary><p lang="ja">ありません。アプリは自分から通信しない作りで、PDF はブラウザの中だけで処理します。</p><p lang="en">No. The app makes no network requests by itself; PDFs are processed only in your browser.</p></details>
  <details><summary><span lang="ja">なぜアクティベーションが必要なのですか？</span><span lang="en">Why is activation needed?</span></summary><p lang="ja">メールなどで出どころのわからないファイルが出回るのを防ぎ、公式の最新版を使ってもらうためです。料金や個人情報の入力はありません。</p><p lang="en">To keep files of unknown origin from circulating and make sure everyone uses the latest official version. No payment and no personal information.</p></details>
  <details><summary><span lang="ja">ID が変わった／もう一度登録画面が出た</span><span lang="en">My ID changed / the registration screen came back</span></summary><p lang="ja">ID はブラウザごとに作られます。ブラウザのデータ（サイトデータ）を消したときや、別のブラウザ・シークレットウィンドウで開いたときは、新しい ID になります。新しい ID でもう一度パスワードを発行してください。何度でも無料です。ダイアログは有効化するまで閉じないので、ID を見逃しても、アプリを開き直せば同じ ID が表示されます。</p><p lang="en">The ID is created per browser. Clearing site data, or opening the app in another browser or a private window, creates a new ID. Just issue a new password — free, any number of times. The dialog stays open until you activate, and reopening the app shows the same ID.</p></details>
@@ -554,6 +554,11 @@ setL((()=>{try{const v=localStorage.getItem('kobo.site.lang');if(v)return v;}cat
 /* 設定の反映 */
 document.querySelectorAll('.ver').forEach(e=>e.textContent='v'+CFG.version);
 document.querySelectorAll('.size').forEach(e=>e.textContent=(CFG.size/1048576).toFixed(1)+' MB');
+(function(){try{const m=CFG.repo.match(/github\.com\/([^/]+\/[^/]+)/);if(!m||!window.fetch)return;
+fetch('https://api.github.com/repos/'+m[1]+'/releases?per_page=100').then(r=>r.ok?r.json():null).then(rs=>{if(!Array.isArray(rs))return;let n=0;
+rs.forEach(r=>(r.assets||[]).forEach(a=>{if(/\.(html|zip)$/i.test(a.name))n+=a.download_count||0;}));
+const lt=rs.find(r=>!r.draft&&!r.prerelease&&r.tag_name==='v'+CFG.version);if(lt&&lt.published_at){const d=new Date(lt.published_at);document.getElementById('relDate').textContent=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+if(n>0){document.getElementById('dlCnt').textContent=n.toLocaleString();document.getElementById('dlCntW').style.display='';}}).catch(()=>{});}catch(e){}})();
 $('#curHash').textContent=CFG.sha256||'—';
 const rel=CFG.repo?CFG.repo+'/releases':'#';
 $('#dlHtml').href=CFG.repo?rel+'/latest/download/Front_PDF.html':'#';$('#dlZip').href=CFG.repo?rel+'/latest/download/Front_PDF.zip':'#';$('#allRel').href=rel;
