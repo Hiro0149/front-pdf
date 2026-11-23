@@ -89,7 +89,8 @@ cfg={'version':APP_VERSION,'size':os.path.getsize(OUT+'/Front_PDF.html'),'sha256
 site=open('site_src/index.html',encoding='utf-8').read().replace('/*__LIC__*/',licjs).replace('/*__CFG__*/{}',json.dumps(cfg,ensure_ascii=False))
 shutil.rmtree(SITE_OUT,ignore_errors=True);os.makedirs(SITE_OUT)
 open(SITE_OUT+'/index.html','w',encoding='utf-8').write(site)
-SITE_ASSETS=['hero.jpg','act_1.jpg','act_2.jpg','act_3.jpg','screenshot_ja.jpg','screenshot_en.jpg','feat_tsel.jpg','feat_stamp.jpg','feat_dual.jpg','feat_draw.jpg','feat_emoji.jpg','feat_paste.jpg','feat_desk.jpg']+['skin_%s.jpg'%k for k in ('modern','dark','98','aqua','gba','mofu')]
+SITE_ASSETS=['hero.jpg','act_1.jpg','act_2.jpg','act_3.jpg','screenshot_ja.jpg','screenshot_en.jpg','feat_tsel.jpg','feat_stamp.jpg','feat_dual.jpg','feat_draw.jpg','feat_emoji.jpg','feat_paste.jpg','feat_desk.jpg','demo_editor.mp4','demo_editor.jpg','demo_desk.mp4','demo_desk.jpg']+['skin_%s.jpg'%k for k in ('modern','dark','98','aqua','gba','mofu')]
 for f in SITE_ASSETS: shutil.copy('site_work/'+f,SITE_OUT+'/'+f)
+shutil.copy('site_src/sitemap.xml',SITE_OUT+'/sitemap.xml')
 open(SITE_OUT+'/.nojekyll','w').close()
 print('site ->',SITE_OUT, 'activation' if ACT else 'no-activation')

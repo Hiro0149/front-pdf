@@ -82,6 +82,7 @@ section:nth-of-type(even){background:var(--paper2)}
 .ftxt li{padding-left:22px;position:relative;margin:6px 0}.ftxt li:before{content:"";position:absolute;left:2px;top:.72em;width:8px;height:8px;border-radius:50%;background:var(--leaf);border:2px solid var(--green)}
 .fvis{padding:18px}
 .fvis img{border-radius:8px;box-shadow:0 6px 20px rgba(31,42,36,.10)}
+.fvis video{width:100%;height:auto;display:block;border-radius:8px;box-shadow:0 6px 20px rgba(31,42,36,.10);background:#fff}
 @media (max-width:860px){.feat,.feat.rev{grid-template-columns:1fr;gap:24px}.feat.rev .ftxt{order:0}}
 /* Excel デモ */
 .xdemo{display:grid;gap:14px}
@@ -244,7 +245,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
 <section id="basics"><div class="wrap">
  <div class="sec-head fade"><div class="num">01</div><div><h2><span lang="ja">何ができるソフト？</span><span lang="en">What is Front PDF?</span></h2><p><span lang="ja">PDF に書き込む・まとめる・分ける。ふだんの PDF 作業が、これひとつで。</span><span lang="en">Write on, combine and split PDFs — everyday PDF work in one tool.</span></p></div></div>
  <div class="basicwrap fade">
-  <div class="panel fvis"><img lang="ja" src="screenshot_ja.jpg" alt="Front PDF の画面" width="2100" height="1290"><img lang="en" src="screenshot_en.jpg" alt="Front PDF screenshot" width="2100" height="1290"></div>
+  <div class="panel fvis"><video lang="ja" src="demo_editor.mp4" poster="demo_editor.jpg" width="1210" height="870" autoplay muted loop playsinline aria-label="Front PDF エディターの操作の様子"></video><img lang="en" src="screenshot_en.jpg" alt="Front PDF screenshot" width="2100" height="1290"></div>
   <div class="basics">
    <div><svg viewBox="0 0 24 24"><path d="M4 20l4-1 10-10-3-3L5 16l-1 4z"/><path d="M14 7l3 3"/></svg><b lang="ja">書き込み</b><b lang="en">Annotate</b><p lang="ja">ペン・蛍光ペン・文字・図形・矢印・表</p><p lang="en">Pen, highlighter, text, shapes, arrows, tables</p></div>
    <div><svg viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="11" rx="1"/><rect x="13" y="9" width="8" height="11" rx="1"/><path d="M9 18h4"/></svg><b lang="ja">結合</b><b lang="en">Merge</b><p lang="ja">複数の PDF・画像を1つにまとめる</p><p lang="en">Combine PDFs and images into one</p></div>
@@ -269,7 +270,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
    <p lang="en">The desk shows a folder's PDFs, work files and images as large thumbnails. Spread them out like papers on a desk, drop one onto another to merge, drag to a folder on the left to move. JPEG and PNG work too, so you can combine documents with photos and images into a single file.</p>
    <div class="scene"><div class="sct"><span lang="ja">デスクでできること</span><span lang="en">On the desk</span></div><ul><li lang="ja">プレビューで、開かなくても中身をページ送りで確認</li><li lang="ja">ダブルクリックで別ウインドウのエディターが開き、［PDF保存］で元の PDF をそのまま更新</li><li lang="ja">結合・ページごとにばらす・名前変更・印刷。間違えても［元に戻す］で何回でも戻せる</li><li lang="ja">Box Drive などの共有フォルダにも対応（Edge / Chrome）</li><li lang="en">Preview any document page by page without opening it</li><li lang="en">Double-click to open the editor in its own window; [Save PDF] updates the original file</li><li lang="en">Merge, split, rename and print — and undo as many times as you like</li><li lang="en">Works with shared folders such as Box Drive (Edge / Chrome)</li></ul></div>
   </div>
-  <div class="panel fvis"><img src="feat_desk.jpg" alt="Front PDF デスク" width="1280" height="800" loading="lazy"></div>
+  <div class="panel fvis"><video lang="ja" src="demo_desk.mp4" poster="demo_desk.jpg" width="1280" height="720" autoplay muted loop playsinline preload="metadata" aria-label="Front PDF デスクの操作の様子"></video><img lang="en" src="feat_desk.jpg" alt="Front PDF Desk" width="1280" height="800" loading="lazy"></div>
  </div>
 </div></section>
 
