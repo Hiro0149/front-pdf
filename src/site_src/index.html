@@ -6,12 +6,19 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src https://api.github.com; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#f7f5f0">
-<title>Front PDF — インストール不要・完全オフラインの PDF 編集ツール | Front Softworks</title>
-<meta name="description" content="Front PDF は HTML ファイル1つで動く、無料・オフラインの PDF 編集ツール。表をそのまま Excel へ、付箋とハンコ、本当に消える黒塗り。ファイルは外部に送信されません。">
+<title>Front PDF — 無料・インストール不要のオフライン PDF 編集ソフト（結合・分割・書き込み・黒塗り）| Front Softworks</title>
+<meta name="description" content="Front PDF は HTML ファイル1つで動く無料の PDF 編集ソフト。インストール不要で exe を入れられない会社 PC でも使え、ファイルは外部に送信されません。PDF の結合・分割・並べ替え、書き込み・付箋・ハンコ、本当に消える黒塗り、表を Excel へコピー。Acrobat や DocuWorks の軽い作業の代わりに。">
 <link rel="canonical" href="https://hiro0149.github.io/front-pdf/">
 <meta property="og:title" content="Front PDF — free offline PDF editor in one HTML file">
 <meta property="og:description" content="No install. Nothing leaves your PC. Copy tables straight into Excel, sticky notes, stamps, true black-out.">
-<meta property="og:image" content="hero.jpg">
+<meta property="og:image" content="https://hiro0149.github.io/front-pdf/hero.jpg">
+<meta property="og:url" content="https://hiro0149.github.io/front-pdf/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Front PDF">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Front PDF — 無料・オフラインの PDF 編集ソフト">
+<meta name="twitter:description" content="インストール不要・外部と通信しない。PDF の結合・分割・書き込み・黒塗りが HTML ファイル1つで。">
+<meta name="twitter:image" content="https://hiro0149.github.io/front-pdf/hero.jpg">
 <style>
 :root{
  --ink:#1f2a24;--ink2:#3c4741;--dim:#6b756f;--paper:#f7f5f0;--paper2:#efebe3;--card:#ffffff;
@@ -21,6 +28,9 @@
  --sans:"Yu Gothic UI","YuGothic","Hiragino Sans","Meiryo",system-ui,-apple-system,"Segoe UI",sans-serif;
  --mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
 }
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:0 0 56px}
+.who div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:14.5px;line-height:1.7}
+.who b{display:block;color:var(--green);font-size:15px;margin-bottom:4px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;color:var(--ink);font:16px/1.85 var(--sans);background:var(--paper);letter-spacing:.02em}
@@ -209,6 +219,9 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
 .fade.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Front PDF","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS, ChromeOS (Edge / Chrome)","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"description":"インストール不要・完全オフラインの無料 PDF 編集ソフト。HTML ファイル1つで PDF の結合・分割・書き込み・付箋・ハンコ・黒塗りができ、ファイルは外部に送信されません。","url":"https://hiro0149.github.io/front-pdf/","downloadUrl":"https://github.com/Hiro0149/front-pdf/releases/latest","image":"https://hiro0149.github.io/front-pdf/hero.jpg","license":"https://opensource.org/licenses/MIT","inLanguage":["ja","en","zh-CN","zh-TW","ko","pt","fr"],"author":{"@type":"Organization","name":"Front Softworks"}}
+</script>
 </head>
 <body>
 <header id="hdr"><div class="wrap">
@@ -229,7 +242,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
 <div class="hero"><div class="wrap">
  <div class="kicker fade">Offline PDF Editor</div>
  <h1 class="fade">Front PDF<span lang="ja">PDF を、思いどおりに編集。</span><span lang="en">Edit your PDFs, exactly how you want.</span></h1>
- <p class="lead fade"><span lang="ja">HTML ファイルひとつ。インストールも通信もいりません。表を Excel へそのまま写し、付箋を貼り、ハンコを押す。仕事の PDF を、手元だけで仕上げます。</span><span lang="en">One HTML file. No installation, no network. Copy tables straight into Excel, add sticky notes and stamps — finish your work PDFs entirely on your own PC.</span></p>
+ <p class="lead fade"><span lang="ja">HTML ファイルひとつ。インストールも通信もいりません。PDF の結合・分割・書き込み・黒塗りを無料で。表を Excel へそのまま写し、付箋を貼り、ハンコを押す。仕事の PDF を、手元だけで仕上げます。</span><span lang="en">One HTML file. No installation, no network. Copy tables straight into Excel, add sticky notes and stamps — finish your work PDFs entirely on your own PC.</span></p>
  <div class="cta fade">
   <a class="btn" href="#download"><span lang="ja">無料でダウンロード</span><span lang="en">Download free</span> <span class="ver" style="font-weight:500;opacity:.75"></span></a>
   <a class="btn ghost" href="#basics"><span lang="ja">できることを見る</span><span lang="en">See what it does</span></a>
@@ -245,6 +258,13 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
 
 <section id="basics"><div class="wrap">
  <div class="sec-head fade"><div class="num">01</div><div><h2><span lang="ja">何ができるソフト？</span><span lang="en">What is Front PDF?</span></h2><p><span lang="ja">PDF に書き込む・まとめる・分ける。ふだんの PDF 作業が、これひとつで。</span><span lang="en">Write on, combine and split PDFs — everyday PDF work in one tool.</span></p></div></div>
+  <h3 class="fade" style="font:600 20px/1.5 var(--serif);margin:0 0 16px;letter-spacing:.04em"><span lang="ja">こんな悩みに</span><span lang="en">Made for these situations</span></h3>
+ <div class="who fade">
+  <div><b lang="ja">会社 PC にソフトを入れられない</b><b lang="en">Can't install software on your work PC</b><span lang="ja">exe ではなく HTML ファイルなので、インストールも管理者権限も不要。Edge で開くだけです。</span><span lang="en">It's an HTML file, not an exe — no installation or admin rights. Just open it in Edge.</span></div>
+  <div><b lang="ja">無料の PDF 編集サイトに書類を上げたくない</b><b lang="en">Don't want to upload documents to free PDF websites</b><span lang="ja">PDF はブラウザの中だけで処理し、外部には一切送信しません。社外秘の書類でも安心です。</span><span lang="en">PDFs are processed only inside your browser and never sent anywhere.</span></div>
+  <div><b lang="ja">Acrobat は高いし、そこまで使わない</b><b lang="en">Acrobat is overkill for what you do</b><span lang="ja">結合・分割・書き込み・ハンコ・黒塗りなど、ふだんの作業は無料でこなせます。</span><span lang="en">Merge, split, annotate, stamp and black out — everyday tasks, free.</span></div>
+  <div><b lang="ja">DocuWorks の操作がたまにだと面倒</b><b lang="en">Heavy document tools feel clunky for quick edits</b><span lang="ja">付箋（貼り紙）やデスク画面など、DocuWorks に慣れた人にもなじみやすい作りです。</span><span lang="en">Paper-style sticky notes and a desk view feel familiar and quick.</span></div>
+ </div>
  <div class="basicwrap fade">
   <div class="panel fvis"><video lang="ja" src="demo_editor.mp4" poster="demo_editor.jpg" width="1210" height="870" autoplay muted loop playsinline aria-label="Front PDF エディターの操作の様子"></video><img lang="en" src="screenshot_en.jpg" alt="Front PDF screenshot" width="2100" height="1290"></div>
   <div class="basics">
@@ -448,6 +468,9 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
 <section id="faq"><div class="wrap">
  <div class="sec-head fade"><div class="num">08</div><div><h2><span lang="ja">よくある質問</span><span lang="en">FAQ</span></h2></div></div>
  <div class="fade">
+ <details><summary><span lang="ja">Adobe Acrobat の代わりになりますか？</span><span lang="en">Can it replace Adobe Acrobat?</span></summary><p lang="ja">PDF の結合・分割・並べ替え・回転、書き込み、付箋、ハンコ、黒塗りといった日常的な作業なら代わりになります。既存の文字の書き換え・OCR・電子署名・フォーム作成など高度な機能が必要な場合は Acrobat をお使いください。</p><p lang="en">For everyday work — merging, splitting, reordering, rotating, annotating, sticky notes, stamps and black-out — yes. For editing existing text, OCR, digital signatures or forms, use Acrobat.</p></details>
+ <details><summary><span lang="ja">DocuWorks との違いは？</span><span lang="en">How is it different from DocuWorks?</span></summary><p lang="ja">Front PDF は PDF をそのまま扱う無料ソフトで、インストールが要りません。貼り紙型の付箋や、フォルダの書類をサムネイルで並べる「デスク」など、DocuWorks に近い使い勝手を目指しています。たまに少し編集するだけの方に向いています。</p><p lang="en">Front PDF works on PDFs directly, is free and needs no installation. Its paper-style sticky notes and thumbnail "desk" aim for a familiar feel, suited to people who only edit occasionally.</p></details>
+ <details><summary><span lang="ja">インストールできない会社のパソコンでも使えますか？</span><span lang="en">Does it work on a locked-down work PC?</span></summary><p lang="ja">はい。exe ではなく HTML ファイル1つなので、インストールや管理者権限は要りません。Edge や Chrome で開けば動きます。ただし、ソフトの利用に関する社内の規程は事前にご確認ください。</p><p lang="en">Yes. It is a single HTML file, not an exe, so no installation or admin rights are needed. It runs in Edge or Chrome. Please check your organization's software policy first.</p></details>
  <details><summary><span lang="ja">本当に無料ですか？会社で使ってもいいですか？</span><span lang="en">Is it really free? Can I use it at work?</span></summary><p lang="ja">はい、無料です。MIT ライセンスなので、個人・会社・学校を問わず無料で使え、商用利用もできます。Windows・Mac の Edge / Chrome で動作を確認しています（Windows のタブレットを含みます）。Safari・Firefox、iPad・スマホでは動作を確認していません。会社でお使いになる場合は、ソフトの利用に関する社内の規程をご確認のうえご利用ください。詳しい仕様は <a href="https://github.com/Hiro0149/front-pdf" target="_blank" rel="noopener">GitHub のページ</a>でご確認いただけます。</p><p lang="en">Yes, it is free. Under the MIT License it can be used by individuals, companies and schools, including for commercial purposes. It is tested in Edge / Chrome on Windows and Mac (including Windows tablets); it is not tested in Safari or Firefox, or on iPad and smartphones. If you use it at work, please check your organization's software policy first. Full technical details are on the <a href="https://github.com/Hiro0149/front-pdf" target="_blank" rel="noopener">GitHub page</a>.</p></details>
  <details><summary><span lang="ja">開いた PDF が外部に送られることはありますか？</span><span lang="en">Are my PDFs sent anywhere?</span></summary><p lang="ja">ありません。アプリは自分から通信しない作りで、PDF はブラウザの中だけで処理します。</p><p lang="en">No. The app makes no network requests by itself; PDFs are processed only in your browser.</p></details>
  <details><summary><span lang="ja">なぜアクティベーションが必要なのですか？</span><span lang="en">Why is activation needed?</span></summary><p lang="ja">メールなどで出どころのわからないファイルが出回るのを防ぎ、公式の最新版を使ってもらうためです。料金や個人情報の入力はありません。</p><p lang="en">To keep files of unknown origin from circulating and make sure everyone uses the latest official version. No payment and no personal information.</p></details>

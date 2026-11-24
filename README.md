@@ -9,7 +9,14 @@
 > ⚠ **作者はメールでは配布しません。** 必ず公式ページまたは GitHub Releases から入手してください。人に勧めるときは、ファイルではなく公式ページの URL を教えてください。
 > ⚠ **The author never distributes Front PDF by email.** Always download from the official page or GitHub Releases, and share the page URL rather than the file.
 
-![Front PDF](docs/screenshot_ja.jpg)
+![Front PDF エディター](src/site_work/demo_editor.gif)
+
+![Front PDF デスク](src/site_work/demo_desk.gif)
+
+**こんな方に / Made for:**
+- 会社 PC にソフトを入れられない（exe 不可）→ HTML ファイルなのでインストール不要 / Can't install software at work → it's just an HTML file
+- 無料の PDF 編集サイトに書類を上げたくない → 外部に一切送信しない / Don't want to upload documents to PDF websites → nothing leaves your PC
+- Acrobat は高い・DocuWorks はたまにだと面倒 → 結合・分割・書き込み・ハンコ・黒塗りを無料で / Acrobat is overkill → everyday PDF work, free
 
 ---
 

@@ -92,5 +92,6 @@ open(SITE_OUT+'/index.html','w',encoding='utf-8').write(site)
 SITE_ASSETS=['hero.jpg','act_1.jpg','act_2.jpg','act_3.jpg','screenshot_ja.jpg','screenshot_en.jpg','feat_tsel.jpg','feat_stamp.jpg','feat_dual.jpg','feat_draw.jpg','feat_emoji.jpg','feat_paste.jpg','feat_desk.jpg','demo_editor.mp4','demo_editor.jpg','demo_desk.mp4','demo_desk.jpg']+['skin_%s.jpg'%k for k in ('modern','dark','98','aqua','gba','mofu')]
 for f in SITE_ASSETS: shutil.copy('site_work/'+f,SITE_OUT+'/'+f)
 shutil.copy('site_src/sitemap.xml',SITE_OUT+'/sitemap.xml')
+shutil.copy('site_src/google0b06dbd8d8f1ec95.html',SITE_OUT+'/google0b06dbd8d8f1ec95.html')  # Search Console 所有権確認（消すと登録が外れる）
 open(SITE_OUT+'/.nojekyll','w').close()
 print('site ->',SITE_OUT, 'activation' if ACT else 'no-activation')
