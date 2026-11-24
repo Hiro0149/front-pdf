@@ -1,11 +1,11 @@
-# Front PDF User Manual (English) v1.1.0 (2026-11-23)
+# Front PDF User Manual (English) v1.1.1 (2026-11-24)
 
 ## 1. Overview
 - Front PDF is a PDF editor that runs just by opening one HTML file (about 4 MB) in a browser (Edge or Chrome recommended). No installation.
 - Fully offline. Files are never sent anywhere; everything is processed inside the browser on your PC.
 - Features: merge, split, reorder, rotate and delete pages of PDFs and images; annotate pages (pen, shapes, text, sticky notes, stamps, emoji, images); black-out / white-out; text search; rectangle text copy (tables paste straight into Excel); watermark; A4 normalize; 2-up/4-up; PNG export; work files.
 - You can also add blank pages and lay out documents freely, like a word processor.
-- The built-in "Desk" lays out a folder's PDFs, work files and images as thumbnails you can place freely, and lets you merge, split, rename, move and print them (like DocuWorks Desk; see section 16).
+- The built-in "Desk" lays out a folder's PDFs, work files and images as thumbnails you can place freely, and lets you merge, split, rename, move and print them (see section 16).
 
 ## 2. Screen layout
 - Title bar (right): Image import (layout when opening PNG/JPEG: Place on A4 / Keep image size), Skin, Language (globe), ? (help), ⓘ (version and license).
@@ -45,7 +45,7 @@
 - Saved automatically in the browser (per PC and browser). [Export (backup)] writes StampBook_Front_PDF.json; [Import] reads it.
 
 ## 8. Sticky notes
-- Paper-style notes like DocuWorks. Colors (yellow, pink, light blue, green, orange, purple, white), font size, text color, bold, author name (remembered).
+- Paper-style notes. Colors (yellow, pink, light blue, green, orange, purple, white), font size, text color, bold, author name (remembered).
 - On PDF export they become annotations: Acrobat and Edge show them as they look, recipients can move or delete them, and they appear in the comment list. Turn on "Burn into the page" to make a note part of the content.
 - Notes are not included in 2-up/4-up exports.
 
@@ -80,6 +80,7 @@
 - Zoom: Fit page / Fit width / 25–400%, Ctrl+wheel, Ctrl++ / Ctrl+−, Ctrl+0 to fit the page.
 - Thumbnails: Size slider, Columns (Auto / 1–6), Ctrl+wheel.
 - Skins: Modern / Dark / Retro PC / Aqua / Handheld / Fluffy pets. Languages: 日本語, English, 简体中文, 繁體中文, Português, Français, 한국어. Both are remembered.
+- Touch (tablets / touch screens): one finger draws and moves notes or shapes; with the Select tool, swiping an empty area scrolls. Two fingers scroll; spread or pinch to zoom.
 
 ## 15. Keyboard shortcuts
 - Ctrl+O open / Ctrl+S save (Save PDF for a PDF opened from the desk, otherwise Save work file) / Ctrl+P print / Ctrl+Z undo / Ctrl+Y or Ctrl+Shift+Z redo / Ctrl+F search / F3 or Enter next hit / Shift+Enter previous hit
@@ -92,7 +93,8 @@
 - Drag thumbnails anywhere. The layout is saved in a ".frontpdf-desk" file in the folder and shared with anyone who opens it. [Arrange] sorts by name; the slider sets the size. Frame colors: PDF = red, work file = blue, image = green.
 - Open: double-click or Enter opens the editor in a new window; the [Editor] button opens an empty editor. Preview: Space, or press and release Ctrl+Shift (←→ pages, ↑↓ documents, Enter to open, Esc to close).
 - Merge: drop a document onto another (the dragged one goes first, the target after it), or select several and right-click [Merge]. You confirm the order and name first. Images become PDF pages. If work files are included, the result is a work file and markups and notes are kept.
-- Split into pages: splits a PDF into one PDF per page (same folder / new folder).
+- Range select: drag from an empty spot to select every document inside the box. Hold Ctrl (or Shift) to add to the current selection, as many times as you like. For right-click [Merge], overlapping documents go in order from the top (a split stack keeps its order); other documents go newest first, oldest last.
+- Split into pages: splits a PDF into one PDF per page (same folder / new folder). Work files (.frontpdf) can be split too, into one-page work files with markups and notes kept. For merge and split, "Move the original files to _削除予定" is on by default.
 - Move: drag to the folder tree on the left. Dropping from Explorer imports (copies). Ctrl+C / Ctrl+V duplicates, F2 renames, Ctrl+F filters by file name, Ctrl+P prints (PDF and images). Right-click for the menu.
 - Deleted files and previous versions of overwritten files go to a "_削除予定" folder created automatically inside that folder (it is not the Windows or Mac trash). When no longer needed, right-click the "_削除予定" folder → [Empty] to delete permanently (cannot be undone).
 - Undo Ctrl+Z / Redo Ctrl+Y: moves, renames, deletions, merges, splits, overwrites and more, as many times as you like. Changes to the folder (by others or Box sync) appear automatically.
@@ -111,7 +113,7 @@
 - Bundled software: PDF.js (Apache License 2.0); pdf-lib, pako, @pdf-lib/standard-fonts, @pdf-lib/upng, qrcode-generator (MIT); tslib (0BSD); Adobe CMaps (BSD-3-Clause); PDFium JBIG2 (BSD-3-Clause); OpenJPEG (BSD-2-Clause). License texts: [ⓘ] → Third-party licenses, and THIRD_PARTY_NOTICES.txt.
 - Official source: the GitHub releases page (the URL is shown in [ⓘ]). Files obtained elsewhere may have been modified; the author is not responsible for problems caused by modified versions.
 - The author never distributes the software by email. When recommending it, share the official source URL instead of the file ([ⓘ] → "Copy intro text and URL"). The welcome screen on first launch also shows the official source.
-- Exported PDFs carry "Front PDF v1.1.0 (Front Softworks)" and the official URL in their properties (Producer/Creator).
+- Exported PDFs carry "Front PDF v1.1.1 (Front Softworks)" and the official URL in their properties (Producer/Creator).
 - On first use a free activation is needed (once per browser): (1) copy "this browser's ID" shown on screen (8 random characters made by the app; contains no PC or personal information), paste it into "Activation" on the official page and press "Issue"; (2) paste the password shown there (or the 10-character short password) into the app. Scanning the QR code on screen with a phone opens the official page with the ID filled in. The password works only in that browser, not on other PCs or browsers. The official page does not send the ID anywhere; it calculates inside the browser. Clearing browser data changes the ID, so activate again. The ID can be copied at any time while this screen is open (it cannot be closed, so you cannot miss it).
 - Other software by Front Softworks: ExVAN Planner (container loading optimizer, https://exvan-planner.github.io/).
 - How to verify the file is unmodified (Windows, nothing to install): run `certutil -hashfile Front_PDF.html SHA256` in Command Prompt and check that the value matches the SHA-256 published at the official source.

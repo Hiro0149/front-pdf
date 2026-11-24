@@ -1,11 +1,11 @@
-# Manual do Front PDF (Português) v1.1.0 (2026-11-23)
+# Manual do Front PDF (Português) v1.1.1 (2026-11-24)
 
 ## 1. Visão geral
 - O Front PDF é um editor de PDF que funciona apenas abrindo um arquivo HTML (cerca de 4 MB) no navegador (Edge ou Chrome recomendados). Não precisa instalar.
 - Totalmente offline. Os arquivos nunca são enviados; tudo é processado no navegador do seu PC.
 - Recursos: mesclar, dividir, reordenar, girar e excluir páginas de PDFs e imagens; anotar (caneta, formas, texto, notas adesivas, carimbos, emoji, imagens); tarja preta / branca; busca de texto; cópia de texto por retângulo (tabelas colam direto no Excel); marca d'água; ajuste para A4; 2 ou 4 páginas por folha; exportação PNG; arquivos de trabalho.
 - Também é possível adicionar páginas em branco e montar documentos livremente, como num editor de texto.
-- A "Mesa" incluída mostra os PDFs, arquivos de trabalho e imagens de uma pasta como miniaturas que você posiciona livremente, e permite unir, separar, renomear, mover e imprimir (como o DocuWorks Desk; seção 16).
+- A "Mesa" incluída mostra os PDFs, arquivos de trabalho e imagens de uma pasta como miniaturas que você posiciona livremente, e permite unir, separar, renomear, mover e imprimir (seção 16).
 
 ## 2. Tela
 - Barra de título (direita): Importar imagem (layout ao abrir PNG/JPEG: Colocar em A4 / Manter tamanho), Tema, Idioma (globo), ? (ajuda), ⓘ (versão e licença).
@@ -45,7 +45,7 @@
 - Salvo automaticamente no navegador (por PC e navegador). [Exportar (backup)] gera StampBook_Front_PDF.json; [Importar] lê o arquivo.
 
 ## 8. Notas adesivas
-- Notas de papel como no DocuWorks. Cores (amarelo, rosa, azul-claro, verde, laranja, roxo, branco), tamanho e cor do texto, negrito, nome do autor (memorizado).
+- Notas no estilo papel. Cores (amarelo, rosa, azul-claro, verde, laranja, roxo, branco), tamanho e cor do texto, negrito, nome do autor (memorizado).
 - Ao exportar o PDF viram anotações: aparecem iguais no Acrobat e no Edge, o destinatário pode movê-las ou excluí-las e elas aparecem na lista de comentários. Ative "Gravar na página" para torná-las parte do conteúdo.
 - Notas não são incluídas na exportação com 2 ou 4 páginas por folha.
 
@@ -80,6 +80,7 @@
 - Zoom: Página inteira / Largura da página / 25–400%, Ctrl+roda, Ctrl++ / Ctrl+−, Ctrl+0 para página inteira.
 - Miniaturas: controle Tamanho, Colunas (Auto / 1–6), Ctrl+roda.
 - Temas: Moderno / Escuro / PC retrô / Aqua / Portátil / Fofinho. Idiomas: 日本語, English, 简体中文, 繁體中文, Português, Français, 한국어. Ambos são memorizados.
+- Toque (tablets / telas sensíveis ao toque): um dedo desenha e move notas ou formas; com a ferramenta Selecionar, deslizar numa área vazia rola a tela. Dois dedos rolam; afaste ou junte para zoom.
 
 ## 15. Atalhos de teclado
 - Ctrl+O abrir / Ctrl+S salvar (Salvar PDF para um PDF aberto pela mesa; senão, Salvar arquivo de trabalho) / Ctrl+P imprimir / Ctrl+Z desfazer / Ctrl+Y ou Ctrl+Shift+Z refazer / Ctrl+F buscar / F3 ou Enter próximo / Shift+Enter anterior
@@ -92,7 +93,8 @@
 - Arraste as miniaturas para qualquer lugar. A disposição fica salva num arquivo ".frontpdf-desk" na pasta e é compartilhada com quem a abrir. [Organizar] ordena por nome; o controle deslizante muda o tamanho. Cores da borda: PDF = vermelho, arquivo de trabalho = azul, imagem = verde.
 - Abrir: clique duplo ou Enter abre o editor em nova janela; o botão [Editor] abre um editor vazio. Visualizar: Espaço, ou pressionar e soltar Ctrl+Shift (←→ páginas, ↑↓ documentos, Enter abre, Esc fecha).
 - Unir: solte um documento sobre outro (o arrastado vem primeiro, o alvo depois) ou selecione vários e clique com o botão direito em [Unir]. Você confirma ordem e nome antes. Imagens viram páginas PDF. Se houver arquivos de trabalho, o resultado é um arquivo de trabalho e as anotações e notas são mantidas.
-- Separar por página: separa um PDF em um PDF por página (mesma pasta / nova pasta).
+- Seleção por área: arraste a partir de um espaço vazio para selecionar todos os documentos dentro da caixa. Segure Ctrl (ou Shift) para adicionar à seleção atual, quantas vezes quiser. Em [Unir] pelo botão direito, documentos sobrepostos seguem de cima para baixo (uma pilha separada mantém a ordem); os demais vão do mais novo ao mais antigo.
+- Separar por página: separa um PDF em um PDF por página (mesma pasta / nova pasta). Arquivos de trabalho (.frontpdf) também podem ser separados em arquivos de trabalho de uma página, mantendo anotações e notas. Ao juntar e separar, "Mover os originais para _削除予定" vem marcado por padrão.
 - Mover: arraste para a árvore de pastas à esquerda. Soltar a partir do Explorer importa (copia). Ctrl+C / Ctrl+V duplica, F2 renomeia, Ctrl+F filtra pelo nome, Ctrl+P imprime (PDF e imagens). Botão direito abre o menu.
 - Arquivos excluídos e versões anteriores de arquivos sobrescritos vão para uma pasta "_削除予定" criada automaticamente dentro daquela pasta (não é a lixeira do Windows ou do Mac). Quando não precisar mais, clique com o botão direito na pasta "_削除予定" → [Esvaziar] para excluir definitivamente (não dá para desfazer).
 - Desfazer Ctrl+Z / Refazer Ctrl+Y: movimentos, renomeações, exclusões, uniões, separações, sobrescritas etc., quantas vezes quiser. Mudanças na pasta (de outras pessoas ou da sincronização do Box) aparecem automaticamente.
@@ -111,7 +113,7 @@
 - Software incluído: PDF.js (Apache License 2.0); pdf-lib, pako, @pdf-lib/standard-fonts, @pdf-lib/upng, qrcode-generator (MIT); tslib (0BSD); Adobe CMaps (BSD-3-Clause); PDFium JBIG2 (BSD-3-Clause); OpenJPEG (BSD-2-Clause). Textos das licenças: [ⓘ] → Licenças de terceiros, e THIRD_PARTY_NOTICES.txt.
 - Fonte oficial: a página de releases no GitHub (a URL aparece em [ⓘ]). Arquivos obtidos em outros lugares podem ter sido modificados; o autor não se responsabiliza por problemas causados por versões modificadas.
 - O autor nunca distribui o software por e-mail. Ao recomendá-lo, compartilhe a URL da fonte oficial em vez do arquivo ([ⓘ] → "Copiar texto e URL"). A tela de boas-vindas no primeiro uso também mostra a fonte oficial.
-- Os PDFs exportados trazem "Front PDF v1.1.0 (Front Softworks)" e a URL oficial nas propriedades (Producer/Creator).
+- Os PDFs exportados trazem "Front PDF v1.1.1 (Front Softworks)" e a URL oficial nas propriedades (Producer/Creator).
 - No primeiro uso é preciso uma ativação gratuita (uma vez por navegador): (1) copie o "ID deste navegador" mostrado na tela (8 caracteres aleatórios gerados pelo app; sem informações do PC ou pessoais), cole em "Ativação" na página oficial e clique em "Emitir"; (2) cole no app a senha exibida (ou a senha curta de 10 caracteres). Ler o QR code da tela com o celular abre a página oficial com o ID preenchido. A senha só funciona nesse navegador, não em outros PCs ou navegadores. A página oficial não envia o ID; o cálculo é feito no navegador. Limpar os dados do navegador muda o ID; nesse caso, ative de novo. O ID pode ser copiado a qualquer momento enquanto esta tela estiver aberta (ela não pode ser fechada).
 - Outros softwares da Front Softworks: ExVAN Planner (otimizador de carregamento de contêineres, https://exvan-planner.github.io/).
 - Como verificar se o arquivo não foi alterado (Windows, sem instalar nada): execute `certutil -hashfile Front_PDF.html SHA256` no Prompt de Comando e confira se o valor é igual ao SHA-256 publicado na fonte oficial.

@@ -110,7 +110,7 @@ function dLayout(){
     let p=DK.pos[it.name];
     if(!p){do{p={x:G+(slot%cols)*(W+G),y:G+Math.floor(slot/cols)*(H+G)};slot++;}while(!free(p.x,p.y)&&slot<5000);taken.push(p);}
     const c=document.createElement('div');c.className='dcard k-'+it.kind+(DK.sel.has(it.name)?' sel':'');
-    c.style.cssText='left:'+p.x+'px;top:'+p.y+'px;width:'+W+'px;height:'+H+'px';maxY=Math.max(maxY,p.y+H);
+    c.style.cssText='left:'+p.x+'px;top:'+p.y+'px;width:'+W+'px;height:'+H+'px'+(p.z?';z-index:'+p.z:'');maxY=Math.max(maxY,p.y+H);
     c.innerHTML='<div class="th"><span class="ph">読み込み中…</span></div><div class="nm"></div><span class="ext"></span>';
     c.querySelector('.nm').textContent=it.name;c.querySelector('.nm').title=it.name;c.querySelector('.ext').textContent=DEXT(it.name);
     c._it=it;it.el=c;c.addEventListener('dragstart',e=>e.preventDefault());
@@ -173,14 +173,34 @@ function dStartDrag(ev,c){
     document.querySelectorAll('.dcard.mtarget').forEach(x=>x.classList.remove('mtarget'));
     if(over&&moved){for(const s of starts){s.x.style.left=s.l+'px';s.x.style.top=s.t+'px';}await over._drop([...DK.sel]);return;}
     if(target&&moved){for(const s of starts){s.x.style.left=s.l+'px';s.x.style.top=s.t+'px';}dMergeAsk([...dSelItems(),target._it]);return;}
-    if(moved){for(const s of starts)DK.pos[s.x._it.name]={x:s.x.offsetLeft,y:s.x.offsetTop};dSavePos();}};
+    if(moved){const mz=Math.max(0,...Object.values(DK.pos).map(q=>q.z||0));for(const s of starts){DK.pos[s.x._it.name]=mz?{x:s.x.offsetLeft,y:s.x.offsetTop,z:mz+1}:{x:s.x.offsetLeft,y:s.x.offsetTop};if(mz)s.x.style.zIndex=mz+1;}dSavePos();}};
   document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);
 }
-$('#dkDesk').addEventListener('mousedown',e=>{if(e.target.id==='dkDesk'){DK.sel.clear();dRefreshSel();}});
+/* 何もない所からドラッグ＝範囲選択（Ctrl／Shift を押しながらで、前の選択に追加。何度でも重ねて選べる） */
+$('#dkDesk').addEventListener('mousedown',e=>{if(e.target.id!=='dkDesk'||e.button!==0)return;
+  const desk=$('#dkDesk'),add=e.ctrlKey||e.shiftKey||e.metaKey,base=new Set(add?DK.sel:[]);if(!add){DK.sel.clear();dRefreshSel();}
+  const r0=desk.getBoundingClientRect(),x0=e.clientX-r0.left,y0=e.clientY-r0.top;let band=null;e.preventDefault();
+  const mv=ev=>{const r=desk.getBoundingClientRect(),x1=ev.clientX-r.left,y1=ev.clientY-r.top;
+    if(!band){if(Math.abs(x1-x0)+Math.abs(y1-y0)<4)return;band=document.createElement('div');band.className='dkBand';desk.appendChild(band);}
+    const L=Math.min(x0,x1),T=Math.min(y0,y1),W=Math.abs(x1-x0),H=Math.abs(y1-y0);band.style.cssText='left:'+L+'px;top:'+T+'px;width:'+W+'px;height:'+H+'px';
+    DK.sel=new Set(base);for(const c of desk.querySelectorAll('.dcard')){const l=c.offsetLeft,t=c.offsetTop;if(l<L+W&&l+c.offsetWidth>L&&t<T+H&&t+c.offsetHeight>T)DK.sel.add(c._it.name);}
+    dRefreshSel();const a=$('#dkArea').getBoundingClientRect();if(ev.clientY>a.bottom-20)$('#dkArea').scrollTop+=20;else if(ev.clientY<a.top+20)$('#dkArea').scrollTop-=20;};
+  const up=()=>{document.removeEventListener('mousemove',mv);document.removeEventListener('mouseup',up);if(band)band.remove();};
+  document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);});
+/* 結合の順番：重なっている書類は上にあるものから（ばらした束はそのままの順）。重なっていない書類は新しいものが先・古いものが後（下） */
+async function dMergeOrder(list){const mt={};for(const it of list){try{mt[it.name]=(await it.h.getFile()).lastModified;}catch(e){mt[it.name]=0;}}
+  const z=it=>(DK.pos[it.name]&&DK.pos[it.name].z)||0;
+  return [...list].sort((a,b)=>(z(b)-z(a))||(mt[b.name]-mt[a.name])||a.name.localeCompare(b.name,'ja',{numeric:true}));}
 
 /* ---------- ファイル操作（すべて Ctrl+Z で戻せるように記録する） ---------- */
 async function dExists(dir,name){try{await dir.getFileHandle(name);return true;}catch(e){return false;}}
-async function dWrite(dir,name,blob){const fh=await dir.getFileHandle(name,{create:true});const w=await fh.createWritable();await w.write(blob);await w.close();return fh;}
+/* ファイル操作の再試行：Box・ウイルス対策・同期ソフトなどが直後にファイルに触ると、一瞬だけ失敗することがある（InvalidStateError など）ので、少し待ってやり直す */
+const DRETRY=new Set(['InvalidStateError','NotReadableError','NoModificationAllowedError','InvalidModificationError']);
+async function dRetry(fn,label,onFail){for(let k=0;;k++){try{return await fn(k);}catch(e){if(k>=3||!DRETRY.has(e.name))throw e;dlog('再試行 '+(k+1)+'/3（'+label+'）: '+e.name);if(onFail)try{await onFail(e);}catch(_){}await new Promise(r=>setTimeout(r,350*(k+1)));}}}
+async function dFresh(it){try{const h=await DK.cur.getFileHandle(it.name);it.h=h;}catch(e){}}
+async function dReadIt(it){return dRetry(async()=>await (await it.h.getFile()).arrayBuffer(),'読み込み '+it.name,()=>dFresh(it));}
+async function dMoveIt(it,dir,name){return dRetry(async()=>{await it.h.move(dir,name);},'移動 '+it.name,()=>dFresh(it));}
+async function dWrite(dir,name,blob){return dRetry(async()=>{const fh=await dir.getFileHandle(name,{create:true});const w=await fh.createWritable();try{await w.write(blob);await w.close();}catch(e){try{await w.abort();}catch(_){}throw e;}return fh;},'書き込み '+name);}
 function dSplit(n){const m=n.match(/^(.*?)(\.[^.]+)?$/);return[m[1],m[2]||''];}
 async function dFreeName(dir,name,suf){const[b,e]=dSplit(name);let nn=suf?b+suf+e:name,k=2;while(await dExists(dir,nn))nn=b+(suf||'')+' ('+(k++)+')'+e;return nn;}
 // エディターのウインドウで行った保存を、デスクの［元に戻す］の履歴に渡す（IndexedDB 経由）
@@ -229,7 +249,7 @@ async function dTrash(){
   const its=dSelItems();if(!its.length)return;
   if(DK.path[DK.path.length-1]===TRASH){msg(TRASH,'このフォルダの中身は、左の一覧でこのフォルダを右クリックして［空にする］で削除してください。');return;}
   try{const tr=await DK.cur.getDirectoryHandle(TRASH,{create:true});
-    for(const it of its){const tn=await dFreeName(tr,it.name);await it.h.move(tr,tn);delete DK.pos[it.name];dPush({t:'trash',h:it.h,fromDir:DK.cur,name:it.name,trName:tn,label:'_削除予定へ '+it.name});dlog('_削除予定へ: '+it.name);}
+    for(const it of its){const tn=await dFreeName(tr,it.name);await dMoveIt(it,tr,tn);delete DK.pos[it.name];dPush({t:'trash',h:it.h,fromDir:DK.cur,name:it.name,trName:tn,label:'_削除予定へ '+it.name});dlog('_削除予定へ: '+it.name);}
     dSavePos();dmsg(its.length+' 件を「_削除予定」へ移しました（Ctrl+Z で戻せます）');DK.sel.clear();await dOpenDir(DK.cur,DK.path,true);}
   catch(e){msg('_削除予定へ移せません',e.message);dlog('_削除予定失敗: '+e.message);}
 }
@@ -249,7 +269,7 @@ async function dImport(files,dir,path){
 /* ---------- 結合（サムネイルを重ねる） ---------- */
 let MG=[];
 function dMergeAsk(list){
-  MG=list;const hasFp=list.some(i=>i.kind==='fp');$('#mgExt').textContent=hasFp?'.frontpdf':'.pdf';$('#mgFpNote').style.display=hasFp?'block':'none';dMergeList();const[b]=dSplit(list[0].name);$('#mgName').value=b.replace(/_作業ファイル$/,'')+'_結合';$('#mgTrash').checked=false;
+  MG=list;const hasFp=list.some(i=>i.kind==='fp');$('#mgExt').textContent=hasFp?'.frontpdf':'.pdf';$('#mgFpNote').style.display=hasFp?'block':'none';dMergeList();const[b]=dSplit(list[0].name);$('#mgName').value=b.replace(/_作業ファイル$/,'').replace(/_p\d+$/,'')+'_結合';$('#mgTrash').checked=true;
   $('#mgImgNote').style.display=list.some(i=>i.kind==='img')?'block':'none';openDlg('#dkMergeDlg');setTimeout(()=>$('#mgName').select(),30);}
 function dMergeList(){const box=$('#mgList');box.innerHTML='';MG.forEach((it,i)=>{const r=document.createElement('div');r.className='mi';
   r.innerHTML='<b>'+(i+1)+'</b><span class="tag" style="background:'+(it.kind==='img'?'#2f8a4a':it.kind==='fp'?'#2f5fc8':'#c8382c')+'">'+DEXT(it.name)+'</span><span class="n"></span><button title="上へ">↑</button><button title="下へ">↓</button>';
@@ -263,11 +283,11 @@ $('#mgGo').onclick=async()=>{
     if(hasFp){const data=await dMergeWork(MG);await dWrite(DK.cur,name,new Blob([data],{type:'application/octet-stream'}));}
     else{const out=await PDFDocument.create();
     for(let i=0;i<MG.length;i++){const it=MG[i];busy('結合しています... '+(i+1)+' / '+MG.length,0.05+0.8*i/MG.length);
-      let bytes=new Uint8Array(await (await it.h.getFile()).arrayBuffer());if(it.kind==='img')bytes=await imageToPdf(bytes,/\.png$/i.test(it.name));
+      let bytes=new Uint8Array(await dReadIt(it));if(it.kind==='img')bytes=await imageToPdf(bytes,/\.png$/i.test(it.name));
       const src=await PDFDocument.load(bytes,{ignoreEncryption:true});const ps=await out.copyPages(src,src.getPageIndices());ps.forEach(p=>out.addPage(p));}
     const data=await out.save();await dWrite(DK.cur,name,new Blob([data],{type:'application/pdf'}));}
     const ops=[{t:'create',dir:DK.cur,name}];
-    if(trash){const tr_=await DK.cur.getDirectoryHandle(TRASH,{create:true});for(const it of MG){const tn=await dFreeName(tr_,it.name);await it.h.move(tr_,tn);delete DK.pos[it.name];ops.push({t:'trash',h:it.h,fromDir:DK.cur,name:it.name,trName:tn});}}
+    if(trash){const tr_=await DK.cur.getDirectoryHandle(TRASH,{create:true});for(const it of MG){const tn=await dFreeName(tr_,it.name);await dMoveIt(it,tr_,tn);delete DK.pos[it.name];ops.push({t:'trash',h:it.h,fromDir:DK.cur,name:it.name,trName:tn});}}
     const p0=DK.pos[MG[0].name];if(p0&&!trash)DK.pos[name]={x:p0.x+24,y:p0.y+24};else if(p0)DK.pos[name]=p0;dSavePos();
     dPush({t:'group',ops,label:'結合 '+name});busy(false);DK.sel.clear();DK.sel.add(name);
     dlog('結合: '+MG.map(i=>i.name).join(' + ')+' → '+name+(trash?'（元は _削除予定へ）':''));dmsg('「'+name+'」を作りました（Ctrl+Z で結合前に戻せます）');await dOpenDir(DK.cur,DK.path,true);}
@@ -279,7 +299,7 @@ async function dReadWork(raw){if(new TextDecoder().decode(raw.subarray(0,8))!==K
 async function dMergeWork(list){// 作業ファイル（＋PDF・画像）を1つの作業ファイルにまとめる。書き込み・付箋はそのまま
   const out={app:'Front PDF',ver:1,saved:new Date().toISOString(),cur:null,wm:null,sources:[],pages:[],images:{},thumb:null};let next=1;
   for(let k=0;k<list.length;k++){const it=list[k];busy('結合しています... '+(k+1)+' / '+list.length,0.05+0.8*k/list.length);
-    const raw=new Uint8Array(await (await it.h.getFile()).arrayBuffer());
+    const raw=new Uint8Array(await dReadIt(it));
     if(it.kind==='fp'){const d=await dReadWork(raw);let mx=0;const js=JSON.stringify(d);for(const m of js.matchAll(/"u(\d+)"/g))mx=Math.max(mx,+m[1]);const off=next;next+=mx+1;
       const map=v=>{if(typeof v!=='string')return v;const m=/^u(\d+)$/.exec(v);return m?'u'+(+m[1]+off):v+'_m'+k;};
       const walk=o=>{if(Array.isArray(o)){o.forEach(walk);return;}if(o&&typeof o==='object')for(const key of Object.keys(o)){if(['id','uid','srcId','imgId'].includes(key))o[key]=map(o[key]);else walk(o[key]);}};
@@ -292,9 +312,33 @@ async function dMergeWork(list){// 作業ファイル（＋PDF・画像）を1�
       for(let i=0;i<doc.numPages;i++){const pg=await doc.getPage(i+1);const vp=pg.getViewport({scale:1,rotation:0});out.pages.push({uid:'u'+(next++),srcId:sid,idx:i,baseRot:pg.rotate||0,rot:0,w:vp.width,h:vp.height,objects:[]});}
       await task.destroy();}}
   if(!out.wm)out.wm={on:false,text:'COPY',size:110,angle:35,color:'#ff0000',opacity:14};out.cur=out.pages[0]?.uid||null;
+  if(!out.thumb&&out.pages[0])out.thumb=await dPageThumb(out,out.pages[0]);
   let body=new TextEncoder().encode(JSON.stringify(out)),flag='J';
   if(window.CompressionStream){try{body=await streamConv(body,new CompressionStream('gzip'));flag='Z';}catch(e){}}
   const head=new TextEncoder().encode(KOBO_MAGIC+flag);const r=new Uint8Array(head.length+body.length);r.set(head);r.set(body,head.length);return r;}
+
+async function dEncWork(out){let body=new TextEncoder().encode(JSON.stringify(out)),flag='J';
+  if(window.CompressionStream){try{body=await streamConv(body,new CompressionStream('gzip'));flag='Z';}catch(e){}}
+  const head=new TextEncoder().encode(KOBO_MAGIC+flag);const r=new Uint8Array(head.length+body.length);r.set(head);r.set(body,head.length);return r;}
+async function dPageThumb(d,p){// 作業ファイルの1ページを、書き込み込みのサムネ画像にする（デスク表示用）
+  try{const s=d.sources.find(x=>x.id===p.srcId);if(!s)return null;const task=dDoc(b64u8(s.b64));const doc=await task.promise;const pg=await doc.getPage(p.idx+1);
+    const R=totalRot(p),[dw,dh]=dims(p,R),vp=pg.getViewport({scale:Math.min(2,360/dw),rotation:R});const c=mk(Math.round(vp.width),Math.round(vp.height)),ctx=c.getContext('2d');
+    ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);await pg.render({canvasContext:ctx,viewport:vp}).promise;await task.destroy();
+    const imgs={};for(const o of p.objects)if(o.imgId&&d.images&&d.images[o.imgId]&&!imgs[o.imgId]){try{imgs[o.imgId]={url:d.images[o.imgId],img:await loadImg(d.images[o.imgId])};}catch(e){}}
+    const sI=state.images,sW=state.wm;state.images=Object.assign({},sI,imgs);state.wm=d.wm||{on:false};
+    try{ctx.save();ctx.scale(c.width/dw,c.height/dh);drawWatermark(ctx,dw,dh);drawObjects(ctx,p,R,false);ctx.restore();}finally{state.images=sI;state.wm=sW;}
+    return c.toDataURL('image/jpeg',.82);}catch(e){console.warn('thumb',e);return null;}}
+async function dSplitWork(it,out,ops){// 作業ファイルを1ページずつの作業ファイルに分ける（書き込み・付箋はそのまま、元PDFはそのページだけに）
+  const d=await dReadWork(new Uint8Array(await dReadIt(it)));const n=d.pages.length,w=Math.max(2,String(n).length);const[b]=dSplit(it.name);const cache={};let made=0;
+  for(let i=0;i<n;i++){busy('分けています... '+it.name+' '+(i+1)+' / '+n,0.05+0.9*(i/n));const p=JSON.parse(JSON.stringify(d.pages[i]));const s=d.sources.find(x=>x.id===p.srcId);if(!s)continue;
+    if(!cache[s.id])cache[s.id]=await PDFDocument.load(b64u8(s.b64),{ignoreEncryption:true});
+    const one=await PDFDocument.create();const[cp]=await one.copyPages(cache[s.id],[p.idx]);one.addPage(cp);p.idx=0;
+    const imgs={};for(const o of p.objects)if(o.imgId&&d.images&&d.images[o.imgId])imgs[o.imgId]=d.images[o.imgId];
+    const o={app:'Front PDF',ver:1,saved:new Date().toISOString(),cur:p.uid,wm:d.wm||{on:false,text:'COPY',size:110,angle:35,color:'#ff0000',opacity:14},
+      sources:[{id:s.id,name:s.name,b64:u8b64(await one.save())}],pages:[p],images:imgs,thumb:null};
+    o.thumb=await dPageThumb(o,p);
+    const nn=await dFreeName(out,b+'_p'+String(i+1).padStart(w,'0')+'.frontpdf');await dWrite(out,nn,new Blob([await dEncWork(o)],{type:'application/octet-stream'}));ops.push({t:'create',dir:out,name:nn});made++;}
+  return made;}
 
 async function dEmptyTrash(dir,path){
   const names=[];try{for await(const [n] of dir.entries())names.push(n);}catch(e){msg('フォルダを開けません',e.message);return;}
@@ -309,26 +353,33 @@ async function dEmptyTrash(dir,path){
 /* ---------- ページごとにばらす ---------- */
 let SP=[];
 async function dSplitAsk(list){
-  list=list.filter(i=>i.kind==='pdf');if(!list.length){msg('ページごとにばらす','PDF を選んでください（作業ファイル・画像はばらせません）。');return;}
-  let total=0;for(const it of list){if(!it.pages){try{const t=dDoc(new Uint8Array(await (await it.h.getFile()).arrayBuffer()));const doc=await t.promise;it.pages=doc.numPages;await t.destroy();}catch(e){it.pages=0;}}total+=+it.pages||0;}
+  list=list.filter(i=>i.kind==='pdf'||i.kind==='fp');if(!list.length){msg('ページごとにばらす','PDF か作業ファイルを選んでください（画像はばらせません）。');return;}
+  const hasFp=list.some(i=>i.kind==='fp');
+  let total=0;for(const it of list){if(it.kind==='fp'){try{it.pages=(await dReadWork(new Uint8Array(await dReadIt(it)))).pages.length;}catch(e){it.pages=0;}}else if(!it.pages){try{const t=dDoc(new Uint8Array(await dReadIt(it)));const doc=await t.promise;it.pages=doc.numPages;await t.destroy();}catch(e){it.pages=0;}}total+=+it.pages||0;}
   SP=list;const[b]=dSplit(list[0].name);$('#spFolder').textContent='「'+(list.length>1?tr('ページ別'):b+tr('_ページ別'))+'」';
-  $('#spInfo').innerHTML='';$('#spInfo').textContent=(list.length>1?list.length+' 個の PDF':'「'+list[0].name+'」')+'を、1ページずつ別の PDF（合計 '+total+' 個）に分けます。名前は「元の名前_p01.pdf」のようになります。';
-  $('#spTrash').checked=false;openDlg('#dkSplitDlg');}
+  $('#spInfo').innerHTML='';$('#spInfo').textContent=hasFp?(list.length>1?list.length+' 個のファイル':'「'+list[0].name+'」')+'を、1ページずつ別のファイル（合計 '+total+' 個）に分けます。作業ファイルは書き込み・付箋を残したまま、1ページずつの作業ファイル（.frontpdf）になります。':(list.length>1?list.length+' 個の PDF':'「'+list[0].name+'」')+'を、1ページずつ別の PDF（合計 '+total+' 個）に分けます。名前は「元の名前_p01.pdf」のようになります。';
+  $('#spTrash').checked=true;openDlg('#dkSplitDlg');}
 $('#spGo').onclick=async()=>{
   const toFolder=document.querySelector('input[name=spWhere]:checked').value==='folder',trash=$('#spTrash').checked;closeDlg($('#spGo'));
   const ops=[];let out=DK.cur,made=0;
   try{busy('ページごとに分けています...',0.03);
     if(toFolder){const fn0=$('#spFolder').textContent.replace(/^「|」$/g,'');let fn=fn0,k=2;const has=async n=>{try{await DK.cur.getDirectoryHandle(n);return true;}catch(e){return false;}};while(await has(fn))fn=fn0+' ('+(k++)+')';
       out=await DK.cur.getDirectoryHandle(fn,{create:true});ops.push({t:'mkdir',dir:DK.cur,name:fn});DK.treeDirty=true;}
-    for(const it of SP){const src=await PDFDocument.load(new Uint8Array(await (await it.h.getFile()).arrayBuffer()),{ignoreEncryption:true});const n=src.getPageCount(),w=Math.max(2,String(n).length);const[b]=dSplit(it.name);
+    const stacks=[];
+    for(const it of SP){const o0=ops.length;if(it.kind==='fp')made+=await dSplitWork(it,out,ops);else{const src=await PDFDocument.load(new Uint8Array(await dReadIt(it)),{ignoreEncryption:true});const n=src.getPageCount(),w=Math.max(2,String(n).length);const[b]=dSplit(it.name);
       for(let i=0;i<n;i++){busy('分けています... '+it.name+' '+(i+1)+' / '+n,0.05+0.9*(i/n));const one=await PDFDocument.create();const[p]=await one.copyPages(src,[i]);one.addPage(p);
         const nn=await dFreeName(out,b+'_p'+String(i+1).padStart(w,'0')+'.pdf');await dWrite(out,nn,new Blob([await one.save()],{type:'application/pdf'}));ops.push({t:'create',dir:out,name:nn});made++;}}
-    if(trash){const tr_=await DK.cur.getDirectoryHandle(TRASH,{create:true});for(const it of SP){const tn=await dFreeName(tr_,it.name);await it.h.move(tr_,tn);delete DK.pos[it.name];ops.push({t:'trash',h:it.h,fromDir:DK.cur,name:it.name,trName:tn});}dSavePos();}
+      if(!toFolder){const base=DK.pos[it.name]?{x:DK.pos[it.name].x,y:DK.pos[it.name].y}:(it.el&&it.el.isConnected?{x:it.el.offsetLeft,y:it.el.offsetTop}:null);stacks.push({base,names:ops.slice(o0).filter(o=>o.t==='create').map(o=>o.name)});}}
+    if(trash){const tr_=await DK.cur.getDirectoryHandle(TRASH,{create:true});for(const it of SP){const tn=await dFreeName(tr_,it.name);await dMoveIt(it,tr_,tn);delete DK.pos[it.name];ops.push({t:'trash',h:it.h,fromDir:DK.cur,name:it.name,trName:tn});}dSavePos();}
+    for(const st of stacks){if(!st.base||!st.names.length)continue;// ばらしたページは、元の位置に少しずつずらして重ねて置く（1ページ目がいちばん上）
+      const n=st.names.length,step=Math.max(2,Math.min(8,Math.floor(160/Math.max(1,n-1)))),x0=st.base.x+(trash?0:24),y0=st.base.y+(trash?0:24);
+      st.names.forEach((nm,i)=>{DK.pos[nm]={x:x0+i*step,y:y0+i*step,z:n-i};});}
+    if(stacks.length)dSavePos();
     dPush({t:'group',ops,label:'ばらす '+SP.map(i=>i.name).join('、')});busy(false);
     dlog('ばらす: '+SP.map(i=>i.name).join(' + ')+' → '+made+' 個'+(toFolder?'（フォルダ '+ops[0].name+'）':''));
-    dmsg(made+' 個の PDF に分けました'+(toFolder?'（フォルダ「'+ops[0].name+'」）':'')+'。Ctrl+Z で元に戻せます');
+    dmsg(made+(SP.some(i=>i.kind==='fp')?' 個のファイルに分けました':' 個の PDF に分けました')+(toFolder?'（フォルダ「'+ops[0].name+'」）':'')+'。Ctrl+Z で元に戻せます');
     if(DK.treeDirty)await dRebuildTree();else await dOpenDir(DK.cur,DK.path,true);}
-  catch(e){busy(false);msg('ばらせません',(e.message||e)+(/encrypt|password/i.test(String(e))?'\n（パスワード付きのPDFはばらせません）':''));dlog('ばらす失敗: '+e.message);if(ops.length)dPush({t:'group',ops,label:'ばらす（途中まで）'});}
+  catch(e){busy(false);msg('ばらせません',(e.message||e)+(/encrypt|password/i.test(String(e))?'\n（パスワード付きのPDFはばらせません）':''));dlog('ばらす失敗（'+e.name+'）: '+e.message+(ops.length?' ／ 途中まで作った '+ops.filter(o=>o.t==='create').length+' 個は［元に戻す］で消せます':''));if(ops.length){let left=[];for(const op of [...ops].reverse()){try{await dRun(op,'undo');}catch(x){left.unshift(op);}}if(left.length)dPush({t:'group',ops:left,label:'ばらす（途中まで）'});else{dlog('途中まで作ったファイルを片付けました');dmsg('途中まで作ったファイルは片付けました。もう一度「ばらす」を試してください');}if(DK.treeDirty)await dRebuildTree();else await dOpenDir(DK.cur,DK.path,true);}}
 };
 async function dRebuildTree(){DK.treeDirty=false;const keep=DK.path.slice(1),m=$('#dkMsg').textContent;await dOpenRoot(keep,true);await new Promise(r=>setTimeout(r,60));$('#dkMsg').textContent=m;}
 async function dNewFolder(){
@@ -382,8 +433,8 @@ $('#deskWin').addEventListener('contextmenu',e=>{
       {t:'貼り付け',k:'Ctrl+V',f:dPaste,off:!DK.clip.length},
       {t:'複製（このフォルダに）',f:async()=>{dCopySel();await dPaste();}},
       '-',
-      {t:n>1?'選んだ '+n+' 件を結合':'結合（2件以上を選んでください）',f:()=>dMergeAsk([...its].sort((a,b)=>a.name.localeCompare(b.name,'ja',{numeric:true}))),off:n<2},
-      {t:'ページごとにばらす',f:()=>dSplitAsk(its),off:!pdfs},
+      {t:n>1?'選んだ '+n+' 件を結合':'結合（2件以上を選んでください）',f:async()=>dMergeAsk(await dMergeOrder(its)),off:n<2},
+      {t:'ページごとにばらす',f:()=>dSplitAsk(its),off:!its.some(i=>i.kind==='pdf'||i.kind==='fp')},
       '-',
       {t:'_削除予定へ',k:'Delete',f:dTrash}]);}
   else{DK.sel.clear();dRefreshSel();
@@ -469,7 +520,7 @@ $('#pvClose').onclick=dPvClose;$('#pvOpen').onclick=()=>{const it=PV.it;dPvClose
 $('#pvBody').addEventListener('wheel',e=>{if(e.ctrlKey)return;if(e.deltaY>0&&PV.pg<PV.n){PV.pg++;dPvShow();e.preventDefault();}else if(e.deltaY<0&&PV.pg>1){PV.pg--;dPvShow();e.preventDefault();}},{passive:false});
 
 /* ---------- 自動反映（フォルダの変更を見張る） ---------- */
-function dScheduleRefresh(why){clearTimeout(DK.refreshT);DK.refreshT=setTimeout(async()=>{if(!DK.cur||!DK.on)return;await dPullOps();const b=DK.items.map(i=>i.name).join('|');await dOpenDir(DK.cur,DK.path,true);if(b!==DK.items.map(i=>i.name).join('|'))dlog('自動で反映しました（'+why+'）');},400);}
+function dScheduleRefresh(why){clearTimeout(DK.refreshT);DK.refreshT=setTimeout(async()=>{if(!DK.cur||!DK.on)return;if($('#dlgBusy').classList.contains('show')){dScheduleRefresh(why);return;}await dPullOps();const b=DK.items.map(i=>i.name).join('|');await dOpenDir(DK.cur,DK.path,true);if(b!==DK.items.map(i=>i.name).join('|'))dlog('自動で反映しました（'+why+'）');},400);}
 async function dStartWatch(){
   if(DK.watcher){DK.watcher.disconnect();DK.watcher=null;}clearInterval(DK.pollT);
   if('FileSystemObserver' in window){try{

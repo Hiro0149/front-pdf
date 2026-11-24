@@ -15,7 +15,7 @@ body[data-view=desk] #main{display:none}
 #dkTree .tnm{overflow:hidden;text-overflow:ellipsis}
 #dkTree .empty{padding:14px;opacity:.75;line-height:1.7;white-space:normal}
 #dkArea{flex:1;overflow:auto;position:relative;background:var(--area-bg);border-radius:var(--sunk-r)}
-#dkDesk{position:relative;min-width:100%;min-height:100%}
+#dkDesk{position:relative;z-index:0;isolation:isolate;min-width:100%;min-height:100%}
 #dkDesk.drop{outline:3px dashed var(--accent);outline-offset:-6px}
 #dkHello{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--empty-fg);line-height:1.8;pointer-events:none}
 #dkHello .big{font-size:26px;font-weight:bold;color:var(--empty-big);margin-bottom:6px}
@@ -43,7 +43,7 @@ body[data-view=desk] #main{display:none}
 #dkStat .cell{white-space:nowrap}
 .dcard{transition:transform .12s,filter .12s,box-shadow .12s;overflow:visible}
 .dcard .th{border-radius:3px 3px 0 0}
-.dcard.dragging{z-index:40;transition:none;box-shadow:0 12px 28px rgba(0,0,0,.35)}
+.dcard.dragging{z-index:100000;transition:none;box-shadow:0 12px 28px rgba(0,0,0,.35)}
 .dcard.dragging.over{transform:rotate(-3deg) scale(1.03)}
 .dcard.mtarget{transform:scale(.93);filter:brightness(.92);outline:3px dashed var(--accent);outline-offset:4px}
 .dcard.mtarget:after{content:"この後ろに結合";position:absolute;left:50%;top:6px;z-index:2;transform:translateX(-50%);background:var(--pri-bg);color:var(--pri-fg);font:bold 12px/1.8 var(--font);padding:0 10px;border-radius:12px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.3)}
@@ -75,3 +75,6 @@ body.skin-mofu .dcard.dragging{box-shadow:0 0 0 3px #fff,0 0 0 7px #f0568a,0 16p
 body.skin-mofu .dcard.mtarget{transform:scale(.93)}
 #deskWin .trow{flex-wrap:wrap;overflow:visible;row-gap:4px}
 body.skin-mofu .dcard.dragging.over{transform:rotate(-3deg) scale(1.03)}
+
+.dkBand{position:absolute;z-index:100001;pointer-events:none;border:1px dashed #2563eb;background:rgba(37,99,235,.12);border-radius:2px}
+body.skin-mofu .dkBand{border-color:#f0568a;background:rgba(240,86,138,.12)}
